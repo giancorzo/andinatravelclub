@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  titulo: MyString
+  subtitulo: MyString
+  descripcion_corta: MyString
+  itinerario_corto: MyString
+  itinerario_largo: MyString
+
+two:
+  titulo: MyString
+  subtitulo: MyString
+  descripcion_corta: MyString
+  itinerario_corto: MyString
+  itinerario_largo: MyString

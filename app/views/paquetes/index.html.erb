@@ -1,0 +1,31 @@
+<h1>Listing paquetes</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Subtitulo</th>
+    <th>Descripcion corta</th>
+    <th>Itinerario corto</th>
+    <th>Itinerario largo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @paquetes.each do |paquete| %>
+  <tr>
+    <td><%= paquete.titulo %></td>
+    <td><%= paquete.subtitulo %></td>
+    <td><%= paquete.descripcion_corta %></td>
+    <td><%= paquete.itinerario_corto %></td>
+    <td><%= paquete.itinerario_largo %></td>
+    <td><%= link_to 'Show', paquete %></td>
+    <td><%= link_to 'Edit', edit_paquete_path(paquete) %></td>
+    <td><%= link_to 'Destroy', paquete, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Paquete', new_paquete_path %>

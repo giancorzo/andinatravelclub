@@ -1,0 +1,37 @@
+<%= form_for(@paquete) do |f| %>
+  <% if @paquete.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paquete.errors.count, "error") %> prohibited this paquete from being saved:</h2>
+
+      <ul>
+      <% @paquete.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitulo %><br />
+    <%= f.text_field :subtitulo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion_corta %><br />
+    <%= f.text_field :descripcion_corta %>
+  </div>
+  <div class="field">
+    <%= f.label :itinerario_corto %><br />
+    <%= f.text_field :itinerario_corto %>
+  </div>
+  <div class="field">
+    <%= f.label :itinerario_largo %><br />
+    <%= f.text_field :itinerario_largo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

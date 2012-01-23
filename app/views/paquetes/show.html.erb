@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @paquete.titulo %>
+</p>
+
+<p>
+  <b>Subtitulo:</b>
+  <%= @paquete.subtitulo %>
+</p>
+
+<p>
+  <b>Descripcion corta:</b>
+  <%= @paquete.descripcion_corta %>
+</p>
+
+<p>
+  <b>Itinerario corto:</b>
+  <%= @paquete.itinerario_corto %>
+</p>
+
+<p>
+  <b>Itinerario largo:</b>
+  <%= @paquete.itinerario_largo %>
+</p>
+
+
+<%= link_to 'Edit', edit_paquete_path(@paquete) %> |
+<%= link_to 'Back', paquetes_path %>
