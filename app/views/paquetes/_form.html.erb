@@ -1,3 +1,23 @@
+<% content_for :javascript do %>  
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      var editor = WysiHat.Editor.attach($('#paquete_descripcion_corta'));
+      editor_toolbar(editor);
+      var editor2 = WysiHat.Editor.attach($('#paquete_itinerario_corto'));
+      editor_toolbar(editor2);
+      var editor3 = WysiHat.Editor.attach($('#paquete_itinerario_largo'));
+      editor_toolbar(editor3);
+    });
+    
+    function editor_toolbar(tool_editor) {
+      toolbar = new WysiHat.Toolbar(tool_editor);
+      toolbar.initialize(tool_editor);
+      toolbar.addButton({ name: 'bold', label: "Negrita" });      
+      toolbar.addButton({ name: 'underline', label: "Subrayado" });      
+      toolbar.addButton({ name: 'em', label: "Itálicas"});      
+    }
+</script>
+<% end %>
 <%= form_for(@paquete) do |f| %>
   <% if @paquete.errors.any? %>
     <div id="error_explanation">
@@ -21,15 +41,15 @@
   </div>
   <div class="field">
     <%= f.label :descripcion_corta %><br />
-    <%= f.text_field :descripcion_corta %>
+    <%= f.text_area :descripcion_corta %>
   </div>
   <div class="field">
     <%= f.label :itinerario_corto %><br />
-    <%= f.text_field :itinerario_corto %>
+    <%= f.text_area :itinerario_corto %>
   </div>
   <div class="field">
     <%= f.label :itinerario_largo %><br />
-    <%= f.text_field :itinerario_largo %>
+    <%= f.text_area :itinerario_largo %>
   </div>
   <div class="actions">
     <%= f.submit %>

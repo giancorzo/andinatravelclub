@@ -3,9 +3,9 @@ class CreatePaquetes < ActiveRecord::Migration
     create_table :paquetes do |t|
       t.string :titulo
       t.string :subtitulo
-      t.string :descripcion_corta
-      t.string :itinerario_corto
-      t.string :itinerario_largo
+      t.text :descripcion_corta
+      t.text :itinerario_corto
+      t.text :itinerario_largo
 
       t.timestamps
     end

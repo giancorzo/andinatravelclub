@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(:version => 20120122062024) do
   create_table "paquetes", :force => true do |t|
     t.string   "titulo"
     t.string   "subtitulo"
-    t.string   "descripcion_corta"
-    t.string   "itinerario_corto"
-    t.string   "itinerario_largo"
+    t.text     "descripcion_corta"
+    t.text     "itinerario_corto"
+    t.text     "itinerario_largo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
