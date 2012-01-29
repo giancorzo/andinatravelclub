@@ -1,10 +1,12 @@
-<h1>Listing paquetes</h1>
-
-<table>
+<h1>Paquetes</h1>
+<div style="float:right;margin-bottom: 10px;">
+  <%= link_to 'New Paquete', new_paquete_path, :class=> "btn primary" %>
+</div>
+<table class="zebra-striped">
   <tr>
-    <th>Titulo</th>
+    <th>Título</th>
     <th>Subtitulo</th>
-    <th>Descripcion corta</th>
+    <th>Descripción corta</th>
     <th>Itinerario corto</th>
     <th>Itinerario largo</th>
     <th></th>
@@ -16,16 +18,12 @@
   <tr>
     <td><%= paquete.titulo %></td>
     <td><%= paquete.subtitulo %></td>
-    <td><%= paquete.descripcion_corta %></td>
-    <td><%= paquete.itinerario_corto %></td>
-    <td><%= paquete.itinerario_largo %></td>
-    <td><%= link_to 'Show', paquete %></td>
-    <td><%= link_to 'Edit', edit_paquete_path(paquete) %></td>
-    <td><%= link_to 'Destroy', paquete, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= raw RedCloth.new(paquete.descripcion_corta).to_html %></td>
+    <td><%= raw RedCloth.new(paquete.itinerario_corto).to_html %></td>
+    <td><%= raw RedCloth.new(paquete.itinerario_largo).to_html %></td>
+    <td><%= link_to 'Detalle', paquete %></td>
+    <td><%= link_to 'Editar', edit_paquete_path(paquete) %></td>
+    <td><%= link_to 'Eliminar', paquete, :confirm => 'Esta seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Paquete', new_paquete_path %>

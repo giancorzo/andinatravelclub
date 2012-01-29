@@ -1,57 +1,71 @@
-<% content_for :javascript do %>  
-<script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-      var editor = WysiHat.Editor.attach($('#paquete_descripcion_corta'));
-      editor_toolbar(editor);
-      var editor2 = WysiHat.Editor.attach($('#paquete_itinerario_corto'));
-      editor_toolbar(editor2);
-      var editor3 = WysiHat.Editor.attach($('#paquete_itinerario_largo'));
-      editor_toolbar(editor3);
-    });
-    
-    function editor_toolbar(tool_editor) {
-      toolbar = new WysiHat.Toolbar(tool_editor);
-      toolbar.initialize(tool_editor);
-      toolbar.addButton({ name: 'bold', label: "Negrita" });      
-      toolbar.addButton({ name: 'underline', label: "Subrayado" });      
-      toolbar.addButton({ name: 'em', label: "Itálicas"});      
-    }
-</script>
-<% end %>
+
 <%= form_for(@paquete) do |f| %>
   <% if @paquete.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@paquete.errors.count, "error") %> prohibited this paquete from being saved:</h2>
 
       <ul>
-      <% @paquete.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @paquete.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
+<div class="row">
+  <div class="span12">
+    <div class="clearfix">
+      <%= f.label :titulo %>
+      <div class="input">
+        <%= f.text_field :titulo, :class => "xxlarge" %>  
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :subtitulo %>
+      <div class="input">
+        <%= f.text_field :subtitulo, :class => "xxlarge" %>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :descripcion_corta %>
+      <div class="input">
+        <%= f.text_area :descripcion_corta, :class => "xxlarge", :rows => 5 %>    
+      </div>  
+    </div>
+    <div class="clearfix">
+      <%= f.label :itinerario_corto %>
+      <div class="input">
+        <%= f.text_area :itinerario_corto, :class => "xxlarge", :rows => 8 %>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :itinerario_largo %>
+      <div class="input">
+        <%= f.text_area :itinerario_largo, :class => "xxlarge", :rows => 10 %>
+      </div>
+    </div>    
   </div>
-  <div class="field">
-    <%= f.label :subtitulo %><br />
-    <%= f.text_field :subtitulo %>
+  <div class="span4">
+    <p>Para hacer formato con estilo se puede usar los siguientes comandos:</p>
+    <p>h1. Titulo</p>
+    <p>h2. Subtitulo</p>
+    <p>h3. Subtitulo Interno</p>
+    <p># Lista numerica</p>
+    <p>* Lista viñetas</p>
+    <p>_enfasis_</p>
+    <p>__italicas__</p>
+    <p>*fuerte*</p>
+    <p>**Negritas**</p>
+    <p>??cita??</p>
+    <p>-Texto negado-</p>
+    <p>+Insertar text+</p>
+    <p>^super indice^</p>
+    <p>~sub indice~</p>
+    <p>@codigo@</p>
+    <p>%(classname)span%</p>
   </div>
-  <div class="field">
-    <%= f.label :descripcion_corta %><br />
-    <%= f.text_area :descripcion_corta %>
-  </div>
-  <div class="field">
-    <%= f.label :itinerario_corto %><br />
-    <%= f.text_area :itinerario_corto %>
-  </div>
-  <div class="field">
-    <%= f.label :itinerario_largo %><br />
-    <%= f.text_area :itinerario_largo %>
-  </div>
+</div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn primary" %>
+    <a href="/paquetes" class="btn">Cancelar</a>
   </div>
 <% end %>

@@ -3,38 +3,27 @@ class PaquetesController < ApplicationController
   # GET /paquetes.xml
   def index
     @paquetes = Paquete.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @paquetes }
-    end
+    render :layout => "admin"
   end
 
   # GET /paquetes/1
   # GET /paquetes/1.xml
   def show
     @paquete = Paquete.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @paquete }
-    end
+    render :layout => "admin"
   end
 
   # GET /paquetes/new
   # GET /paquetes/new.xml
   def new
     @paquete = Paquete.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @paquete }
-    end
+    render :layout => "admin"
   end
 
   # GET /paquetes/1/edit
   def edit
     @paquete = Paquete.find(params[:id])
+    render :layout => "admin"
   end
 
   # POST /paquetes
@@ -44,7 +33,7 @@ class PaquetesController < ApplicationController
 
     respond_to do |format|
       if @paquete.save
-        format.html { redirect_to(@paquete, :notice => 'Paquete was successfully created.') }
+        format.html { redirect_to(@paquete, :notice => 'Se creo el paquete exitosamente.') }
         format.xml  { render :xml => @paquete, :status => :created, :location => @paquete }
       else
         format.html { render :action => "new" }
@@ -60,7 +49,7 @@ class PaquetesController < ApplicationController
 
     respond_to do |format|
       if @paquete.update_attributes(params[:paquete])
-        format.html { redirect_to(@paquete, :notice => 'Paquete was successfully updated.') }
+        format.html { redirect_to(@paquete, :notice => 'Se actualizo el paquete exitosamente.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

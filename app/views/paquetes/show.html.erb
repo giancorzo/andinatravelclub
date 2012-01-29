@@ -1,3 +1,5 @@
+<h1>Detalle del paquete</h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -12,19 +14,20 @@
 
 <p>
   <b>Descripcion corta:</b>
-  <%= @paquete.descripcion_corta %>
+  <%= raw RedCloth.new(@paquete.descripcion_corta).to_html %>
 </p>
 
 <p>
   <b>Itinerario corto:</b>
-  <%= @paquete.itinerario_corto %>
+  <%= raw RedCloth.new(@paquete.itinerario_corto).to_html %>
 </p>
 
 <p>
   <b>Itinerario largo:</b>
-  <%= @paquete.itinerario_largo %>
+  <%= raw RedCloth.new(@paquete.itinerario_largo).to_html %>
 </p>
 
-
-<%= link_to 'Edit', edit_paquete_path(@paquete) %> |
-<%= link_to 'Back', paquetes_path %>
+<div class="actions">
+<%= link_to 'Editar', edit_paquete_path(@paquete), :class => "btn primary" %> 
+<%= link_to 'Cancelar', paquetes_path, :class => "btn" %>  
+</div>
