@@ -1,0 +1,108 @@
+<% content_for :javascript do %>
+  <script type="text/javascript">
+    $(".alert-message").alert();
+    
+  </script>
+<% end %>
+
+<% if notice %>
+<div class="alert-message success fade in" data-alert="alert">
+  <a class="close" href="#">×</a>
+  <p><%= notice %></p>
+</div> 
+<% end %>  
+<h1 style="float:left;" >Detalle del tour</h1>   
+<div class="right">
+  <%= link_to 'Editar', edit_tour_path(@tour), :class => "btn primary" %> 
+</div>  
+<div class="clear page-header"></div>
+<p>
+  <b>Título:</b>
+  <%= @tour.title %>
+</p>
+
+<p>
+  <b>Subtitulo:</b>
+  <%= @tour.subtitle %>
+</p>
+
+<p>
+  <b>Descripcion corta:</b>  
+  <%= raw RedCloth.new(@tour.short_description).to_html %>
+</p>
+
+<p>
+  <b>Itinerario corto:</b>  
+  <%= raw RedCloth.new(@tour.short_itinerary).to_html %>
+</p>
+
+<p>
+  <b>Itinerario largo:</b>
+  <%= raw RedCloth.new(@tour.itinerary).to_html %>
+</p>
+<h2>Imagen principal</h2>
+<div class="clear page-header"></div>
+<%= image_tag @tour.image.url(:large) %>
+<br/><br/>
+<h2>Imágenes variadas del tour</h2>
+<div class="clear page-header"></div>
+<table class="zebra-striped">
+  <tr>
+    <th style="width: 140px;">imagen</th>   
+    <th>descripción</th>
+    <th></th>
+  </tr>
+  <% @tour.images.each do |image| %>
+  <tr>
+    <td>
+      <%= image_tag image.image.url(:media) %>
+    </td>
+    <td>
+      <%= image.description %>
+    </td>
+    <td>
+      <%= link_to 'Eliminar', [image.tour, image], :confirm => 'Desea eliminar esta imagen?', :method => :delete %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<hr>
+<%= render 'images/form' %>
+<br/>
+<h2>Experiencias de los clientes</h2>
+<div class="clear page-header"></div>
+<table class="zebra-striped">
+  <tr>
+    <th>Sale en el home</th>
+    <th>Nombre de cliente</th>
+    <th>Reseña corta</th>
+    <th>Reseña</th>
+    <th>Avatar</th>
+    <th></th>
+  </tr>
+  <% @tour.reviews.each do |review| %>
+    <tr>
+      <td>
+        <%= review.home ? "Si" : "No" %>
+      </td>
+      <td>
+        <%= review.name %>
+      </td>
+      <td>
+        <%= review.short_description %>
+      </td>
+      <td>
+        <%= review.description %>
+      </td>
+      <td>
+        <%= image_tag review.avatar.url(:thumb) %>
+      </td>
+      <td>
+        <%= link_to 'Eliminar', [review.tour, review], :confirm => 'Desea eliminar esta Reseña?', :method => :delete %>
+      </td>      
+    </tr>
+  <% end %>
+</table>
+<br/>
+<hr>
+<%= render 'reviews/form' %>

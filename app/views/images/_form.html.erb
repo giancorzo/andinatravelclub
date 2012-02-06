@@ -1,0 +1,17 @@
+<%= form_for [@tour, @tour.images.build] , :html => { :multipart => true } do |f| %>
+<div class="review-form">
+  <div class="clearfix">
+    <%= f.label :image, "Image:" %>
+    <div class="input">
+      <%= f.file_field :image ,:class => "xlarge input-file" %>
+    </div>
+  </div>
+  <div class="clearfix">
+    <%= f.label :description, "Descripción:" %>
+    <div class="input">
+      <%= f.text_area :description, :rows => 3, :style => "width: 360px;" %>
+    </div>      
+  </div>
+  <%= f.submit :class => "btn primary", :style => "margin-left: 150px;"%>
+</div>
+<% end %>

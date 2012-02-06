@@ -1,0 +1,30 @@
+<h1 style="float:left;">Tours</h1>
+<div style="float:right;margin-bottom: 10px;">
+  <%= link_to 'Nuevo Tour', new_tour_path, :class=> "btn primary" %>
+</div>
+<div class="clear"></div>
+<table class="zebra-striped">
+  <tr>
+    <th>Título</th>
+    <th>Subtitulo</th>
+    <th style="width: 100px;">Descripción corta</th>
+    <th style="width: 200px;">Itinerario corto</th>
+    <th>Itinerario largo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tours.each do |tour| %>
+  <tr>
+    <td><%= tour.title %></td>
+    <td><%= tour.subtitle %></td>
+    <td><%= raw RedCloth.new(tour.short_description).to_html %></td>
+    <td><%= raw RedCloth.new(tour.short_itinerary).to_html %></td>
+    <td><%= raw RedCloth.new(tour.itinerary).to_html %></td>
+    <td><%= link_to 'Detalle', tour %></td>
+    <td><%= link_to 'Editar', edit_tour_path(tour) %></td>
+    <td><%= link_to 'Eliminar', tour, :confirm => 'Esta seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

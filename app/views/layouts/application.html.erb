@@ -2,15 +2,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <title>AndinaSite</title>
+  <title>Andina Travel club</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag "jquery-1.4.2.min","application", :cache => false %>  
+  <%= javascript_include_tag "jquery-1.4.2.min","application","mocha", :cache => false %>  
   <%= csrf_meta_tag %>
 </head>
 <body>
   <div class="container">
-    <%= yield %>
+    <div class="rounded">
+      <%= render "shared/header" %>
+      <%= yield %>            
+    </div>    
   </div>
+  <div class="container" style="margin-bottom: 20px;">
+    <div class="rounded" style="min-height: 26px;">
+      <ul class="nav">
+        <li>
+          <a href="#">Nosotros</a>            
+        </li>
+        <li>
+          <a href="#">Perú</a>
+        </li>
+        <li>
+          <a href="#">Utilidad</a>
+        </li>
+        <li>
+          <a href="#">Forma de Pago</a>
+        </li>
+        <li>
+          <a href="#">Fotos</a>
+        </li>
+      </ul>      
+    </div>
+  </div>
+  <div class="andina-footer clear">
+    <div class="container">
+      <%= render "shared/footer" %>
+    </div>
+  </div>  
   <%= yield :javascript %>
 </body>
 </html>
