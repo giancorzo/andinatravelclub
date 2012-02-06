@@ -82,5 +82,5 @@ DEPENDENCIES
   RedCloth
   mimetype-fu
   mysql2 (= 0.2.11)
-  paperclip (~> 2.3)
+  paperclip
   rails (= 3.0.9)
