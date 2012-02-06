@@ -6,7 +6,7 @@ gem 'rails', '3.0.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '0.2.11'
-gem "paperclip", "~> 2.3"
+gem "paperclip"
 gem 'mimetype-fu'
 gem 'RedCloth'
 
