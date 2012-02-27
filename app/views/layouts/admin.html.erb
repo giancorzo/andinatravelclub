@@ -3,25 +3,28 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <title>Andina Travel Club</title>
-    <%= stylesheet_link_tag :all %>
-    <%= javascript_include_tag "jquery-1.4.2.min" %>  
+    <%= stylesheet_link_tag "0.bootstrap.min","1.bootstrap-responsive.min","5.style-admin" %>  
+    <%= javascript_include_tag "jquery-1.7.1.min" %>  
     <%= javascript_include_tag "jquery-rails.js" %>
-    <%= javascript_include_tag "bootstrap-alerts" %>   
+    <%= javascript_include_tag "bootstrap.min" %>   
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <div class="topbar-wrapper" style="z-index: 5;margin-bottom: 50px;">
-      <div class="topbar" data-dropdown="dropdown">
-        <div class="topbar-inner">
+    <div class="navbar">      
+        <div class="navbar-inner">
           <div class="container">
-            <h3><a href="javascript:void(0);">Andina travel club</a></h3>
+            <a href="javascript:void(0);" class="brand">Andina travel club</a>
             <ul class="nav">
               <li class="<%=@header_tab == "tour" ? "active" : ""%>"><%= link_to "Administrador de tours",tours_path %></li>
               <li class="<%=@header_tab == "banner" ? "active" : "" %>"><%= link_to "Administrador de banners", banners_path  %></li>
+              <li class="<%=@header_tab == "account" ? "active" : "" %>"><%= link_to "Administrador de usuarios", accounts_path  %></li>
             </ul>
+            <div class="right" style="color:white;line-height: 40px;">
+              Bienvenido, <%= @current_account.name %> | 
+              <%= link_to "Salir", logout_url %>
+            </div>
           </div>
         </div><!-- /topbar-inner -->
-      </div><!-- /topbar -->
     </div>
     <div class="container">
       <%= yield %>

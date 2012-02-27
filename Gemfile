@@ -9,6 +9,7 @@ gem 'mysql2', '0.2.11'
 gem "paperclip"
 gem 'mimetype-fu'
 gem 'RedCloth'
+gem 'carmen'
 
 # Use unicorn as the web server
 # gem 'unicorn'

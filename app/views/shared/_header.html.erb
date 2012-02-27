@@ -1,24 +1,25 @@
-<div class="andina-header">
+<div class="andina-header" style="margin-bottom: 20px;">
     <h1 class="left">
       <%= link_to "Andina travel club", home_path, {:class => "logo", :title => "Andina Travel Club"} %>
     </h1>
     <div class="right">
       <ul class="nav">
         <li>
-          <a href="#">Paquetes turísticos</a>          
+          <%= link_to "Paquetes turísticos",tours_path %>
         </li>
         <li>
-          <a href="#">Destinos</a>
+          <%= link_to "Destinos",tours_by_location_url %>          
         </li>
         <li>
-          <a href="#">Viajes de Interés</a>
+          <%= link_to "Viajes de Interés",tours_by_interest_url %>
         </li>
         <li>
           <a href="#">Blog</a>
         </li>
         <li>
-          <a href="#">Contáctenos</a>
+          <%= link_to "Contáctenos", contact_us_url %>
         </li>        
       </ul>
     </div>
+    <div class="clear"></div>
 </div>

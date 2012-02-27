@@ -10,7 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120206050924) do
+ActiveRecord::Schema.define(:version => 20120217202806) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "name"
+    t.string   "email",          :null => false
+    t.string   "crypt_password", :null => false
+    t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "accounts", ["email"], :name => "index_accounts_on_email"
 
   create_table "banners", :force => true do |t|
     t.string   "title"
@@ -38,6 +49,24 @@ ActiveRecord::Schema.define(:version => 20120206050924) do
 
   add_index "images", ["id"], :name => "index_images_on_id"
   add_index "images", ["tour_id"], :name => "fk_images_tours"
+
+  create_table "interests", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.string   "travel_type"
+    t.integer  "days"
+    t.date     "travel_time"
+    t.string   "name"
+    t.string   "country"
+    t.string   "city"
+    t.string   "email"
+    t.string   "payment_type"
+    t.string   "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "reviews", :force => true do |t|
     t.text     "description"
@@ -68,8 +97,15 @@ ActiveRecord::Schema.define(:version => 20120206050924) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "price"
+    t.integer  "days"
+    t.integer  "night"
+    t.integer  "place",              :limit => 1
+    t.integer  "popularity",                      :default => 0
+    t.integer  "interest_id"
   end
 
   add_index "tours", ["id"], :name => "index_tours_on_id"
+  add_index "tours", ["interest_id"], :name => "fk_interest_tour"
 
 end

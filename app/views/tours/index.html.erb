@@ -1,9 +1,10 @@
+<% if @current_account  %>
 <h1 style="float:left;">Tours</h1>
 <div style="float:right;margin-bottom: 10px;">
-  <%= link_to 'Nuevo Tour', new_tour_path, :class=> "btn primary" %>
+  <%= link_to 'Nuevo Tour', new_tour_path, :class=> "btn btn-primary" %>
 </div>
 <div class="clear"></div>
-<table class="zebra-striped">
+<table class="table table-striped">
   <tr>
     <th>Título</th>
     <th>Subtitulo</th>
@@ -28,3 +29,56 @@
   </tr>
 <% end %>
 </table>
+<% else %>
+  <div class="tour-banner">
+    <%= image_tag @tour.image.url(:large) %>
+    <div class="promotion">
+      <h1><%= @tour.title %></h1>
+      <h2><%= @tour.subtitle %></h2>
+    </div>    
+  </div>
+  <div class="container" style="margin-bottom: 20px;">
+    <div class="rounded" style="min-height: 20px; height: 20px;width: 1016px;margin:10px auto 0px auto;text-align: center;padding-top: 5px;">
+      <h3>
+        <% if @interests %>
+          <% @interests.each do |interest| %>
+            <span class="interest-header interest-<%= interest.id %>"><%= interest.name %></span>
+          <% end %>
+        <% else %>
+          ¿Interesado en algo diferente?
+          <%= link_to "Descubre nuestros tours de interes",tours_by_interest_url %>       
+        <% end %>
+      </h3>
+    </div>
+  </div>
+  <div class="row clear" style="margin:10px 0px;">
+    <div class="form-home form-paquetes" style="padding: 5px 10px;">
+      <ul class="thumbnails">
+        <% @tours.each do |tour| %>
+          <li class="span3">
+            <% if tour.interest and tour.place == 0 %>
+              <div class="thumbnail interest-back-<%= tour.interest.id %>" style="min-height: 240px;position: relative;">                
+            <% else %>
+              <div class="thumbnail" style="min-height: 240px;position: relative;">
+            <% end %>
+              <%= link_to tour do %>
+                <%= image_tag tour.image.url(:thumb) %>
+              <% end %>
+              <h5><%= tour.title  %></h5>
+              <p><%= tour.subtitle %></p>
+              <div>
+                <div class="left">
+                  <%= tour.days %> días / <%= tour.night %> noches
+                </div>
+                <div class="right">
+                  <%= tour.price %> dólares
+                </div>
+                <div class="clear"></div>                
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>      
+    </div>    
+  </div>
+<% end %>

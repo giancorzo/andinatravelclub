@@ -1,0 +1,131 @@
+<% content_for :javascript do %>
+  <script type="text/javascript">
+    $(".tour-gallery a").lightBox();
+    $(".alert").alert();
+  </script>
+<% end %>
+<div class="tour-banner">
+  <%= image_tag @tour.image.url(:large) %>
+  <div class="promotion">
+    <h1><%= @tour.title %></h1>
+    <h2><%= @tour.subtitle %></h2>
+  </div>    
+</div>
+<div class="row">
+  <% if flash[:notice] %>
+    <div class="span12 alert alert-success fade in" data-alert="alert" style="margin: 10px 48px;">
+      <a class="close" href="#" data-dismiss="alert">×</a>
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if flash[:error] %>
+    <div class="span12 alert alert-error fade in" data-alert="alert" style="margin: 10px 48px;">
+      <a class="close" href="#" data-dismiss="alert">×</a>
+      <%= flash[:error] %>
+    </div>
+  <% end %>    
+  <div class="span8" style="margin-left: 35px;width: 518px;min-height: 848px;">
+    <div class="rounded">
+      <h2 style="margin: 10px 10px;">Contáctenos</h2>
+      <div style="margin: 0px 10px 10px 10px">
+        <%= form_tag contact_us_url, :html => { :class => "form-horizontal"} do %>
+          <p>En caso tenga dudas o desee que se le arme un paquete personalizado, puede utilizar el siguiente formulario para enviarnos un mensaje</p>
+          <table>
+            <tr>
+              <td><%= label_tag :name, "Nombre",:style=>"display:inline;margin-right:5px;" %></td>
+              <td><%= text_field :contact, :name %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag :country, "País",:style=>"display:inline;margin-right:5px;" %></td>
+              <td><%= country_select :contact,:country %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag :city, "Ciudad",:style=>"display:inline;margin-right:5px;" %></td>
+              <td><%= text_field :contact, :city %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag :phone, "Teléfono",:style=>"display:inline;margin-right:5px;" %></td>
+              <td><%= telephone_field :contact, :phone %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag :email, "Email",:style=>"display:inline;margin-right:5px;" %></td>
+              <td><%= email_field :contact, :email %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag :comments, "Mensaje",:style=>"display:inline;margin-right:5px;" %></td>
+              <td>
+                <%= text_area :contact, :comments, :style => "width:300px; height: 100px;"  %>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="padding-top: 10px;"><%= submit_tag "Enviar cotización", :class => "btn btn-primary"  %></td>
+            </tr>
+          </table>
+        <% end %>        
+      </div>
+      <h2 style="margin: 10px 10px;">Contacto directo</h2>
+      <table style="margin: 0px 10px;">
+        <tr>
+          <td>            
+          </td>          
+          <td>            
+            <p>Yasser Silva -- Gerente General</p>
+            <p>gerencia@andinatravelclub.com</p>
+            <p>yasser.silva@andinatravelclub.com</p>
+          </td>          
+        </tr>
+        <tr>
+          <td>            
+          </td>
+          <td>            
+            <p>Fernando Silva -- Gerente de Turismo receptivo</p>
+            <p>receptivo@andinatravelclub.com</p>
+            <p>fernando.silva@andinatravelclub.com</p>   
+          </td>          
+        </tr>        
+      </table>
+      <h2 style="margin: 10px 10px;">Mensajeria instantanea</h2>
+      <div style="margin: 0px 10px;">
+        <p>MSN: andinatravelclub@hotmail.com</p>
+        <p>GMAIL: andinatravelclub@gmail.com</p>
+      </div>
+      <h2 style="margin: 10px 10px;">Oficina en Lima</h2>
+      <div style="margin: 0px 10px;">
+        <address>
+          Calle Gonzales Prada 255 OF 611<br/>
+          Edificio Miranda<br/>
+          Miraflores<br/>
+          (511)777-5014<br/>
+        </address>        
+      </div>
+      
+    </div>    
+  </div>
+  <div class="span6" style="width: 480px;">
+    <div class="rounded">
+      <ul class="thumbnails" style="margin-top: 10px;margin-left: -12px;">
+        <% @tours.each do |tour| %>
+          <li class="span3">
+            <div class="thumbnail" style="min-height: 240px;position: relative;">
+              <%= link_to tour do %>
+                <%= image_tag tour.image.url(:thumb) %>
+              <% end %>
+              <h5><%= tour.title  %></h5>
+              <p><%= tour.subtitle %></p>
+              <div>
+                <div class="left">
+                  <%= tour.days %> días / <%= tour.night %> noches
+                </div>
+                <div class="right">
+                  <%= tour.price %> dólares
+                </div>
+                <div class="clear"></div>                
+              </div>        
+            </div>          
+          </li>
+        <% end %>        
+      </ul>
+    </div>
+  </div>
+</div>

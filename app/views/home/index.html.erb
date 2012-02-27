@@ -1,5 +1,5 @@
 <div class="row clear" style="margin:0px;">
-  <div class="span12">
+  <div class="span9"  style="width: 722px;">
     <div id="gallery">
       <% @banners.each do |banner|  %>
         <%= image_tag banner.image.url(:media) %>
@@ -9,13 +9,13 @@
         </div>
       <% end %>
     </div>    
-    <div id="thumbs">
-      <% @banners.each do |banner| %>
-        <%= image_tag banner.image.url(:thumb) %>
+    <div id="thumbs">      
+      <% @banners.each do |bann| %>
+        <%= image_tag bann.image.url(:thumb) %>
       <% end %>
     </div>    
   </div>
-  <div class="span4">
+  <div class="span3">
     <div class="formulario-contacto form-home">
       <h3 style="text-align: center;border-bottom: 1px solid rgba(0,0,0,0.1)">Central de atención al cliente</h3>
       <div class="line">
@@ -35,14 +35,53 @@
   </div>  
 </div>
 <div class="row clear" style="margin:10px 0px;">
-  <div class="span12">
-    <div class="form-home form-destinos">
-      
+  <div class="span9" style="width: 722px;">
+    <div class="form-home form-destinos" style="padding: 5px 10px;">
+      <h2 style="margin-bottom: 10px;">Nuestros Destinos</h2>
+      <ul class="thumbnails">
+        <% @tours.each do |tour| %>
+          <li class="span3">
+            <div class="thumbnail" style="min-height: 240px;position: relative;">
+              <a href="#">
+                <%= image_tag tour.image.url(:thumb) %>
+              </a>
+              <h5><%= tour.title  %></h5>
+              <p><%= tour.subtitle %></p>
+              <div>
+                <div class="left">
+                  <%= tour.days %> días / <%= tour.night %> noches
+                </div>
+                <div class="right">
+                  <%= tour.price %> dólares
+                </div>
+                <div class="clear"></div>                
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>      
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="span3">
+    <div class="form-home form-experiencias" style="padding: 5px 0px;">
+      <h2 style="margin-bottom: 10px;text-align: center;">Experiencias</h2>
+      <ul class="experiencias">
+        <% @reviews.each do |review| %>
+        <li>
+          <blockquote class="pull-right">
+            <p>"<%= review.short_description %>"</p>
+            <small><%= review.name %></small>
+          </blockquote>
+        </li>
+        <% end %>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <br/>
+    <div class="form-home form-facebook" style="padding: 5px 0px;">
+      <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fandinatravelclub&amp;width=255&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;appId=113112562038537" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:255px; height:258px;" allowTransparency="true"></iframe>
     </div>
   </div>
-  <div class="span4">
-    <div class="form-home form-experiencias">
-      
-    </div>    
-  </div>
+  <div class="clear"></div>
 </div>

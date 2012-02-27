@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style="background-color: #FFF;font-family: 'Lucida Grande', Verdana, Sans-serif;">
+      <p>Nombre del solicitante: <%= @quote.name %></p>
+      <p>Pais: <%= @quote.country %></p>
+      <p>Ciudad: <%= @quote.city %></p>
+      <p>Teléfono: <%= @quote.phone %></p>
+      <p>Correo: <%= @quote.email %></p>
+      <br/>
+      <p>Tipo de viaje: <%= @quote.travel_type %></p>
+      <p>Días que se queda: <%= @quote.days %></p>
+      <p>Fecha de llegada: <%= @quote.travel_time %></p>
+      <p>Forma de pago: <%= @quote.payment_type %></p>
+      <p>Comentarios extra: <%= @quote.comments %></p>
+    </body>
+</html>

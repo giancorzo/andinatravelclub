@@ -1,0 +1,230 @@
+.nav { list-style: none; }
+.nav li { display:block;float:left; }
+.nav li a{float:none;padding:10px 10px 11px;line-height:19px;}
+.nav li a:hover{background-color:transparent;text-decoration:none;}
+.nav .active a, .nav .active a:hover{text-decoration:none;}
+
+.experiencias { list-style: none; margin:0px;}
+.experiencias li { display: block; }
+
+.container {width: 1048px;}
+
+.rounded {
+    background-color:#fff; 
+    border:1px solid rgba(0,0,0,0.1);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    -moz-box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    padding-bottom: 1em;
+    min-height: 800px;
+    margin-top: 10px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.andina-header {
+    margin-top: 5px;    
+}
+
+.andina-header .logo {
+    display: block;
+    background-color: #CCC;
+    width: 300px;
+    height: 70px;
+    text-indent: -1000px;
+    margin-left: 20px;
+}
+
+.andina-header a:hover {
+    color:#00438a;text-decoration:underline;
+}
+
+.andina-footer {
+    background-color: #bfbfbf;
+}
+
+.andina-footer a:hover {
+    color:#00438a;text-decoration:underline;
+}
+
+.dashed-right {
+    border-right: 1px dashed #049cdb;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: block;
+    float: left;
+    margin: 5px 0px;    
+}
+
+.footer-nav ul li {
+    display: block;
+    float: left;
+    padding-right: 10px;
+}
+
+.form-home {
+    border:1px solid rgba(0,0,0,0.1); 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    background: #F4F4F4;    
+}
+
+.formulario-contacto {    
+    width: 265px;
+    height: 300px;    
+}
+
+.formulario-contacto h3 {
+    background: #F4F4F4;
+}
+
+.formulario-contacto .line {
+    height: 20px;    
+    padding-top: 10px;
+    line-height: 20px;
+    padding-left: 7px;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto .image {
+    margin-top:9px;    
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    float:left;    
+}
+
+.formulario-contacto h5 {
+    padding-left: 25px;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.form-destinos {
+    width: 700px;
+    min-height: 500px;     
+}
+
+.form-experiencias {
+    width: 265px;
+    min-height: 500px;     
+}
+
+.form-experiencias blockquote {
+    border: none;
+}
+
+.form-facebook {
+    width: 265px;
+    text-align: center;
+}
+
+.tour-banner {
+    text-align: center;
+    overflow: hidden;    
+    position:relative;
+    margin-left: 0px;
+}
+
+.tour-banner .promotion {
+    margin-top: -71px;
+    margin-left: 15px;    
+    width: 996px;    
+    color: white;
+    padding: 5px 10px;
+    background-color: black;
+    text-align: left;        
+    opacity: 0.8;
+}
+
+.tour-banner .promotion h1 {
+    color: white;
+    font-style: italic;
+    font-size: 180%;
+    margin:0px;
+    padding:0px;
+}
+
+.tour-banner .promotion h2 {
+    color: white;
+    font-style: italic;
+    font-size: 130%;
+    margin:0px;
+    padding:0px;
+    line-height: 20px;
+}
+
+.form-paquetes {
+    margin: 0px auto;
+    width: 996px;
+    min-height: 500px;     
+}
+
+.form-paquetes li {
+    margin: 0 0 18px 32px;    
+}
+
+.thumbnail p {
+    margin: 0px;
+    height: 60px;
+}
+
+.interest-header {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.interest-1 {color: #277e49; }
+.interest-2 {color: #e00789; }
+.interest-3 {color: #ff0000; }
+.interest-4 {color: #f6a51b; }
+.interest-5 {color: #366ab5; }
+.interest-6 {color: #ca9868; }
+
+.interest-back-1 {border: 3px solid #277e49; }
+.interest-back-2 {border: 3px solid #e00789; }
+.interest-back-3 {border: 3px solid #ff0000; }
+.interest-back-4 {border: 3px solid #f6a51b; }
+.interest-back-5 {border: 3px solid #366ab5; }
+.interest-back-6 {border: 3px solid #ca9868; }
+
+.tour-content {
+    padding: 10px 15px;
+    text-align: justify;
+}
+
+.quote-content {
+    padding: 0px 15px;
+}
+
+.tour-gallery {
+    margin-left: 2px;
+}
+
+.tour-gallery ul {
+    list-style: none;
+    display: block;
+    margin: 5px 0px;
+}
+
+.tour-gallery ul li {
+    display: block;
+    float: left;
+    padding-right: 4px;
+}
+
+#quote_travel_time_3i { width: 55px; margin-left: 20px; }
+#quote_travel_time_2i { width: 100px; }
+#quote_travel_time_1i  { width: 70px; }

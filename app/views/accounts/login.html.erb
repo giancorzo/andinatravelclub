@@ -1,0 +1,19 @@
+<div class="row">
+  <%= form_tag nil,:class => "form-horizontal" do %>
+    <div class="control-group">
+      <%= label_tag :email %>
+      <div class="controls">
+        <%= text_field_tag :email, params[:email],:class => "input-xlarge" %>
+      </div>      
+    </div>
+    <div class="control-group">
+      <%= label_tag :password %>
+      <div class="controls">
+        <%= password_field_tag :password, params[:password],:class => "input-xlarge" %>
+      </div>
+    </div>
+    <div class="actions" style="margin-left: 160px;">
+      <%= submit_tag "Ingresar", :class => "btn btn-primary" %>
+    </div>
+  <% end %>    
+</div>

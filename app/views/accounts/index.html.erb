@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1 style="float: left;">Listing accounts</h1>
+  <div style="float:right;margin-bottom: 10px;">
+    <%= link_to 'New Account', new_account_path, :class=> "btn btn-primary" %>
+  </div>
+</div>
+<div class="clear"></div>
+<br/>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @accounts.each do |account| %>
+  <tr>
+    <td><%= account.name %></td>
+    <td><%= account.email %></td>
+    <td><%= link_to 'Editar', edit_account_path(account) %></td>
+    <td><%= link_to 'Eliminar', account, :confirm => '¿Está seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

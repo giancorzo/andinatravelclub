@@ -3,8 +3,7 @@
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title>Andina Travel club</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag "jquery-1.4.2.min","application","mocha", :cache => false %>  
+  <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>  
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -12,7 +11,7 @@
     <div class="rounded">
       <%= render "shared/header" %>
       <%= yield %>            
-    </div>    
+    </div>
   </div>
   <div class="container" style="margin-bottom: 20px;">
     <div class="rounded" style="min-height: 26px;">
@@ -40,6 +39,7 @@
       <%= render "shared/footer" %>
     </div>
   </div>  
+  <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>  
   <%= yield :javascript %>
 </body>
 </html>

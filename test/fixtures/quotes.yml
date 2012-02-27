@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  travel_type: MyString
+  days: 1
+  travel_time: 2012-02-17
+  name: MyString
+  country: MyString
+  city: MyString
+  email: MyString
+  payment_type: MyString
+  comments: MyString
+
+two:
+  travel_type: MyString
+  days: 1
+  travel_time: 2012-02-17
+  name: MyString
+  country: MyString
+  city: MyString
+  email: MyString
+  payment_type: MyString
+  comments: MyString

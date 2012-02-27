@@ -1,18 +1,47 @@
 class ToursController < ApplicationController
+  
+  skip_before_filter :check_account, :only => [:index, :index_by_location, :index_by_interest, :show]
+  
   # GET /tours
   # GET /tours.xml
   def index
-    @header_tab = "tour"
-    @tours = Tour.all
-    render :layout => "admin"
+    if current_account
+      @header_tab = "tour"
+      @tours = Tour.all
+      render :layout => "admin"
+    else      
+      @tours = Tour.order("popularity").where("place = 0 and interest_id is null").all
+      @tour = Tour.order("RAND()").first
+      render :layout => "application"
+    end
+  end
+  
+  def index_by_location
+      @tours = Tour.order("popularity").where("place = 1")
+      @tour = Tour.order("RAND()").first
+      render :template => "tours/index", :layout => "application"   
+  end
+  
+  def index_by_interest
+      @tours = Tour.order("popularity").where("interest_id is not null and place = 0").all
+      @tour = Tour.order("RAND()").first
+      @interests = Interest.all
+      render :template => "tours/index", :layout => "application"    
   end
 
   # GET /tours/1
   # GET /tours/1.xml
   def show
-    @header_tab = "tour"
-    @tour = Tour.find(params[:id])
-    render :layout => "admin"
+    
+    if current_account
+      @header_tab = "tour"
+      @tour = Tour.find(params[:id])
+      @review = Review.new
+      render :layout => "admin"
+    else
+      @tour = Tour.find(params[:id])
+      render :template => "tours/show", :layout => "application"
+    end
   end
 
   # GET /tours/new

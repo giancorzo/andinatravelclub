@@ -1,7 +1,7 @@
+<% if @current_account  %>
 <% content_for :javascript do %>
   <script type="text/javascript">
-    $(".alert-message").alert();
-    
+    $(".alert").alert();    
   </script>
 <% end %>
 
@@ -13,7 +13,7 @@
 <% end %>  
 <h1 style="float:left;" >Detalle del tour</h1>   
 <div class="right">
-  <%= link_to 'Editar', edit_tour_path(@tour), :class => "btn primary" %> 
+  <%= link_to 'Editar', edit_tour_path(@tour), :class => "btn btn-primary" %> 
 </div>  
 <div class="clear page-header"></div>
 <p>
@@ -24,6 +24,16 @@
 <p>
   <b>Subtitulo:</b>
   <%= @tour.subtitle %>
+</p>
+
+<p>
+  <b>Días / noches:</b>
+  <%= @tour.days %> / <%= @tour.night  %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @tour.price %>
 </p>
 
 <p>
@@ -46,7 +56,7 @@
 <br/><br/>
 <h2>Imágenes variadas del tour</h2>
 <div class="clear page-header"></div>
-<table class="zebra-striped">
+<table class="table table-striped">
   <tr>
     <th style="width: 140px;">imagen</th>   
     <th>descripción</th>
@@ -71,13 +81,14 @@
 <br/>
 <h2>Experiencias de los clientes</h2>
 <div class="clear page-header"></div>
-<table class="zebra-striped">
+<table class="table table-striped">
   <tr>
     <th>Sale en el home</th>
     <th>Nombre de cliente</th>
     <th>Reseña corta</th>
     <th>Reseña</th>
     <th>Avatar</th>
+    <th></th>
     <th></th>
   </tr>
   <% @tour.reviews.each do |review| %>
@@ -89,14 +100,17 @@
         <%= review.name %>
       </td>
       <td>
-        <%= review.short_description %>
+        <%= raw RedCloth.new(review.short_description).to_html %>
       </td>
       <td>
-        <%= review.description %>
+        <%= raw RedCloth.new(review.description).to_html %>
       </td>
       <td>
-        <%= image_tag review.avatar.url(:thumb) %>
+        <% if review.avatar.file? %>
+          <%= image_tag review.avatar.url(:thumb) %>
+        <% end %>
       </td>
+      <td><%= link_to 'Editar', edit_tour_review_path(review.tour,review) %></td>
       <td>
         <%= link_to 'Eliminar', [review.tour, review], :confirm => 'Desea eliminar esta Reseña?', :method => :delete %>
       </td>      
@@ -106,3 +120,77 @@
 <br/>
 <hr>
 <%= render 'reviews/form' %>
+<% else %>
+  <% content_for :javascript do %>
+    <script type="text/javascript">
+      $(".tour-gallery a").lightBox();
+      $(".alert").alert();
+    </script>
+  <% end %>
+  <div class="tour-banner">
+    <%= image_tag @tour.image.url(:large) %>
+    <div class="promotion">
+      <h1><%= @tour.title %></h1>
+      <h2><%= @tour.subtitle %></h2>
+    </div>    
+  </div>
+  <div class="row">
+    <% if flash[:notice] %>
+      <div class="span12 alert alert-success fade in" data-alert="alert" style="margin: 10px 48px;">
+        <a class="close" href="#" data-dismiss="alert">×</a>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <% if flash[:error] %>
+      <div class="span12 alert alert-error fade in" data-alert="alert" style="margin: 10px 48px;">
+        <a class="close" href="#" data-dismiss="alert">×</a>
+        <%= flash[:error] %>
+      </div>
+    <% end %>    
+    <div class="span8" style="margin-left: 40px;">
+      <div class="tour-gallery">
+        <ul>
+          <% @tour.images.each do |image| %>
+            <li>
+              <a href="<%= image.image.url(:big) %>">
+                <%= image_tag image.image.url(:media) %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="rounded">
+        <div class="tour-content">        
+          <%= raw RedCloth.new(@tour.short_description).to_html %>
+          <%= raw RedCloth.new(@tour.short_itinerary).to_html %>
+          <%= raw RedCloth.new(@tour.itinerary).to_html %>          
+        </div>
+      </div>
+    </div>
+    <div class="span5" style="width: 372px;">
+      <div class="rounded">
+        <div class="quote-content">
+          <h2 style="margin-bottom: 10px;margin-top: 5px;text-align: center;">Pídamos una cotización</h2>
+          <%= render 'quotes/form' %>
+        </div>
+      </div>
+      <% if @tour.reviews.to_a.size > 0 %>
+        <div class="rounded" style="padding: 5px 0px;min-height: inherit">
+          <h2 style="margin-bottom: 10px;text-align: center;">Experiencias</h2>
+          <ul class="experiencias">
+            <% @tour.reviews.each do |review| %>
+            <li>
+              <blockquote class="pull-right" style="border:none;">
+                <p>"<%= review.short_description %>"</p>
+                <small><%= review.name %></small>
+              </blockquote>
+            </li>
+            <% end %>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
