@@ -5,6 +5,7 @@ class Tour < ActiveRecord::Base
   has_many :reviews, :dependent => :destroy
   has_many :images, :dependent => :destroy
   has_many :quotes, :dependent => :destroy
+  has_many :banners
   accepts_nested_attributes_for :reviews, :allow_destroy => :true
   accepts_nested_attributes_for :images, :allow_destroy => :true
   

@@ -1,0 +1,59 @@
+<% if @current_account  %>
+<h1 style="float:left;">Blog</h1>
+<div style="float:right;margin-bottom: 10px;">
+  <%= link_to 'Nuevo Post', new_post_path, :class=> "btn btn-primary" %>
+</div>
+<div class="clear"></div>
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Popular</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= raw RedCloth.new(truncate(post.preview, :length => 50, :omission => "...")).to_html %></td>
+    <td><%= raw RedCloth.new(truncate(post.body, :length => 50, :omission => "...")).to_html %></td>
+    <td><%= post.popular %></td>
+    <td><%= link_to 'Detalle', post %></td>
+    <td><%= link_to 'Editar', edit_post_path(post) %></td>
+    <td><%= link_to 'Eliminar', post, :confirm => 'Esta seguro?', :method => :delete %></td>        
+  </tr>
+<% end %>
+</table>
+<% else %>
+<div class="row">
+  <div class="span8" style="margin-left: 40px;">
+    <div class="rounded" style="padding: 20px;">
+      <% @posts.each do |post| %>
+        <h2><%= post.title %></h2>
+        <p class="author">by <%= post.account.name  %></p>
+        <articule style="text-align: justify;">
+          <%= raw RedCloth.new(post.preview).to_html %>
+        </articule>
+        <div>
+          <%= link_to "[Click para continuar]",post %>
+        </div>
+      <% end %>      
+    </div>
+  </div>
+  <div class="span5" style="width: 372px;">
+    <div class="rounded" style="padding: 20px;">
+      <h3>Artículos populares</h3>
+      <ul>
+        <% @popular.each do |popular| %>
+          <li>
+            <%= link_to popular.title, popular %>
+          </li>          
+        <% end %>        
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<% end %>

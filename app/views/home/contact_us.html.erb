@@ -5,11 +5,13 @@
   </script>
 <% end %>
 <div class="tour-banner">
-  <%= image_tag @tour.image.url(:large) %>
-  <div class="promotion">
-    <h1><%= @tour.title %></h1>
-    <h2><%= @tour.subtitle %></h2>
-  </div>    
+  <%= link_to @tour do %>
+    <%= image_tag @tour.image.url(:large) %>
+    <div class="promotion">
+      <h1><%= @tour.title %></h1>
+      <h2><%= @tour.subtitle %></h2>
+    </div>
+  <% end %>
 </div>
 <div class="row">
   <% if flash[:notice] %>
@@ -71,8 +73,10 @@
           </td>          
           <td>            
             <p>Yasser Silva -- Gerente General</p>
-            <p>gerencia@andinatravelclub.com</p>
-            <p>yasser.silva@andinatravelclub.com</p>
+            <ul>
+              <li><%= mail_to "gerencia@andinatravelclub.com" %></li>
+              <li><%= mail_to "yasser.silva@andinatravelclub.com" %></li>
+            </ul>
           </td>          
         </tr>
         <tr>
@@ -80,15 +84,17 @@
           </td>
           <td>            
             <p>Fernando Silva -- Gerente de Turismo receptivo</p>
-            <p>receptivo@andinatravelclub.com</p>
-            <p>fernando.silva@andinatravelclub.com</p>   
+            <ul>
+              <li><%= mail_to "receptivo@andinatravelclub.com" %></li>
+              <li><%= mail_to "fernando.silva@andinatravelclub.com" %></li>
+            </ul>  
           </td>          
         </tr>        
       </table>
       <h2 style="margin: 10px 10px;">Mensajeria instantanea</h2>
       <div style="margin: 0px 10px;">
-        <p>MSN: andinatravelclub@hotmail.com</p>
-        <p>GMAIL: andinatravelclub@gmail.com</p>
+        <p>MSN: <%= mail_to "andinatravelclub@hotmail.com" %></p>
+        <p>GMAIL: <%= mail_to "andinatravelclub@gmail.com" %></p>
       </div>
       <h2 style="margin: 10px 10px;">Oficina en Lima</h2>
       <div style="margin: 0px 10px;">
@@ -96,7 +102,7 @@
           Calle Gonzales Prada 255 OF 611<br/>
           Edificio Miranda<br/>
           Miraflores<br/>
-          (511)777-5014<br/>
+          +511.777.5014<br/>
         </address>        
       </div>
       
@@ -115,7 +121,7 @@
               <p><%= tour.subtitle %></p>
               <div>
                 <div class="left">
-                  <%= tour.days %> días / <%= tour.night %> noches
+                  <%= tour.days %> días / <%= tour.nights %> noches
                 </div>
                 <div class="right">
                   <%= tour.price %> dólares

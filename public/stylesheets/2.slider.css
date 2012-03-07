@@ -34,6 +34,10 @@
     padding:0px;
 }
 
+#gallery a:hover {
+    text-decoration: none;
+}
+
 #gallery .promotion h2 {
     color: white;
     font-style: italic;

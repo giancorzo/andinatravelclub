@@ -14,8 +14,6 @@ class CreateReviews < ActiveRecord::Migration
       
       t.timestamps
     end
-
-    add_index :reviews, :id
     
     execute <<-SQL
       ALTER TABLE reviews

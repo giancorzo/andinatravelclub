@@ -2,11 +2,13 @@
   <div class="span9"  style="width: 722px;">
     <div id="gallery">
       <% @banners.each do |banner|  %>
-        <%= image_tag banner.image.url(:media) %>
-        <div class="promotion">
-          <h1><%= banner.title %></h1>
-          <h2><%= banner.subtitle %></h2>
-        </div>
+        <%= link_to banner.tour do %>
+          <%= image_tag banner.image.url(:media) %>
+          <div class="promotion">
+            <h1><%= banner.title %></h1>
+            <h2><%= banner.subtitle %></h2>
+          </div>
+        <% end %>
       <% end %>
     </div>    
     <div id="thumbs">      
@@ -42,14 +44,14 @@
         <% @tours.each do |tour| %>
           <li class="span3">
             <div class="thumbnail" style="min-height: 240px;position: relative;">
-              <a href="#">
+              <%= link_to tour do  %>
                 <%= image_tag tour.image.url(:thumb) %>
-              </a>
+              <% end %>
               <h5><%= tour.title  %></h5>
               <p><%= tour.subtitle %></p>
               <div>
                 <div class="left">
-                  <%= tour.days %> días / <%= tour.night %> noches
+                  <%= tour.days %> días / <%= tour.nights %> noches
                 </div>
                 <div class="right">
                   <%= tour.price %> dólares

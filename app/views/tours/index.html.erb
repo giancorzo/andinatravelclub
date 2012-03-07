@@ -20,9 +20,9 @@
   <tr>
     <td><%= tour.title %></td>
     <td><%= tour.subtitle %></td>
-    <td><%= raw RedCloth.new(tour.short_description).to_html %></td>
-    <td><%= raw RedCloth.new(tour.short_itinerary).to_html %></td>
-    <td><%= raw RedCloth.new(tour.itinerary).to_html %></td>
+    <td><%= raw RedCloth.new(truncate(tour.short_description, :length => 50, :omission => "...")).to_html %></td>
+    <td><%= raw RedCloth.new(truncate(tour.short_itinerary, :length => 50, :omission => "...")).to_html %></td>
+    <td><%= raw RedCloth.new(truncate(tour.itinerary, :length => 50, :omission => "...")).to_html %></td>
     <td><%= link_to 'Detalle', tour %></td>
     <td><%= link_to 'Editar', edit_tour_path(tour) %></td>
     <td><%= link_to 'Eliminar', tour, :confirm => 'Esta seguro?', :method => :delete %></td>
@@ -31,11 +31,13 @@
 </table>
 <% else %>
   <div class="tour-banner">
-    <%= image_tag @tour.image.url(:large) %>
-    <div class="promotion">
-      <h1><%= @tour.title %></h1>
-      <h2><%= @tour.subtitle %></h2>
-    </div>    
+    <%= link_to @tour do %>
+      <%= image_tag @tour.image.url(:large) %>
+      <div class="promotion">
+        <h1><%= @tour.title %></h1>
+        <h2><%= @tour.subtitle %></h2>
+      </div>
+    <% end %>
   </div>
   <div class="container" style="margin-bottom: 20px;">
     <div class="rounded" style="min-height: 20px; height: 20px;width: 1016px;margin:10px auto 0px auto;text-align: center;padding-top: 5px;">
@@ -68,7 +70,7 @@
               <p><%= tour.subtitle %></p>
               <div>
                 <div class="left">
-                  <%= tour.days %> días / <%= tour.night %> noches
+                  <%= tour.days %> días / <%= tour.nights %> noches
                 </div>
                 <div class="right">
                   <%= tour.price %> dólares

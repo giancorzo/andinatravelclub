@@ -15,9 +15,10 @@
           <div class="container">
             <a href="javascript:void(0);" class="brand">Andina travel club</a>
             <ul class="nav">
-              <li class="<%=@header_tab == "tour" ? "active" : ""%>"><%= link_to "Administrador de tours",tours_path %></li>
-              <li class="<%=@header_tab == "banner" ? "active" : "" %>"><%= link_to "Administrador de banners", banners_path  %></li>
-              <li class="<%=@header_tab == "account" ? "active" : "" %>"><%= link_to "Administrador de usuarios", accounts_path  %></li>
+              <li class="<%=@header_tab == "tour" ? "active" : ""%>"><%= link_to "Tours",tours_path %></li>
+              <li class="<%=@header_tab == "banner" ? "active" : "" %>"><%= link_to "Banners", banners_path  %></li>
+              <li class="<%=@header_tab == "account" ? "active" : "" %>"><%= link_to "Usuarios", accounts_path  %></li>
+              <li class="<%=@header_tab == "blog" ? "active" : "" %>"><%= link_to "Blog", posts_path  %></li>
             </ul>
             <div class="right" style="color:white;line-height: 40px;">
               Bienvenido, <%= @current_account.name %> | 

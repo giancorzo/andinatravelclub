@@ -13,7 +13,21 @@
   <h3 style="margin: 20px 0px 10px 0px;">¿Cuanto tiempo planea quedarse?</h3>
   <%= f.text_field :days, :style => "margin-left:20px; margin-right:5px;width:70px;" %>días
   <h3 style="margin: 20px 0px 10px 0px;">¿Más o menos cuando planea realizarlo?</h3>            
-  <%= f.date_select :travel_time, {:start_year => Time.now.year, :end_year => (Time.now.year+1), :order => [:day,:month,:year]} %>            
+  <%= f.date_select :travel_time, {:start_year => Time.now.year, :end_year => (Time.now.year+1), :order => [:day,:month,:year]} %>
+  <h3 style="margin: 20px 0px 10px 0px;">¿Cuantas personas son?</h3>
+  <table>
+    <tr>
+      <td><%= f.label :adults, "Adultos",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.text_field :adults, :style => "width:70px;" %></td>
+      <td colspan="2"></td>
+    </tr>
+    <tr>
+      <td><%= f.label :childs, "Niños",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.text_field :childs, :style => "width:70px;" %></td>
+      <td><%= f.label :age, "Edades", :style=> "margin-left:10px;" %></td>
+      <td><%= f.text_field :age, :style => "width:70px;" %></td>
+    </tr>
+  </table>
   <h3 style="margin: 20px 0px 10px 0px;">¿Nos otorga sus datos personales para poder contactarlo?</h3>
   <table>
     <tr>
@@ -22,7 +36,7 @@
     </tr>
     <tr>
       <td><%= f.label :country, "País",:style=>"display:inline;margin-right:5px;" %></td>
-      <td><%= f.country_select :country %></td>
+      <td><%= f.country_select(:country, ["ES","MX"]) %></td>
     </tr>
     <tr>
       <td><%= f.label :city, "Ciudad",:style=>"display:inline;margin-right:5px;" %></td>

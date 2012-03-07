@@ -12,7 +12,6 @@ class CreateBanners < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index :banners, :id
   end
 
   def self.down

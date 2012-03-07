@@ -13,8 +13,6 @@ class CreateImages < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index :images, :id
-    
     execute <<-SQL
       ALTER TABLE images
         ADD CONSTRAINT fk_images_tours

@@ -5,8 +5,6 @@ class CreateInterests < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index :interests, :id
-    
   end
 
   def self.down

@@ -16,4 +16,22 @@ class HomeController < ApplicationController
     @tour = Tour.order("RAND()").first
     @tours = Tour.order("RAND()").limit(6)
   end
+  
+  def about_us
+    @tour = Tour.order("RAND()").first
+    @reviews = Review.order("RAND()").limit(10)
+  end
+  
+  def how_to_pay
+    @tour = Tour.order("RAND()").first
+  end
+  
+  def peru
+    @tour = Tour.order("RAND()").first
+  end
+  
+  def util_information
+    @tour = Tour.order("RAND()").first
+  end
+  
 end

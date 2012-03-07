@@ -22,8 +22,6 @@ class CreateTours < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_index :tours, :id
-    
     execute <<-SQL
       ALTER TABLE tours
         ADD CONSTRAINT fk_interests_tours

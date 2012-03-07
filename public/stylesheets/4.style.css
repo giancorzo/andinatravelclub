@@ -31,6 +31,10 @@
     float: left;
 }
 
+.justify {
+    text-align: justify;
+}
+
 .andina-header {
     margin-top: 5px;    
 }
@@ -138,6 +142,10 @@
     margin-left: 0px;
 }
 
+.tour-banner a {
+    text-decoration:none;
+}
+
 .tour-banner .promotion {
     margin-top: -71px;
     margin-left: 15px;    
@@ -228,3 +236,15 @@
 #quote_travel_time_3i { width: 55px; margin-left: 20px; }
 #quote_travel_time_2i { width: 100px; }
 #quote_travel_time_1i  { width: 70px; }
+
+.dsq-trackback-url input {
+    width: 360px;
+}
+
+.author {    
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #999;
+}
+
