@@ -10,6 +10,8 @@ gem "paperclip"
 gem 'mimetype-fu'
 gem 'RedCloth'
 gem 'carmen'
+gem 'will_paginate', "2.3.15"
+gem 'friendly_id'
 
 # Use unicorn as the web server
 # gem 'unicorn'
