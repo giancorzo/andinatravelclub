@@ -34,7 +34,13 @@
       <%= f.label :popular, :class => "control-label" %>
       <div class="controls">
         <%= f.check_box :popular %>
-      </div>      
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :account_id, :class => "control-label" %>
+      <div class="controls">
+        <%= f.select :account_id, Account.all.map {|account| [account.name,account.id]} %>
+      </div>
     </div>
   </div>
   <div class="span3">

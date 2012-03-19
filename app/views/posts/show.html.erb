@@ -1,20 +1,47 @@
-<p id="notice"><%= notice %></p>
+<% if @current_account  %>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+  <p>
+    <b>Title:</b>
+    <%= @post.title %>
+  </p>
 
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
+  <p>
+    <b>Body:</b>
+    <%= @post.body %>
+  </p>
 
-<p>
-  <b>Popular:</b>
-  <%= @post.popular %>
-</p>
+  <p>
+    <b>Popular:</b>
+    <%= @post.popular %>
+  </p>
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
+<% else %>
+<div class="row">
+  <div class="span8" style="margin-left: 40px;">
+    <div class="rounded" style="padding: 20px;">      
+      <h2><%= @post.title %></h2>
+      <p class="author">by <%= @post.account.name  %></p>
+      <articule style="text-align: justify;">
+        <%= raw RedCloth.new(@post.body).to_html %>
+      </articule>
+    </div>  
+  </div>
+  <div class="span5" style="width: 372px;">
+    <div class="rounded" style="padding: 20px;">
+      <h3>Artículos populares</h3>
+      <ul class="popular-articule">
+        <% @popular.each do |popular| %>
+          <li>
+            <%= link_to popular.title, popular %>
+          </li>          
+        <% end %>        
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>  
+</div>
+<% end %>

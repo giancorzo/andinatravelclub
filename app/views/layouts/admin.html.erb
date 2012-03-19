@@ -19,6 +19,7 @@
               <li class="<%=@header_tab == "banner" ? "active" : "" %>"><%= link_to "Banners", banners_path  %></li>
               <li class="<%=@header_tab == "account" ? "active" : "" %>"><%= link_to "Usuarios", accounts_path  %></li>
               <li class="<%=@header_tab == "blog" ? "active" : "" %>"><%= link_to "Blog", posts_path  %></li>
+              <li class="<%=@header_tab == "media" ? "media" : ""%>"><%= link_to "Media", media_path %></li>
             </ul>
             <div class="right" style="color:white;line-height: 40px;">
               Bienvenido, <%= @current_account.name %> | 

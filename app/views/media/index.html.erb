@@ -1,0 +1,26 @@
+<h1 style="float:left;">Media</h1>
+<div style="float:right;margin-bottom: 10px;">
+  <%= link_to 'Nuevo Media', new_medium_path, :class=> "btn btn-primary" %>
+</div>
+<div class="clear"></div>
+<table class="table table-striped">
+  <tr>
+    <th>Image</th>
+    <th>Path</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @media.each do |medium| %>
+  <tr>
+    <td><%= image_tag  medium.content.url, :size => "200x200" %></td>
+    <td><%= medium.content.url %></td>
+    <td><%= medium.description %></td>
+    <td><%= link_to 'Detalle', medium %></td>
+    <td><%= link_to 'Editar', edit_medium_path(medium) %></td>
+    <td><%= link_to 'Eliminar', medium, :confirm => 'Esta seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

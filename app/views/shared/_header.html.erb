@@ -1,25 +1,29 @@
-<div class="andina-header" style="margin-bottom: 20px;">
+<div class="andina-header">
+  <div class="container">
     <h1 class="left">
-      <%= link_to "Andina travel club", home_path, {:class => "logo", :title => "Andina Travel Club"} %>
+      <%= link_to home_path, {:class => "logo", :title => "Andina Travel Club"} do %>
+        Andina Travel Club
+      <% end %>
     </h1>
     <div class="right">
       <ul class="nav">
-        <li>
-          <%= link_to "Paquetes turísticos",tours_path %>
+        <li class="<%= @header_tab == "tour" ? "active" : "" %>">
+          <%= link_to "PAQUETES TURÍSTICOS",tours_path %>
         </li>
-        <li>
-          <%= link_to "Destinos",tours_by_location_url %>          
+        <li class="<%= @header_tab == "location" ? "active" : "" %>">
+          <%= link_to "DESTINOS",tours_by_location_url %>          
         </li>
-        <li>
-          <%= link_to "Viajes de Interés",tours_by_interest_url %>
+        <li class="<%= @header_tab == "interest" ? "active" : "" %>">
+          <%= link_to "VIAJES DE INTERÉS",tours_by_interest_url %>
         </li>
-        <li>
-          <%= link_to "Blog", posts_path %>
+        <li class="<%= @header_tab == "post" ? "active" : "" %>">
+          <%= link_to "BLOG", posts_path %>
         </li>
-        <li>
-          <%= link_to "Contáctenos", contact_us_url %>
+        <li class="<%= @header_tab == "contact" ? "active" : "" %>">
+          <%= link_to "CONTÁCTENOS", contact_us_url %>
         </li>        
       </ul>
     </div>
-    <div class="clear"></div>
+    <div class="clear"></div>    
+  </div>
 </div>

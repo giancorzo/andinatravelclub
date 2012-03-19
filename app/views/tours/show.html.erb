@@ -183,19 +183,14 @@
       </div>
     </div>
     <div class="span5" style="width: 372px;">
-      <div class="rounded">
-        <div class="quote-content">
-          <h2 style="margin-bottom: 10px;margin-top: 5px;text-align: center;">Pídamos una cotización</h2>
-          <%= render 'quotes/form' %>
-        </div>
-      </div>
+      
       <% if @tour.reviews.to_a.size > 0 %>
-        <div class="rounded" style="padding: 5px 0px;min-height: inherit">
+      <div class="rounded" style="min-height: 200px;">
           <h2 style="margin-bottom: 10px;text-align: center;">Experiencias</h2>
           <ul class="experiencias">
             <% @tour.reviews.each do |review| %>
             <li>
-              <blockquote class="pull-right" style="border:none;">
+              <blockquote class="pull-right" style="border:none;margin-left: 20px;">
                 <p>"<%= review.short_description %>"</p>
                 <small><%= review.name %></small>
               </blockquote>
@@ -203,8 +198,14 @@
             <% end %>
           </ul>
           <div class="clear"></div>
-        </div>
+      </div>
       <% end %>
+      <div class="rounded">
+        <div class="quote-content">
+          <h2 style="margin-bottom: 10px;margin-top: 5px;text-align: center;">Pídamos una cotización</h2>
+          <%= render 'quotes/form' %>
+        </div>
+      </div>
     </div>
   </div>
 <% end %>

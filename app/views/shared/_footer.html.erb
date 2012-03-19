@@ -6,18 +6,17 @@
     </p>
   </div>
   <div class="span6">
-    <h3>Últimas entradas en el blog</h3>
-    <p>ANDINA TRAVEL CLUB conocedores de lo mucho que tenemos por dar a conocer busca a través de muchos años de experiencia acumulada dar a sus clientes lo que mejor conocemos, que es más que realizar una reserva, o comprar un ticket aéreo.</p>
-    <p>ANDINA TRAVEL CLUB conocedores de lo mucho que tenemos por dar a conocer busca a través de muchos años de experiencia acumulada dar a sus clientes lo que mejor conocemos, que es más que realizar una reserva, o comprar un ticket aéreo.</p>
+    <h3 style="margin-bottom: 10px;">Últimas entradas en el blog</h3>
+    <articule><%= raw RedCloth.new(truncate(@last_post.preview, :length => 648, :omission => "...")).to_html %></articule>
+    <%= link_to "Leer más", @last_post %>
   </div>
 </div>
 <div style="margin-left: 20px;" class="clear">
   <div class="footer-nav">
     <ul>
-      <li>Sobre andinaTravelClub.com</li>
-      <li><a href="#">Política de privacidad</a></li>
-      <li><a href="#">Condiciones del servicio</a></li>
-      <li><a href="#">Blog</a></li>
+      <li>Sobre andinaTravelClub.com</li>      
+      <li><%= link_to "Términos y condiciones del servicio", :terms_and_condition %></li>
+      <li><%= link_to "Blog", posts_path %></li>
     </ul>     
   </div>
   <div class="clear" style="margin-bottom: 20px;">Copyright © 2012 andinaTravelClub.com. Todos los derechos reservados.</div>

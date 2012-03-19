@@ -1,0 +1,41 @@
+<% content_for :javascript do %>
+  <script type="text/javascript">
+    $(".tour-gallery a").lightBox();
+    $(".alert").alert();
+  </script>
+<% end %>
+  <div class="row" style="padding-left:20px;">
+  <div style="width:1016px;margin: 0 auto;">
+    <div class="rounded" style="padding:20px;min-height: 500px;text-align: justify;">
+      <h2>Gracias por enviarnos su pedido de cotización</h2>
+      <p>El equipo de <b>Andina Travel Club</b> revisará la información enviada y se estará comunicando lo más pronto posible mediante
+        un correo electrónico a la dirección que proporcionó en la cotización.</p>
+      <p>Cada vez que recibimos un pedido como el suyo, suenan todas las alarmas porque tenemos un compromiso con la calidad. 
+        Esperamos poder responderle en un plazo máximo de 48 horas ( Este tiempo puede variar si es que ha solicitado modificaciones al tour original).</p>
+      <p>En caso no reciba un correo le rogamos revisar la sección de correos bloqueados.</p>
+      <h2 style="margin-bottom: 10px;">Tal vez le pueda interesar revisar la información de nuestro otros tours</h2>
+      <ul class="thumbnails">
+        <% @tours.each do |tour| %>
+          <li class="span3">
+            <div class="thumbnail" style="min-height: 240px;position: relative;">
+              <%= link_to tour do  %>
+                <%= image_tag tour.image.url(:thumb) %>
+              <% end %>
+              <h5><%= tour.title  %></h5>
+              <p><%= tour.subtitle %></p>
+              <div>
+                <div class="left">
+                  <%= tour.days %> días / <%= tour.nights %> noches
+                </div>
+                <div class="right">
+                  <%= tour.price %> dólares
+                </div>
+                <div class="clear"></div>                
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>            
+    </div>    
+  </div>
+</div>

@@ -39,7 +39,7 @@
             </tr>
             <tr>
               <td><%= label_tag :country, "País",:style=>"display:inline;margin-right:5px;" %></td>
-              <td><%= country_select :contact,:country %></td>
+              <td><%= country_select(:contact,:country,["ES","MX","AR","BO","BR","CL","CO","CR","CU","DO","EC","SV","GT","HT","HN","NI","PA","PY","PE","PR","UY","VE"])  %></td>
             </tr>
             <tr>
               <td><%= label_tag :city, "Ciudad",:style=>"display:inline;margin-right:5px;" %></td>
