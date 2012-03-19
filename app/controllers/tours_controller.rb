@@ -9,7 +9,8 @@ class ToursController < ApplicationController
       @header_tab = "tour"
       @tours = Tour.all
       render :layout => "admin"
-    else      
+    else
+      @header_tab = "tour"
       @tours = Tour.order("popularity").where("place = 0 and interest_id is null").all
       @tour = Tour.order("RAND()").first
       render :layout => "application"
@@ -17,12 +18,14 @@ class ToursController < ApplicationController
   end
   
   def index_by_location
+      @header_tab = "location"
       @tours = Tour.order("popularity").where("place = 1")
       @tour = Tour.order("RAND()").first
       render :template => "tours/index", :layout => "application"   
   end
   
   def index_by_interest
+      @header_tab = "interest"
       @tours = Tour.order("popularity").where("interest_id is not null and place = 0").all
       @tour = Tour.order("RAND()").first
       @interests = Interest.all
@@ -40,6 +43,13 @@ class ToursController < ApplicationController
       render :layout => "admin"
     else
       @tour = Tour.find(params[:id])
+      if (@tour.interest and @tour.place == false) then
+        @header_tab = "interest"
+      elsif (@tour.place) then
+        @header_tab = "location"
+      else
+        @header_tab = "tour"
+      end
       render :template => "tours/show", :layout => "application"
     end
   end

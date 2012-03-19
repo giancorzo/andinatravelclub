@@ -10,8 +10,9 @@ class PostsController < ApplicationController
       @posts = Post.all
       render :layout => "admin"
     else
-      @posts = Post.all
-      @popular = Post.where("popular = 1").all
+      @header_tab = "post"
+      @posts = Post.order("created_at desc").all.paginate(:page => params[:page],:per_page => 5)
+      @popular = Post.order("created_at desc").where("popular = 1").all
       render :layout => "application"
     end
   end
@@ -23,7 +24,13 @@ class PostsController < ApplicationController
       @header_tab = "blog"
       @post = Post.find(params[:id])
       render :layout => "admin"
+    else
+      @header_tab = "post"
+      @post = Post.find(params[:id])
+      @popular = Post.order("created_at desc").where("popular = 1").all      
+      render :layout => "application"      
     end
+    
   end
 
   # GET /posts/new

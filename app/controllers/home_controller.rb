@@ -9,8 +9,10 @@ class HomeController < ApplicationController
   end
   
   def contact_us
+    @header_tab = "contact"
     if request.post?
       QuotesMailer.send_contact(params[:contact]).deliver
+      redirect_to :thank_you_contact and return
     end
     
     @tour = Tour.order("RAND()").first
@@ -31,6 +33,10 @@ class HomeController < ApplicationController
   end
   
   def util_information
+    @tour = Tour.order("RAND()").first
+  end
+  
+  def terms_and_condition
     @tour = Tour.order("RAND()").first
   end
   
