@@ -1,5 +1,7 @@
 Andina::Application.routes.draw do
    
+  resources :media
+
   resources :posts
 
   resources :accounts
@@ -22,6 +24,9 @@ Andina::Application.routes.draw do
   match "/how-to-pay" => "home#how_to_pay", :as => :how_to_pay
   match "/util-information" => "home#util_information", :as => :util_information
   match "/peru" => "home#peru", :as => :peru
+  match "/terms_and_conditions" => "home#terms_and_condition", :as => :terms_and_condition
+  match "/thank-you" => "quotes#thank_you", :as => :thank_you
+   match "/thank-you-contact" => "quotes#thank_you_contact", :as => :thank_you_contact
 
   get 'logout' => 'accounts#logout', :as => :logout
   match 'login' => 'accounts#login', :as => :login
