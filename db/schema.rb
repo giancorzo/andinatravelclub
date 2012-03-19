@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120305201122) do
+ActiveRecord::Schema.define(:version => 20120310155747) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -56,6 +56,16 @@ ActiveRecord::Schema.define(:version => 20120305201122) do
     t.datetime "updated_at"
   end
 
+  create_table "media", :force => true do |t|
+    t.string   "description"
+    t.string   "content_file_name"
+    t.string   "content_content_type"
+    t.integer  "content_file_size"
+    t.datetime "content_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -64,9 +74,11 @@ ActiveRecord::Schema.define(:version => 20120305201122) do
     t.integer  "account_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   add_index "posts", ["account_id"], :name => "fk_posts_accounts"
+  add_index "posts", ["slug"], :name => "index_posts_on_slug", :unique => true
 
   create_table "quotes", :force => true do |t|
     t.string   "travel_type"
