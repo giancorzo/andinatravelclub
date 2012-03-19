@@ -44,6 +44,5 @@ $(document).ready(function() {
         $(descriptions).fadeOut(speed);
         $(".image-"+num).stop().fadeIn(speed);
         $(".promo-"+num).stop().fadeIn(speed);
-        console.log("img.image-"+num);
     }    
 });

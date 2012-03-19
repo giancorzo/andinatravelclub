@@ -1,8 +1,20 @@
-.nav { list-style: none; }
+.nav { list-style: none; font-size: 13px; }
 .nav li { display:block;float:left; }
-.nav li a{float:none;padding:10px 10px 11px;line-height:19px;}
+.nav li a{float:none;padding:10px 10px 11px;line-height:19px;font-weight: bold;}
 .nav li a:hover{background-color:transparent;text-decoration:none;}
-.nav .active a, .nav .active a:hover{text-decoration:none;}
+.nav .active a, .nav .active a:hover{
+    background-color:#74ac37;
+    color: #fff;
+    font-weight:bold;
+    display: block;
+    float: left;
+    height: 26px;
+    padding:5px 10px 0 10px;  
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top: 6px;
+}
 
 .experiencias { list-style: none; margin:0px;}
 .experiencias li { display: block; }
@@ -11,7 +23,7 @@
 
 .rounded {
     background-color:#fff; 
-    border:1px solid rgba(0,0,0,0.1);
+    border:1px solid #dbdbdb;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -36,24 +48,33 @@
 }
 
 .andina-header {
-    margin-top: 5px;    
+    background: transparent url('../images/header.jpg') top left repeat-x;
+    padding-top: 10px;
+}
+
+.andina-header a {
+    color: white;
 }
 
 .andina-header .logo {
-    display: block;
-    background-color: #CCC;
+    display: block;    
     width: 300px;
-    height: 70px;
-    text-indent: -1000px;
-    margin-left: 20px;
+    height: 70px;       
+    font-weight: lighter;
+    font-style: italic;
+    margin-left: 20px;    
+}
+
+.andina-header .logo:hover {
+    text-decoration: none;
 }
 
 .andina-header a:hover {
-    color:#00438a;text-decoration:underline;
+    color:white;text-decoration:underline;
 }
 
 .andina-footer {
-    background-color: #bfbfbf;
+    background-color: #dbdbdb;
 }
 
 .andina-footer a:hover {
@@ -82,7 +103,11 @@
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
-    background: #F4F4F4;    
+    background: #ededed;    
+}
+
+.thumbnail {
+     background: #F4F4F4;
 }
 
 .formulario-contacto {    
@@ -213,6 +238,10 @@
     text-align: justify;
 }
 
+.tour-content p {
+    font-size: 15px;
+}
+
 .quote-content {
     padding: 0px 15px;
 }
@@ -248,3 +277,70 @@
     color: #999;
 }
 
+.popular-articule {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.popular-articule li {
+    background: url('../images/bulletside.gif') left no-repeat;
+    background-position-x: 3px;
+    background-position-y: 0.43em;
+    padding-left: 18px;
+    margin-bottom: 10px;
+}
+
+.post-title a {
+    color:#333333;
+}
+
+.phone-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+.skype-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+.mail-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+.msn-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+
+
+.phone-content {
+    margin:  120px 0px 0px 20px;
+    color: white;
+}
+
+.button {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    float: left;
+    margin-right: 10px;
+}
