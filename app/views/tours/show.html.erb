@@ -161,9 +161,11 @@
         <div class="clear"></div>
       </div>
       <div class="rounded">
-        <div class="tour-content">        
+        <div class="tour-content">
           <%= raw RedCloth.new(@tour.short_description).to_html %>
+          <h3 style="margin-top:30px;margin-bottom:10px;"><%=  (@tour.place) ? "Que incluye" : "Itinerario resumido" %></h3>
           <%= raw RedCloth.new(@tour.short_itinerary).to_html %>
+          <h3 style="margin-top:30px;margin-bottom:10px;">Itinerario detallado</h3>
           <%= raw RedCloth.new(@tour.itinerary).to_html %>          
         </div>
         <div id="disqus_thread" style="margin: 0px 16px;"></div>

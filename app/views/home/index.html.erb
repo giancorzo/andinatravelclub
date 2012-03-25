@@ -22,20 +22,25 @@
       <h3 style="text-align: center;border-bottom: 1px solid rgba(0,0,0,0.1)">Central de atención al cliente</h3>
       <div class="line">
         <div class="image"></div>
-        <h5 style="margin-top: 10px;">+511.777.5014</h5>
+        <h5 style="margin-top: 10px;">+511.457.3553&nbsp;&nbsp;-&nbsp;&nbsp;+511.777.5014</h5>
       </div>
       <div class="line">
         <div class="image"></div>
-        <h5 style="margin-top: 10px;">Llámanos por Skype</h5>
+        <h5 style="margin-top: 10px;">
+          <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+          <a href="skype:fernando.atc?call">Llámanos por Skype</a>
+        </h5>
       </div>
       <div class="line" style="border-bottom: 1px solid rgba(0,0,0,0.1);height:60px;">
         <div class="image"></div>
-        <h5 style="margin-top: 10px;">receptivo@andinatravelclub.com</h5>
+        <h5 style="margin-top: 10px;">
+          <%= mail_to "receptivo@andinatravelclub.com" %>
+        </h5>
       </div>
       <div style="margin-left: 18px;">
-        <div class="facebook button">FACEBOOK ICON</div>
-        <div class="twitter button">TWITTER ICON</div>
-        <div class="google-plus button">GOOGLE PLUS ICON</div>
+        <a href="http://www.facebook.com/andinatravelclub" target="blank"><div class="facebook button">FACEBOOK ICON</div></a>        
+        <a href="http://twitter.com/andinaTravlclub" target="blank"><div class="twitter button">TWITTER ICON</div></a>
+        <a href="https://plus.google.com/b/104441395577126259780/104441395577126259780/posts" target="blank"><div class="google-plus button">GOOGLE PLUS ICON</div></a>
         <div class="clear"></div>
       </div>
     </div>
@@ -52,7 +57,7 @@
               <%= link_to tour do  %>
                 <%= image_tag tour.image.url(:thumb) %>
               <% end %>
-              <h5><%= tour.title  %></h5>
+              <h5><%= link_to tour.title, tour, :style => "color: #333;" %></h5>
               <p><%= tour.subtitle %></p>
               <div>
                 <div class="left">
@@ -86,6 +91,12 @@
     <div class="form-home form-facebook" style="padding: 5px 0px;">
       <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fandinatravelclub&amp;width=255&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;appId=113112562038537" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:255px; height:258px;" allowTransparency="true"></iframe>
     </div>
+    <br/>
+    <div>
+      <div class="form-home" style="width: 265px;padding: 5px 0px;text-align: center;">
+        <%= image_tag "/images/tarjetas.gif" %>
+      </div>
+    </div>    
   </div>
   <div class="clear"></div>
 </div>

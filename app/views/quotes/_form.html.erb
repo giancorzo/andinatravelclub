@@ -1,5 +1,31 @@
+<%= content_for :javascript do %>
+  <script type="text/javascript">
+
+      $("#quote_submit").click(function (e) {
+        days = $("#quote_days").val();
+        adults = $("#quote_adults").val();
+        childs = $("#quote_childs").val();
+        age = $("#quote_age").val();
+        name = $("#quote_name").val();
+        city = $("#quote_city").val();
+        phone = $("#quote_phone").val();
+        email = $("#quote_email").val();
+        
+        if (days == "" || adults == "" || name == "" || city == "" || phone == "" || email == "") {
+          alert("Necesita ingresar todos los campos");
+          e.preventDefault();
+        } else {
+          if (childs != "" && age == "") {
+            alert("Debe ingresar las edades de los niños");
+            e.preventDefault();
+          }
+        }
+      });
+
+  </script>
+<% end %>
 <%= form_for [@tour,@tour.quotes.build], :html => { :class => "form-horizontal",  :multipart => true } do |f| %>
-  <h3 style="margin-bottom: 10px;">¿Qué tipo de viaje está buscando?</h3>
+  <h3 style="margin-bottom: 10px;">¿Qué tipo de hotel le gustaria?</h3>
     <div style="margin-left:10px;">
       <% [ 'Lujo Total', 'Muy bueno', 'Bueno', 'Básico'].each do |travel_type| %>
         <% if travel_type == "Muy bueno" %>
@@ -7,7 +33,7 @@
         <% else %>
           <%= f.radio_button :travel_type,travel_type, :style => "margin:0px;margin-top:-3px;" %>
         <% end %>
-        <span style="margin-right:10px;"><%= travel_type.humanize %></span>
+        <span style="margin-right:5px;"><%= travel_type.humanize %></span>
       <% end %>              
     </div>
   <h3 style="margin: 20px 0px 10px 0px;">¿Cuanto tiempo planea quedarse?</h3>
@@ -26,6 +52,12 @@
       <td><%= f.text_field :childs, :style => "width:70px;" %></td>
       <td><%= f.label :age, "Edades", :style=> "margin-left:10px;" %></td>
       <td><%= f.text_field :age, :style => "width:70px;" %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Ej. 5,3,2</td>
     </tr>
   </table>
   <h3 style="margin: 20px 0px 10px 0px;">¿Nos otorga sus datos personales para poder contactarlo?</h3>
@@ -53,13 +85,13 @@
   </table>
   <h3 style="margin: 20px 0px 10px 0px;">¿Qué forma de pago le gustaría utilizar?</h3>
     <div style="margin-left:20px;">
-      <% ['Transferencia Bancaria','Tarjeta de crédito'].each do |forma| %>
-        <% if forma == "Transferencia Bancaria" %>
+      <% ['Trans. Bancaria','Tarjeta de crédito'].each do |forma| %>
+        <% if forma == "Trans. Bancaria" %>
           <%= f.radio_button :payment_type, forma, {:checked => true, :style => "margin:0px;margin-top:-3px;"} %>
         <% else %>
           <%= f.radio_button :payment_type, forma,:style => "margin:0px;margin-top:-3px;" %>
         <% end %>
-        <span style="margin-right:10px;"><%= forma.humanize %></span>
+        <span style="margin-right:5px;"><%= forma.humanize %></span>
       <% end %>                
     </div>
   <h3 style="margin: 20px 0px 10px 0px;">¿Algún comentario adicional?</h3>

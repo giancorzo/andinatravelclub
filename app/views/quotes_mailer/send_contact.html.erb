@@ -4,11 +4,12 @@
         <title></title>
     </head>
     <body style="background-color: #FFF;font-family: 'Lucida Grande', Verdana, Sans-serif;">
-      <p>Nombre del solicitante: <%= @contact[:name] %></p>
-      <p>Pais: <%= @contact[:country] %></p>
-      <p>Ciudad: <%= @contact[:city] %></p>
-      <p>Teléfono: <%= @contact[:phone] %></p>
-      <p>Correo: <%= @contact[:email] %></p>
+      <div style="border-bottom: 1px solid #CCC;">Datos del solicitante:</div><br/>
+      Nombre del solicitante: <%= @contact[:name] %><br/>
+      Pais: <%= @contact[:country] %><br/>
+      Ciudad: <%= @contact[:city] %><br/>
+      Teléfono: <%= @contact[:phone] %><br/>
+      Correo: <%= @contact[:email] %><br/>
       <br/>
       <p>Mensaje: <%= @contact[:comments] %></p>        
     </body>
