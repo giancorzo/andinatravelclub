@@ -5,12 +5,14 @@
   </script>
 <% end %>
 <div class="tour-banner">
-  <%= link_to @tour do %>
-    <%= image_tag @tour.image.url(:large) %>
-    <div class="promotion">
-      <h1><%= @tour.title %></h1>
-      <h2><%= @tour.subtitle %></h2>
-    </div>
+  <% if @tour != nil then %>
+    <%= link_to @tour do %>
+      <%= image_tag @tour.image.url(:large) %>
+      <div class="promotion">
+        <h1><%= @tour.title %></h1>
+        <h2><%= @tour.subtitle %></h2>
+      </div>
+    <% end %>  
   <% end %>
 </div>
 <div class="row">

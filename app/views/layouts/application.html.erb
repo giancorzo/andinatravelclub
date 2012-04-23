@@ -43,8 +43,18 @@
         font-size: 16px
       }
     </style>
-  <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>  
+  <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>    
   <%= csrf_meta_tag %>
+  <script type="text/javascript">
+  if (!Modernizr.borderradius) {
+      $.getScript("/javascripts/jquery/jquery.corner.js", function () {
+          $(".rounded").corner('6px');
+          $(".form-home").corner('6px');
+          $(".thumbnail").corner('6px');
+          $(".btn").corner('6px');
+      });
+  }        
+  </script>  
 </head>
 <body>
   <%= render "shared/header" %>
@@ -59,7 +69,7 @@
       <%= render "shared/footer" %>
     </div>
   </div>  
-  <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>  
+  <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts","modernizr.custom", :cache => false %>  
   <%= yield :javascript %>
 </body>
 </html>
