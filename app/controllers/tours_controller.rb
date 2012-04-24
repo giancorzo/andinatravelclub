@@ -73,7 +73,7 @@ class ToursController < ApplicationController
   # POST /tours.xml
   def create    
     @tour = Tour.new(params[:tour])
-
+    @tour.popularity = 0
     respond_to do |format|
       if @tour.save
         format.html { redirect_to(@tour, :notice => 'Se creo el tour exitosamente.') }
