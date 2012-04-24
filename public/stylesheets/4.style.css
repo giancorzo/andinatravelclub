@@ -52,6 +52,13 @@
     padding-top: 10px;
 }
 
+@media (min-width: 768px) and (max-width: 980px) {
+    
+    .andina-header {
+        width:1048px;
+    }
+}
+
 .andina-header a {
     color: white;
 }
@@ -75,6 +82,12 @@
 
 .andina-footer {
     background-color: #dbdbdb;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {   
+    .andina-footer {
+        width:1048px;
+    }
 }
 
 .andina-footer a:hover {
