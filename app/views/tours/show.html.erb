@@ -163,11 +163,11 @@
       <div class="rounded">
         <div class="tour-content">
           <%= raw RedCloth.new(@tour.short_description).to_html %>
-          <% if (@tour.short_itinerary != nil) then %>
+          <% if (@tour.short_itinerary != '') then %>
             <h3 style="margin-top:30px;margin-bottom:10px;"><%=  (@tour.place) ? "Que incluye" : "Itinerario resumido" %></h3>
             <%= raw RedCloth.new(@tour.short_itinerary).to_html %>
           <% end %>
-          <% if (@tour.itinerary != nil) then %>
+          <% if (@tour.itinerary != '') then %>
             <h3 style="margin-top:30px;margin-bottom:10px;">Itinerario detallado</h3>
             <%= raw RedCloth.new(@tour.itinerary).to_html %>
           <% end %>

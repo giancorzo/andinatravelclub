@@ -27,7 +27,7 @@
 <%= form_for [@tour,@tour.quotes.build], :html => { :class => "form-horizontal",  :multipart => true } do |f| %>
   <h3 style="margin-bottom: 10px;">¿Qué tipo de hotel le gustaria?</h3>
     <div style="margin-left:10px;">
-      <% [ 'Lujo Total', 'Muy bueno', 'Bueno', 'Básico'].each do |travel_type| %>
+      <% [ 'Lujo', 'Superior', 'Standard', 'Básico'].each do |travel_type| %>
         <% if travel_type == "Muy bueno" %>
           <%= f.radio_button :travel_type,travel_type, {:checked => true,:style => "margin:0px;margin-top:-3px;"} %>
         <% else %>
