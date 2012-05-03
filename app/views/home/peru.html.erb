@@ -4,15 +4,6 @@
     $(".alert").alert();
   </script>
 <% end %>
-<div class="tour-banner">
-  <%= link_to @tour do %>
-    <%= image_tag @tour.image.url(:large) %>
-    <div class="promotion">
-      <h1><%= @tour.title %></h1>
-      <h2><%= @tour.subtitle %></h2>
-    </div>    
-  <% end %>
-</div>
   <div class="row" style="padding-left:20px;">
   <div style="width:1016px;margin: 0 auto;">
     <div class="rounded" style="padding:20px;min-height: 500px;">

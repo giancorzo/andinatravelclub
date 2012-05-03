@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <title>Andina Travel club</title>  
+  <title>Andina Travel Club - Experiencias únicas en cada destino</title>  
     <script type="text/javascript">
       WebFontConfig = {
         google: { families: [ 'Open Sans' ] }
@@ -30,17 +30,14 @@
       .wf-loading h1 {
         font-family: serif;
         font-weight: 400;
-        font-size: 16px
       }
       .wf-inactive h1 {
         font-family: serif;
         font-weight: 400;
-        font-size: 16px
       }
       .wf-active h1 {
         font-family: 'Open Sans', serif;
         font-weight: 400;
-        font-size: 16px
       }
     </style>
   <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>    
@@ -48,7 +45,9 @@
 </head>
 <body>
   <%= render "shared/header" %>
-  <div class="container">
+  <div class="container" style="position:relative">
+    <div class="andina-bg-monkey"></div>
+    <div class="andina-bg-bird"></div>
     <div class="rounded" style="padding-top: 20px;">      
       <%= yield %>            
     </div>
@@ -59,7 +58,7 @@
       <%= render "shared/footer" %>
     </div>
   </div>  
-  <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>    
+  <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>
   <%= yield :javascript %>
 </body>
 </html>

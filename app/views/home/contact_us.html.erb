@@ -28,8 +28,8 @@
       <%= flash[:error] %>
     </div>
   <% end %>    
-  <div class="span8" style="margin-left: 35px;width: 518px;min-height: 848px;">
-    <div class="rounded">
+  <div class="span8" style="margin-left: 35px;width: 518px;">
+    <div class="rounded" style="height: 480px;min-height: 480px;">
       <h2 style="margin: 10px 10px;">Contáctenos</h2>
       <div style="margin: 0px 10px 10px 10px">
         <%= form_tag contact_us_url, :html => { :class => "form-horizontal"} do %>
@@ -68,6 +68,8 @@
           </table>
         <% end %>        
       </div>
+    </div>
+    <div class="rounded" style="height: 480px;min-height: 480px;">
       <h2 style="margin: 10px 10px;">Contacto directo</h2>
       <table style="margin: 0px 10px;">
         <tr>
@@ -107,7 +109,7 @@
           +511.777.5014<br/>
         </address>        
       </div>
-      
+
     </div>    
   </div>
   <div class="span6" style="width: 480px;">
@@ -121,12 +123,9 @@
               <% end %>
               <h5><%= link_to tour.title, tour, :style => "color: #333;" %></h5>
               <p><%= tour.subtitle %></p>
-              <div>
+              <div class="info-days">
                 <div class="left">
                   <%= tour.days %> días / <%= tour.nights %> noches
-                </div>
-                <div class="right">
-                  <%= tour.price %> dólares
                 </div>
                 <div class="clear"></div>                
               </div>        

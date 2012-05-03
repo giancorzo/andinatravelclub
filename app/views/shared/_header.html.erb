@@ -2,28 +2,36 @@
   <div class="container andina-header-fix">
     <h1 class="left">
       <%= link_to home_path, {:class => "logo", :title => "Andina Travel Club"} do %>
-        Andina Travel Club
+        Andina Travel Club - Experiencias únicas en cada destino
       <% end %>
     </h1>
     <div class="right">
       <ul class="nav">
-        <li class="<%= @header_tab == "tour" ? "active" : "" %>">
+        <li class="nav-starter">&nbsp;</li>
+        <li class="<%= @header_tab == "tour" ? "active" : "" %>">          
           <%= link_to "PAQUETES TURÍSTICOS",tours_path %>
+          <div class="nav-separator"></div>
         </li>
         <li class="<%= @header_tab == "location" ? "active" : "" %>">
-          <%= link_to "DESTINOS",tours_by_location_url %>          
+          <%= link_to "DESTINOS",tours_by_location_url %>
+          <div class="nav-separator"></div>
         </li>
         <li class="<%= @header_tab == "interest" ? "active" : "" %>">
           <%= link_to "VIAJES DE INTERÉS",tours_by_interest_url %>
+          <div class="nav-separator"></div>
         </li>
         <li class="<%= @header_tab == "post" ? "active" : "" %>">
           <%= link_to "BLOG", posts_path %>
+          <div class="nav-separator"></div>
         </li>
         <li class="<%= @header_tab == "contact" ? "active" : "" %>">
-          <%= link_to "CONTÁCTENOS", contact_us_url %>
+          <%= link_to "CONTÁCTENOS", contact_us_url %>          
         </li>        
+        <li class="nav-finisher">&nbsp;</li>
       </ul>
     </div>        
   </div>
 </div>
+<div class="andina-header-bottom"><div class="andina-header-bottom-curve"></div></div>
+<div class="andina-header-bottom-bg"></div>
 <div class="clear"></div>

@@ -11,36 +11,46 @@
         <% end %>
       <% end %>
     </div>    
-    <div id="thumbs">      
+    <div id="thumbs">
       <% @banners.each do |bann| %>
         <%= image_tag bann.image.url(:thumb) %>
       <% end %>
     </div>    
   </div>
   <div class="span3">
-    <div class="formulario-contacto form-home">
-      <h3 style="text-align: center;border-bottom: 1px solid rgba(0,0,0,0.1)">Central de atención al cliente</h3>
-      <div class="line">
-        <div class="image"></div>
-        <h5 style="margin-top: 10px;">+511.457.3553&nbsp;&nbsp;-&nbsp;&nbsp;+511.777.5014</h5>
-      </div>
-      <div class="line">
-        <div class="image"></div>
-        <h5 style="margin-top: 10px;">
-          <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
-          <a href="skype:fernando.atc?call">Llámanos por Skype</a>
-        </h5>
-      </div>
-      <div class="line" style="border-bottom: 1px solid rgba(0,0,0,0.1);height:60px;">
-        <div class="image"></div>
-        <h5 style="margin-top: 10px;">
-          <%= mail_to "receptivo@andinatravelclub.com" %>
-        </h5>
-      </div>
-      <div style="margin-left: 18px;">
-        <a href="http://www.facebook.com/andinatravelclub" target="blank"><div class="facebook button">FACEBOOK ICON</div></a>        
-        <a href="http://twitter.com/andinaTravlclub" target="blank"><div class="twitter button">TWITTER ICON</div></a>
-        <a href="https://plus.google.com/b/104441395577126259780/104441395577126259780/posts" target="blank"><div class="google-plus button">GOOGLE PLUS ICON</div></a>
+    <div class="formulario-contacto form-home central">
+      <h3 class="title">Central de atención al cliente</h3>
+      <table cellpadding="0" cellspacing="0" border="0" class="content">
+        <tr>
+          <td><div class="phone-image"></div></td>
+          <td class="central-text">
+              <span>(511)457.3553</span><br/>
+              <span>(511)777.5014</span>
+          </td>
+        </tr>
+        <tr><td colspan="2"><br/></td></tr>
+        <tr>
+          <td><div class="skype-image"></div></td>
+          <td class="central-text">
+              <span>Llámanos por Skype</span><br/>
+              <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+              <a href="skype:fernando.atc?call">Andina.travel.peru</a>
+          </td>
+        </tr>
+        <tr><td colspan="2"><br/></td></tr>
+        <tr>
+          <td><div class="email-image"></div></td>
+          <td class="central-text">
+              <span>Escríbenos aquí:</span><br/>
+              <%= mail_to "receptivo@andinatravelclub.com" %>
+          </td>
+        </tr>
+      </table>
+      <div class="central-bottom">
+        <a href="http://www.facebook.com/andinatravelclub" target="blank" title="Andina travel club en facebook"><div class="connect-facebook"></div></a>        
+        <a href="http://twitter.com/andinaTravlclub" target="blank" title="Andina travel club en twitter"><div class="connect-twitter"></div></a>
+        <a href="https://plus.google.com/b/104441395577126259780/104441395577126259780/posts" target="blank" title="Andina travel club en Google plus"><div class="connect-google-plus"></div></a>
+        <a href="http://twitter.com/andinaTravlclub" target="blank" title="Andina travel club en twitter"><div class="connect-youtube"></div></a>
         <div class="clear"></div>
       </div>
     </div>
@@ -57,9 +67,9 @@
               <%= link_to tour do  %>
                 <%= image_tag tour.image.url(:thumb) %>
               <% end %>
-              <h5><%= link_to tour.title, tour, :style => "color: #333;" %></h5>
+              <h5><%= link_to tour.title, tour %></h5>
               <p><%= tour.subtitle %></p>
-              <div>
+              <div class="info-days">
                 <div class="left">
                   <%= tour.days %> días / <%= tour.nights %> noches
                 </div>
@@ -73,12 +83,12 @@
     <div class="clear"></div>
   </div>
   <div class="span3">
-    <div class="form-home form-experiencias" style="padding: 5px 0px;">
+    <div class="form-home form-experiencias" style="padding: 5px 0px;">      
       <h2 style="margin-bottom: 10px;text-align: center;">Experiencias</h2>
       <ul class="experiencias">
         <% @reviews.each do |review| %>
         <li>
-          <blockquote class="pull-right">
+          <blockquote>
             <p>"<%= review.short_description %>"</p>
             <small><%= review.name %></small>
           </blockquote>
@@ -88,8 +98,10 @@
       <div class="clear"></div>
     </div>
     <br/>
-    <div class="form-home form-facebook" style="padding: 5px 0px;">
-      <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fandinatravelclub&amp;width=255&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=false&amp;header=false&amp;appId=113112562038537" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:255px; height:258px;" allowTransparency="true"></iframe>
+    <div class="form-home form-facebook" style="padding: 5px 0px;">      
+      <div class="fb-like-box" data-href="http://www.facebook.com/andinatravelclub" 
+           data-width="255" data-height="258" data-show-faces="true" 
+           data-stream="false" data-header="false"></div>
     </div>
     <br/>
     <div>
@@ -100,3 +112,11 @@
   </div>
   <div class="clear"></div>
 </div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=113112562038537";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
