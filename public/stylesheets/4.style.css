@@ -2,6 +2,7 @@ body {
    background: transparent url('../images/bg.jpg') repeat-x; 
    background-position: 0px 100px;
    background-color: #e9e9e9;
+   overflow: hidden;
 }
 
 h1,h2,h3,h4,h5 {
