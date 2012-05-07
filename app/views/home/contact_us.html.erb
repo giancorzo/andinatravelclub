@@ -4,17 +4,6 @@
     $(".alert").alert();
   </script>
 <% end %>
-<div class="tour-banner">
-  <% if @tour != nil then %>
-    <%= link_to @tour do %>
-      <%= image_tag @tour.image.url(:large) %>
-      <div class="promotion">
-        <h1><%= @tour.title %></h1>
-        <h2><%= @tour.subtitle %></h2>
-      </div>
-    <% end %>  
-  <% end %>
-</div>
 <div class="row">
   <% if flash[:notice] %>
     <div class="span12 alert alert-success fade in" data-alert="alert" style="margin: 10px 48px;">

@@ -12,7 +12,12 @@ class ToursController < ApplicationController
     else
       @header_tab = "tour"
       @tours = Tour.order("popularity").where("place = 0 and interest_id is null").all
-      @tour = Tour.order("RAND()").first
+      if session[:tour_header].nil? then
+        @tour = Tour.order("RAND()").first
+        session[:tour_header] = @tour.id
+      else
+        @tour = Tour.find(session[:tour_header])
+      end      
       render :layout => "application"
     end
   end
@@ -20,14 +25,24 @@ class ToursController < ApplicationController
   def index_by_location
       @header_tab = "location"
       @tours = Tour.order("popularity").where("place = 1")
-      @tour = Tour.order("RAND()").first
+      if session[:tour_header].nil? then
+        @tour = Tour.order("RAND()").first
+        session[:tour_header] = @tour.id
+      else
+        @tour = Tour.find(session[:tour_header])
+      end
       render :template => "tours/index", :layout => "application"   
   end
   
   def index_by_interest
       @header_tab = "interest"
       @tours = Tour.order("popularity").where("interest_id is not null and place = 0").all
-      @tour = Tour.order("RAND()").first
+      if session[:tour_header].nil? then
+        @tour = Tour.order("RAND()").first
+        session[:tour_header] = @tour.id
+      else
+        @tour = Tour.find(session[:tour_header])
+      end
       @interests = Interest.all
       render :template => "tours/index", :layout => "application"    
   end

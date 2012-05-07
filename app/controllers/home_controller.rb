@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def index
     @tours = Tour.order("popularity").where("place = 0 and interest_id is null").all
     @banners = Banner.all
-    @reviews = Review.all
+    @reviews = Review.where("home = 1").all
   end
   
   def contact_us
@@ -14,8 +14,7 @@ class HomeController < ApplicationController
       QuotesMailer.send_contact(params[:contact]).deliver
       redirect_to :thank_you_contact and return
     end
-    
-    @tour = Tour.order("RAND()").first
+
     @tours = Tour.order("RAND()").limit(6)
   end
   

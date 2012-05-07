@@ -194,7 +194,8 @@
       <div class="rounded" style="min-height: 200px;">
           <h2 style="margin-bottom: 10px;text-align: center;">Experiencias</h2>
           <ul class="experiencias">
-            <% @tour.reviews.each do |review| %>
+            <% @tour.reviews.each_with_index do |review,i| %>
+            <% break if i == 3; %>
             <li>
               <blockquote class="pull-right" style="border:none;margin-left: 20px;">
                 <p>"<%= review.short_description %>"</p>
