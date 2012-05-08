@@ -1,3 +1,13 @@
+<% content_for :javascript do %>
+<script type="text/javascript">  
+  $(".Microsoft_Live_Messenger_PresenceButton").removeAttr( 'style' );
+  $(".Microsoft_Live_Messenger_PresenceButton div").removeAttr( 'style' );
+  $(".Microsoft_Live_Messenger_PresenceButton div canvas").remove();
+  $(".Microsoft_Live_Messenger_PresenceButton img").remove();
+  $(".Microsoft_Live_Messenger_PresenceButton span").remove();
+  $(".Microsoft_Live_Messenger_PresenceButton a div").addClass('connect-msn');
+</script>
+<% end %>
 <div class="row clear" style="margin:0px;">
   <div class="span9"  style="width: 722px;">
     <div id="gallery">
@@ -47,10 +57,19 @@
         </tr>
       </table>
       <div class="central-bottom">
-        <a href="http://www.facebook.com/andinatravelclub" target="blank" title="Andina travel club en facebook"><div class="connect-facebook"></div></a>        
-        <a href="http://twitter.com/andinaTravlclub" target="blank" title="Andina travel club en twitter"><div class="connect-twitter"></div></a>
-        <a href="https://plus.google.com/b/104441395577126259780/104441395577126259780/posts" target="blank" title="Andina travel club en Google plus"><div class="connect-google-plus"></div></a>
-        <a href="http://twitter.com/andinaTravlclub" target="blank" title="Andina travel club chat"><div class="connect-msn"></div></a>
+        <a href="http://www.facebook.com/andinatravelclub" target="_blank" title="Andina travel club en facebook"><div class="connect-facebook"></div></a>        
+        <a href="http://twitter.com/andinaTravlclub" target="_blank" title="Andina travel club en twitter"><div class="connect-twitter"></div></a>
+        <a href="https://plus.google.com/b/104441395577126259780/104441395577126259780/posts" target="_blank" title="Andina travel club en Google plus"><div class="connect-google-plus"></div></a>
+        
+        <script type="text/javascript" src="http://settings.messenger.live.com/controls/1.0/PresenceButton.js"></script>
+        <div
+          id="Microsoft_Live_Messenger_PresenceButton_511488505152206d"
+          msgr:width="100"
+          msgr:backColor="#FCFCFC"
+          msgr:altBackColor="#FFFFFF"
+          msgr:foreColor="#424542"
+          msgr:conversationUrl="http://settings.messenger.live.com/Conversation/IMMe.aspx?invitee=511488505152206d@apps.messenger.live.com&mkt=en-US"></div>
+        <script type="text/javascript" src="http://messenger.services.live.com/users/511488505152206d@apps.messenger.live.com/presence?dt=&mkt=en-US&cb=Microsoft_Live_Messenger_PresenceButton_onPresence"></script>
         <div class="clear"></div>
       </div>
     </div>
