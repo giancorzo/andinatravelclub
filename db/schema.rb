@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120310155747) do
+ActiveRecord::Schema.define(:version => 20120508202209) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -132,8 +132,10 @@ ActiveRecord::Schema.define(:version => 20120310155747) do
     t.integer  "interest_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   add_index "tours", ["interest_id"], :name => "fk_interests_tours"
+  add_index "tours", ["slug"], :name => "index_tours_on_slug", :unique => true
 
 end
