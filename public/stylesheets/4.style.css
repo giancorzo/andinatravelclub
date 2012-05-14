@@ -136,7 +136,7 @@ h1,h2,h3,h4,h5 {
     display: block;
     width: 388px;
     height: 81px;     
-    text-indent: -1000px;      
+    text-indent: -10000px;      
 }
 
 .andina-header .logo:hover {
