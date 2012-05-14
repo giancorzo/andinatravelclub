@@ -8,7 +8,7 @@
   <div class="span6">
     <h3 style="margin-bottom: 10px;">Últimas entradas en el blog</h3>
     <% if @last_post != nil then  %>
-      <articule><%= raw RedCloth.new(truncate(@last_post.preview, :length => 648, :omission => "...")).to_html %></articule>
+      <articule><%= raw RedCloth.new(truncate(@last_post.preview.gsub(/<object.*object>/,""), :length => 648, :omission => "...")).to_html %></articule>
       <%= link_to "Leer más", @last_post %>
     <% end %>
   </div>
