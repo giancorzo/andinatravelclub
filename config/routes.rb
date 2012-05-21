@@ -54,7 +54,15 @@ Andina::Application.routes.draw do
   match "/viajes_lujo_paquete2.htm" => redirect("/tours/descubra-el-lago-titicaca")
   match "/viajes_lujo_paquete3.htm" => redirect("/tours/peru-unico")
   match "/viajes_gastronomico_paquete1.htm" => redirect("/tours/tour-gastronomico")
-
+  match "/experiencias.htm" => redirect("/about")
+  match "/pago.htm" => redirect("/how-to-pay")
+  match "/nosotros.htm" => redirect("/about")
+  match "/cotizador-new.php" => redirect("/contact")
+  match "/galeria_fotos.htm" => redirect("http://www.facebook.com/andinatravelclub?sk=photos")
+  match "/contactenos.php" => redirect("/contact")
+  match "/skype_andina.htm" => redirect("/home")
+  match "/pruebago.htm" => redirect("/home")
+  
   get 'logout' => 'accounts#logout', :as => :logout
   match 'login' => 'accounts#login', :as => :login
   
