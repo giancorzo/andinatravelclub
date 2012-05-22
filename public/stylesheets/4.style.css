@@ -1,3 +1,25 @@
+.wf-loading p {
+font-family: serif
+}
+.wf-inactive p {
+font-family: serif
+}
+.wf-active p {
+font-family: 'Open Sans', serif
+}
+.wf-loading h1 {
+font-family: serif;
+font-weight: 400;
+}
+.wf-inactive h1 {
+font-family: serif;
+font-weight: 400;
+}
+.wf-active h1 {
+font-family: 'Open Sans', serif;
+font-weight: 400;
+}
+
 body {
    background: transparent url('../images/bg.jpg') repeat-x; 
    background-position: 0px 100px;
