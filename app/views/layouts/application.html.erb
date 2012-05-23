@@ -1,55 +1,57 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <title>Andina Travel Club - Experiencias únicas en cada destino</title>
-    <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>  
-    <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: [ 'Open Sans' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="description" content="AndinaTravelClub es una agencia de viajes receptivo. Ofrecemos la posibilidad de vivir una experiencias únicas y que el viaje sea un recuerdo para toda la vida"/>
+    <meta name="keywords" content="Viaje a Perú,  cotizaciones de viajes, tours a Perú, tours de interés, vacaciones perfectas, clima, paquetes turísticos, testimoniales, guía del viajero, visas, transporte, embajadas, cambio de monedas, tours, museos, vuelos, calendario turístico, macchu picchu, nazca, arequipa, máncora, manu, Andina travel, Andina travel club, Peru Travel, travel club"/>
+      <title>Andina Travel Club - Experiencias únicas en cada destino</title>
+      <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>  
+      <script type="text/javascript">
+        WebFontConfig = {
+          google: { families: [ 'Open Sans' ] }
+        };
+        (function() {
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
             '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-    </script>  
-  <%= csrf_meta_tag %>  
-  
-  <script type="text/javascript">
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+        })();
+      </script>  
+      <%= csrf_meta_tag %>  
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-31507667-1']);
-    _gaq.push(['_trackPageview']);
+      <script type="text/javascript">
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-31507667-1']);
+        _gaq.push(['_trackPageview']);
 
-  </script>  
-</head>
-<body>
-  <%= render "shared/header" %>
-  <div class="container" style="position:relative">
-    <div class="andina-bg-monkey"></div>
-    <div class="andina-bg-bird"></div>
-    <div class="rounded" style="padding-top: 20px;">      
-      <%= yield %>            
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>  
+  </head>
+  <body>
+    <%= render "shared/header" %>
+    <div class="container" style="position:relative">
+      <div class="andina-bg-monkey"></div>
+      <div class="andina-bg-bird"></div>
+      <div class="rounded" style="padding-top: 20px;">      
+        <%= yield %>            
+      </div>
     </div>
-  </div>
-  <%= render "shared/footer_link" %>
-  <div class="andina-footer clear">
-    <div class="container">
-      <%= render "shared/footer" %>
-    </div>
-  </div>  
-  <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>
-  <%= yield :javascript %>
-</body>
+    <%= render "shared/footer_link" %>
+    <div class="andina-footer clear">
+      <div class="container">
+        <%= render "shared/footer" %>
+      </div>
+    </div>  
+    <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>
+    <%= yield :javascript %>
+  </body>
 </html>
