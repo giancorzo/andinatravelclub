@@ -1,19 +1,28 @@
 .wf-loading p {
-font-family: serif
+    font-family: serif;
 }
 .wf-inactive p {
-font-family: serif
+    font-family: serif;
 }
 .wf-active p {
-font-family: 'Open Sans', serif
+    font-family: 'Open Sans', serif;
 }
+
+.wf-active .text-wf {
+    font-family: 'Open Sans', serif;
+}
+
+.wf-active {
+    font-family: 'Open Sans'
+}
+
 .wf-loading h1 {
-font-family: serif;
-font-weight: 400;
+    font-family: serif;
+    font-weight: 400;
 }
 .wf-inactive h1 {
-font-family: serif;
-font-weight: 400;
+    font-family: serif;
+    font-weight: 400;
 }
 .wf-active h1 {
 font-family: 'Open Sans', serif;
@@ -64,7 +73,7 @@ h1,h2,h3,h4,h5 {
 }
 .andina-header .nav li { background: transparent url('../images/nav-bg.gif') top left repeat-x; }
 
-.nav li a{float:left;padding:10px 10px 11px;line-height:19px;font-weight: bold;}
+.nav li a{float:left;padding:10px 10px 11px;line-height:19px;font-weight: normal;}
 .andina-header .nav li a {padding:6px 10px}
 .nav li a:hover{background-color:transparent;text-decoration:none;}
 
@@ -245,6 +254,10 @@ h1,h2,h3,h4,h5 {
 
 .formulario-contacto h3 {
     background: #F4F4F4;
+}
+
+.safari .formulario-contacto h3 {
+    background: #F4F4F4;    
 }
 
 .formulario-contacto .line {
@@ -516,7 +529,7 @@ h1,h2,h3,h4,h5 {
     border-bottom: 1px solid #ccc;
     height: 50px;
     line-height: 50px;
-    font-size: 123%;
+    font-size: 160%;
     background: #fcfcfc !important;
 }
 
@@ -534,6 +547,14 @@ h1,h2,h3,h4,h5 {
     padding-left: 10px;
     font-size: 88%;
 }
+
+.safari .central .central-text {
+    font-weight: normal;
+    padding-left: 10px;
+    font-size: 96%;
+}
+
+
 .phone-image {
     background: url('../images/phone.gif') top left no-repeat;
     width: 34px;

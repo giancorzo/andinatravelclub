@@ -2,14 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="description" content="AndinaTravelClub es una agencia de viajes receptivo. Ofrecemos la posibilidad de vivir una experiencias únicas y que el viaje sea un recuerdo para toda la vida"/>
-    <meta name="keywords" content="Viaje a Perú,  cotizaciones de viajes, tours a Perú, tours de interés, vacaciones perfectas, clima, paquetes turísticos, testimoniales, guía del viajero, visas, transporte, embajadas, cambio de monedas, tours, museos, vuelos, calendario turístico, macchu picchu, nazca, arequipa, máncora, manu, Andina travel, Andina travel club, Peru Travel, travel club"/>
+    <meta name="description" content="AndinaTravelClub es una agencia de viajes receptivo. Ofrecemos la posibilidad de vivir una experiencias únicas y que el viaje sea un recuerdo para toda la vida"/>    
       <title>Andina Travel Club - Experiencias únicas en cada destino</title>
       <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>  
-      <script type="text/javascript">
-        WebFontConfig = {
-          google: { families: [ 'Open Sans' ] }
-        };
+      <script type="text/javascript">        
+        WebFontConfig = { google: {families: [ 'Open Sans' ]} };
         (function() {
           var wf = document.createElement('script');
           wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
@@ -34,7 +31,7 @@
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
-      </script>  
+      </script>
   </head>
   <body>
     <%= render "shared/header" %>
@@ -52,6 +49,11 @@
       </div>
     </div>  
     <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>
+    <script>
+      if ( /Safari/.test(navigator.userAgent) ) {
+        $("body").addClass("safari");
+      }
+    </script>    
     <%= yield :javascript %>
   </body>
 </html>
