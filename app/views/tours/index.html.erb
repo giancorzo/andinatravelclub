@@ -30,6 +30,10 @@
 <% end %>
 </table>
 <% else %>
+<% content_for :meta do %>
+    <meta name="description" content="Descubre nuestros paquetes turísticos organizados por destino e interés"/>
+    <title>Andina Travel Club - Paquetes turisticos por destino e interés</title>
+<% end %> 
   <div class="tour-banner">
     <% if @tour != nil then %>
       <%= link_to @tour do %>

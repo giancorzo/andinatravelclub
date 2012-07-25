@@ -2,9 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="description" content="AndinaTravelClub es una agencia de viajes receptivo. Ofrecemos la posibilidad de vivir una experiencias únicas y que el viaje sea un recuerdo para toda la vida"/>    
-      <title>Andina Travel Club - Experiencias únicas en cada destino</title>
-      <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style" %>  
+    <%= yield :meta %>
+      <% if Rails.env.production? then %>
+        <%= stylesheet_link_tag "styles-bundle", :cache => true %>
+      <% else %>
+        <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style", :cache => false %>
+      <% end %>  
       <script type="text/javascript">        
         WebFontConfig = { google: {families: [ 'Open Sans' ]} };
         (function() {
@@ -47,8 +50,12 @@
       <div class="container">
         <%= render "shared/footer" %>
       </div>
-    </div>  
-    <%= javascript_include_tag "jquery-1.7.1.min","application","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>
+    </div>
+    <% if Rails.env.production? then %>
+      <%= javascript_include_tag "bundle/application", :cache => true %>
+    <% else %>
+      <%= javascript_include_tag "jquery-1.7.1.min","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>
+    <% end %>
     <script>
       if ( /Safari/.test(navigator.userAgent) ) {
         $("body").addClass("safari");

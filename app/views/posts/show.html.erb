@@ -20,10 +20,14 @@
   <%= link_to 'Edit', edit_post_path(@post) %> |
   <%= link_to 'Back', posts_path %>
 <% else %>
+<% content_for :meta do %>
+    <meta name="description" content="<%= truncate(@post.preview.gsub(/<object.*object>/,""), :length => 648, :omission => "...") %>"/>    
+    <title>Andina Travel Club - <%= @post.title %></title>
+<% end %>  
 <div class="row">
   <div class="span8" style="margin-left: 40px;">
     <div class="rounded" style="padding: 20px;">      
-      <h2><%= @post.title %></h2>
+      <h1 style="font-size: 24px;line-height: 36px;"><%= @post.title %></h1>
       <p class="author">by <%= @post.account.name  %></p>
       <articule style="text-align: justify;">
         <%= raw RedCloth.new(@post.body).to_html %>

@@ -121,6 +121,10 @@
 <hr>
 <%= render 'reviews/form' %>
 <% else %>
+<% content_for :meta do %>
+    <meta name="description" content="<%= @tour.subtitle %>"/>
+    <title>Andina Travel Club - <%= @tour.title %></title>
+<% end %>
   <% content_for :javascript do %>
     <script type="text/javascript">
       $(".tour-gallery a").lightBox();
