@@ -32,6 +32,13 @@
     <meta name="description" content="El blog oficial de Andina travel club. Tratamos de brindar la mayor cantidad de información sobre viajes y tours a Perú."/>    
     <title>Andina Travel Club - Blog de turismo receptivo a Perú</title>
 <% end %>
+<% content_for :javascript do %>
+    <script type="text/javascript">
+      $(".pagination .disabled a").click(function(e) {
+        e.preventDefault();
+      })
+    </script>
+<% end %>
 <div class="row">
   <div class="span8" style="margin-left: 40px;">
     <div class="rounded" style="padding: 20px;">
