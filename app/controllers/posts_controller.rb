@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       render :layout => "admin"
     else
       @header_tab = "post"
-      @posts = Post.order("created_at desc").all.paginate(:page => params[:page],:per_page => 5)
+      @posts = Post.paginate(:page => params[:page],:per_page => 5).order("created_at desc")
       @popular = Post.order("created_at desc").where("popular = 1").all
       render :layout => "application"
     end
