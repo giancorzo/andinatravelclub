@@ -7635,3 +7635,1302 @@ ActionView::Template::Error (undefined method `country_select' for #<#<Class:0x0
   Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.3ms)
+
+
+Started GET "/" for 190.234.105.102 at 2015-05-29 08:39:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[35mBanner Load (0.4ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity[0m
+  [1m[35mReview Load (0.3ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE (home = 1)
+  Rendered home/index.html.erb within layouts/application (23.3ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer_link.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 230ms (Views: 181.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.102 at 2015-05-29 08:39:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.102 at 2015-05-29 08:39:28 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 08:39:28 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 08:39:28 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.102 at 2015-05-29 08:39:28 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.102 at 2015-05-29 08:39:29 +0000
+
+
+Started GET "/contactenos" for 190.234.105.102 at 2015-05-29 08:39:32 +0000
+Processing by HomeController#contact_us as HTML
+  [1m[36mTour Load (1.3ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6[0m
+  Rendered home/contact_us.html.erb within layouts/application (30.3ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (undefined method `country_select' for #<#<Class:0x000000064c5940>:0x00000005bd4908>):
+    35:             </tr>
+    36:             <tr>
+    37:               <td><%= label_tag :country, "País",:style=>"display:inline;margin-right:5px;" %></td>
+    38:               <td><%= country_select(:contact,:country,["ES","MX","AR","BO","BR","CL","CO","CR","CU","DO","EC","SV","GT","HT","HN","NI","PA","PY","PE","PR","UY","VE"])  %></td>
+    39:             </tr>
+    40:             <tr>
+    41:               <td><%= label_tag :city, "Ciudad",:style=>"display:inline;margin-right:5px;" %></td>
+  app/views/home/contact_us.html.erb:38:in `block in _app_views_home_contact_us_html_erb__2267894297342053707_48126040'
+  app/views/home/contact_us.html.erb:29:in `_app_views_home_contact_us_html_erb__2267894297342053707_48126040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.4ms)
+
+
+Started GET "/contactenos" for 190.234.105.102 at 2015-05-29 08:39:33 +0000
+Processing by HomeController#contact_us as HTML
+  [1m[35mTour Load (1.5ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6
+  Rendered home/contact_us.html.erb within layouts/application (21.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `country_select' for #<#<Class:0x000000064c5940>:0x00000005806ad8>):
+    35:             </tr>
+    36:             <tr>
+    37:               <td><%= label_tag :country, "País",:style=>"display:inline;margin-right:5px;" %></td>
+    38:               <td><%= country_select(:contact,:country,["ES","MX","AR","BO","BR","CL","CO","CR","CU","DO","EC","SV","GT","HT","HN","NI","PA","PY","PE","PR","UY","VE"])  %></td>
+    39:             </tr>
+    40:             <tr>
+    41:               <td><%= label_tag :city, "Ciudad",:style=>"display:inline;margin-right:5px;" %></td>
+  app/views/home/contact_us.html.erb:38:in `block in _app_views_home_contact_us_html_erb__2267894297342053707_46145140'
+  app/views/home/contact_us.html.erb:29:in `_app_views_home_contact_us_html_erb__2267894297342053707_46145140'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.4ms)
+
+
+Started GET "/contactenos" for 190.234.105.102 at 2015-05-29 08:49:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#contact_us as HTML
+  Rendered home/contact_us.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    35:             </tr>
+    36:             <tr>
+    37:               <td><%= label_tag :country, "País",:style=>"display:inline;margin-right:5px;" %></td>
+    38:               <td><%= country_select(:contact,:country,["ES","MX","AR","BO","BR","CL","CO","CR","CU","DO","EC","SV","GT","HT","HN","NI","PA","PY","PE","PR","UY","VE"])  %></td>
+    39:             </tr>
+    40:             <tr>
+    41:               <td><%= label_tag :city, "Ciudad",:style=>"display:inline;margin-right:5px;" %></td>
+  app/views/home/contact_us.html.erb:38:in `block in _app_views_home_contact_us_html_erb__287811317448725617_43684320'
+  app/views/home/contact_us.html.erb:29:in `_app_views_home_contact_us_html_erb__287811317448725617_43684320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.4ms)
+
+
+Started GET "/contactenos" for 190.234.105.102 at 2015-05-29 08:51:59 +0000
+Processing by HomeController#contact_us as HTML
+  [1m[35mTour Load (2.0ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6
+  Rendered home/contact_us.html.erb within layouts/application (58.8ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer_link.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 253ms (Views: 248.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:00 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.102 at 2015-05-29 08:52:01 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.102 at 2015-05-29 08:52:02 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.102 at 2015-05-29 08:52:02 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.102 at 2015-05-29 08:52:02 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.102 at 2015-05-29 08:52:02 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.102 at 2015-05-29 08:52:02 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.102 at 2015-05-29 08:52:02 +0000
+
+
+Started GET "/contactenos" for 190.234.105.102 at 2015-05-29 08:53:47 +0000
+Processing by HomeController#contact_us as HTML
+  [1m[36mTour Load (1.5ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6[0m
+  Rendered home/contact_us.html.erb within layouts/application (54.9ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 145.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 08:53:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.102 at 2015-05-29 08:53:48 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.102 at 2015-05-29 08:53:48 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.102 at 2015-05-29 08:53:49 +0000
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 08:54:13 +0000
+Processing by ToursController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT `tours`.* FROM `tours`[0m
+  Rendered tours/index.html.erb within layouts/admin (4.2ms)
+Completed 200 OK in 81ms (Views: 45.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 08:54:13 +0000
+Processing by ToursController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT `tours`.* FROM `tours`[0m
+  Rendered tours/index.html.erb within layouts/admin (3.4ms)
+Completed 200 OK in 36ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 08:54:14 +0000
+
+
+Started GET "/assets/boostrap-responsive.min.css?body=1" for 190.234.105.102 at 2015-05-29 08:54:14 +0000
+
+
+Started GET "/assets/admin.css?body=1" for 190.234.105.102 at 2015-05-29 08:54:14 +0000
+
+
+Started GET "/" for 190.234.105.102 at 2015-05-29 08:54:30 +0000
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[35mBanner Load (0.4ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity[0m
+  [1m[35mReview Load (0.3ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE (home = 1)
+  Rendered home/index.html.erb within layouts/application (10.9ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer_link.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 120ms (Views: 102.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:31 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:31 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:31 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.102 at 2015-05-29 08:54:32 +0000
+
+
+Started GET "/tours/peru/destino" for 190.234.105.102 at 2015-05-29 08:57:28 +0000
+Processing by ToursController#index_by_location as HTML
+  [1m[36mTour Load (1.7ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.7ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/tours_controller.rb:31:in `index_by_location'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/tours/peru/destino" for 190.234.105.102 at 2015-05-29 08:57:29 +0000
+Processing by ToursController#index_by_location as HTML
+  [1m[35mTour Load (1.2ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.2ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/tours_controller.rb:31:in `index_by_location'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.7ms)
+
+
+Started GET "/tours/peru/destino" for 190.234.105.102 at 2015-05-29 08:59:01 +0000
+Processing by ToursController#index_by_location as HTML
+  [1m[36mTour Load (1.4ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.9ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/tours_controller.rb:31:in `block in index_by_location'
+  app/controllers/tours_controller.rb:31:in `index_by_location'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.3ms)
+
+
+Started GET "/tours/peru/destino" for 190.234.105.102 at 2015-05-29 09:00:16 +0000
+Processing by ToursController#index_by_location as HTML
+  [1m[35mTour Load (1.2ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.4ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/tours_controller.rb:31:in `index_by_location'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.4ms)
+
+
+Started GET "/tours/peru/destino" for 190.234.105.102 at 2015-05-29 09:00:35 +0000
+Processing by ToursController#index_by_location as HTML
+  [1m[36mTour Load (1.7ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1[0m
+  [1m[35mTour Load (0.4ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 1)  ORDER BY popularity
+  Rendered tours/index.html.erb within layouts/application (1.7ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 90ms (Views: 79.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:00:36 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.102 at 2015-05-29 09:00:36 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.102 at 2015-05-29 09:00:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:36 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:36 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.102 at 2015-05-29 09:00:37 +0000
+
+
+Started GET "/tours/peru/interes" for 190.234.105.102 at 2015-05-29 09:00:43 +0000
+Processing by ToursController#index_by_interest as HTML
+  [1m[36mTour Load (1.3ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.3ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/tours_controller.rb:43:in `index_by_interest'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.8ms)
+
+
+Started GET "/tours/peru/interes" for 190.234.105.102 at 2015-05-29 09:00:44 +0000
+Processing by ToursController#index_by_interest as HTML
+  [1m[35mTour Load (1.1ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/tours_controller.rb:43:in `index_by_interest'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+
+
+Started GET "/tours/peru/interes" for 190.234.105.102 at 2015-05-29 09:01:10 +0000
+Processing by ToursController#index_by_interest as HTML
+  [1m[36mTour Load (1.0ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1[0m
+  [1m[35mInterest Load (0.4ms)[0m  SELECT `interests`.* FROM `interests`
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (interest_id is not null and place = 0)  ORDER BY popularity[0m
+  Rendered tours/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 83.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:01:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:10 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.102 at 2015-05-29 09:01:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.102 at 2015-05-29 09:01:10 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.102 at 2015-05-29 09:01:11 +0000
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 09:01:13 +0000
+Processing by ToursController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT `tours`.* FROM `tours`[0m
+  Rendered tours/index.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 48ms (Views: 24.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 09:01:14 +0000
+Processing by ToursController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.2ms)[0m  [1mSELECT `tours`.* FROM `tours`[0m
+  Rendered tours/index.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:01:14 +0000
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 09:01:27 +0000
+Processing by ToursController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.2ms)[0m  [1mSELECT `tours`.* FROM `tours`[0m
+  Rendered tours/index.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 09:01:27 +0000
+Processing by ToursController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.5ms)[0m  [1mSELECT `tours`.* FROM `tours`[0m
+  Rendered tours/index.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:01:28 +0000
+
+
+Started GET "/blog" for 190.234.105.102 at 2015-05-29 09:01:41 +0000
+
+ActionController::RoutingError (uninitialized constant PostsController):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (143.6ms)
+
+
+Started GET "/blog" for 190.234.105.102 at 2015-05-29 09:01:42 +0000
+
+ActionController::RoutingError (uninitialized constant PostsController):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.1ms)
+
+
+Started GET "/nosotros" for 190.234.105.102 at 2015-05-29 09:01:50 +0000
+Processing by HomeController#about_us as HTML
+  [1m[35mTour Load (1.5ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[36mReview Load (1.4ms)[0m  [1mSELECT  `reviews`.* FROM `reviews`  ORDER BY RAND() LIMIT 10[0m
+  Rendered home/about_us.html.erb within layouts/application (6.4ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 116ms (Views: 100.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:51 +0000
+
+
+Started GET "/peru" for 190.234.105.102 at 2015-05-29 09:01:53 +0000
+Processing by HomeController#peru as HTML
+  [1m[35mTour Load (1.2ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1
+  Rendered home/peru.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:01:54 +0000
+
+
+Started GET "/informacion-util" for 190.234.105.102 at 2015-05-29 09:02:02 +0000
+Processing by HomeController#util_information as HTML
+  [1m[36mTour Load (1.6ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1[0m
+  Rendered home/util_information.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 103ms (Views: 99.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:03 +0000
+
+
+Started GET "/formas-de-pago" for 190.234.105.102 at 2015-05-29 09:02:41 +0000
+Processing by HomeController#how_to_pay as HTML
+  [1m[35mTour Load (1.2ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1
+  Rendered home/how_to_pay.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 96ms (Views: 93.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:42 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:42 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:42 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:42 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:42 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:43 +0000
+
+
+Started GET "/" for 190.234.105.102 at 2015-05-29 09:02:45 +0000
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+  [1m[36mBanner Load (0.5ms)[0m  [1mSELECT `banners`.* FROM `banners`[0m
+  [1m[35mTour Load (0.4ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity
+  [1m[36mReview Load (0.8ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE (home = 1)[0m
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 100ms (Views: 90.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.102 at 2015-05-29 09:02:46 +0000
+
+
+Started GET "/" for 190.234.105.102 at 2015-05-29 09:16:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[35mBanner Load (0.5ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity[0m
+  [1m[35mReview Load (0.3ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE (home = 1)
+  Rendered home/index.html.erb within layouts/application (17.1ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer_link.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 1068ms (Views: 1029.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:16:45 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.102 at 2015-05-29 09:16:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/accounts.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/home.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/banners.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/images.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/media.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/quotes.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/tours.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/reviews.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.102 at 2015-05-29 09:16:46 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.102 at 2015-05-29 09:16:47 +0000
+
+
+Started GET "/login" for 190.234.105.102 at 2015-05-29 09:17:59 +0000
+Processing by AccountsController#login as HTML
+Redirected to http://andinatravelclub-giancorzo-1.c9.io/tours/peru
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 09:17:59 +0000
+Processing by ToursController#index as HTML
+  [1m[36mAccount Load (1.1ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT `tours`.* FROM `tours`
+  Rendered tours/index.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 64ms (Views: 33.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:00 +0000
+
+
+Started GET "/assets/boostrap-responsive.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:00 +0000
+
+
+Started GET "/assets/admin.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:00 +0000
+
+
+Started GET "/banners" for 190.234.105.102 at 2015-05-29 09:18:04 +0000
+Processing by BannersController#index as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  [1m[35mBanner Load (0.3ms)[0m  SELECT `banners`.* FROM `banners`
+  Rendered banners/index.html.erb within layouts/admin (1.7ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/boostrap-responsive.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:04 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:04 +0000
+
+
+Started GET "/assets/admin.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:04 +0000
+
+
+Started GET "/accounts" for 190.234.105.102 at 2015-05-29 09:18:06 +0000
+Processing by AccountsController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT `accounts`.* FROM `accounts`
+  Rendered accounts/index.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:07 +0000
+
+
+Started GET "/assets/boostrap-responsive.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:07 +0000
+
+
+Started GET "/assets/admin.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:07 +0000
+
+
+Started GET "/blog" for 190.234.105.102 at 2015-05-29 09:18:08 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT `posts`.* FROM `posts`
+  Rendered posts/index.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 38ms (Views: 24.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:08 +0000
+
+
+Started GET "/assets/boostrap-responsive.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:08 +0000
+
+
+Started GET "/assets/admin.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:08 +0000
+
+
+Started GET "/media" for 190.234.105.102 at 2015-05-29 09:18:10 +0000
+Processing by MediaController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Media> at /home/ubuntu/workspace/app/models/media.rb:17)
+  [1m[35mMedia Load (0.4ms)[0m  SELECT `media`.* FROM `media`
+  Rendered media/index.html.erb within layouts/admin (3.8ms)
+Completed 200 OK in 36ms (Views: 26.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:10 +0000
+
+
+Started GET "/assets/boostrap-responsive.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:10 +0000
+
+
+Started GET "/assets/admin.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:10 +0000
+
+
+Started GET "/tours/peru" for 190.234.105.102 at 2015-05-29 09:18:12 +0000
+Processing by ToursController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT `tours`.* FROM `tours`
+  Rendered tours/index.html.erb within layouts/admin (1.1ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:12 +0000
+
+
+Started GET "/assets/admin.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:12 +0000
+
+
+Started GET "/assets/boostrap-responsive.min.css?body=1" for 190.234.105.102 at 2015-05-29 09:18:12 +0000

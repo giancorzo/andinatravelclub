@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spring', group: :development
 gem 'paperclip'
 gem 'friendly_id'
+gem 'RedCloth'
+gem 'will_paginate'
+gem 'country_select'
 
 group :development do
     gem 'annotate'

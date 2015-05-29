@@ -28,7 +28,7 @@ class ToursController < ApplicationController
       @tours = Tour.order("popularity").where("place = 1")
       if session[:tour_header].nil? then
         @tour = Tour.order("RAND()").first
-        session[:tour_header] = @tour.id
+        session[:tour_header] = @tour.id unless @tour == nil
       else
         @tour = Tour.find(session[:tour_header])
       end
@@ -40,7 +40,7 @@ class ToursController < ApplicationController
       @tours = Tour.order("popularity").where("interest_id is not null and place = 0").all
       if session[:tour_header].nil? then
         @tour = Tour.order("RAND()").first
-        session[:tour_header] = @tour.id
+        session[:tour_header] = @tour.id unless @tour == nil
       else
         @tour = Tour.find(session[:tour_header])
       end
