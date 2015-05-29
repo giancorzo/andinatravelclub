@@ -1,9 +1,25 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# == Schema Information
+#
+# Table name: reviews
+#
+#  id                  :integer          not null, primary key
+#  description         :text(65535)
+#  short_description   :text(65535)
+#  home                :boolean          default(FALSE)
+#  name                :string(255)
+#  tour_id             :integer
+#  created_at          :datetime
+#  updated_at          :datetime
+#  avatar_file_name    :string(255)
+#  avatar_content_type :string(255)
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  description: MyText
-  name: MyString
+  tour_id: 
 
 two:
-  description: MyText
-  name: MyString
+  tour_id: 

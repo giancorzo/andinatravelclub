@@ -1,6 +1,7 @@
 class ToursController < ApplicationController
-  
+
   skip_before_filter :check_account, :only => [:index, :index_by_location, :index_by_interest, :show]
+  before_action :set_tour, only: [:show, :edit, :update, :destroy]
   
   # GET /tours
   # GET /tours.xml
@@ -53,11 +54,9 @@ class ToursController < ApplicationController
     
     if current_account
       @header_tab = "tour"
-      @tour = Tour.find(params[:id])
       @review = Review.new
       render :layout => "admin"
     else
-      @tour = Tour.find(params[:id])
       if (@tour.interest and @tour.place == false) then
         @header_tab = "interest"
       elsif (@tour.place) then
@@ -80,18 +79,16 @@ class ToursController < ApplicationController
   # GET /tours/1/edit
   def edit
     @header_tab = "tour"
-    @tour = Tour.find(params[:id])
     render :layout => "admin"
   end
 
   # POST /tours
   # POST /tours.xml
   def create    
-    @tour = Tour.new(params[:tour])
-    @tour.popularity = 0
+    @tour = Tour.new(tour_params)
     respond_to do |format|
       if @tour.save
-        format.html { redirect_to(@tour, :notice => 'Se creo el tour exitosamente.') }
+        format.html { redirect_to tours_path, :notice => 'Se creo el tour exitosamente.' }
         format.xml  { render :xml => @tour, :status => :created, :location => @tour }
       else
         format.html { render :action => "new" }
@@ -103,11 +100,9 @@ class ToursController < ApplicationController
   # PUT /tours/1
   # PUT /tours/1.xml
   def update
-    @tour = Tour.find(params[:id])
-
     respond_to do |format|
-      if @tour.update_attributes(params[:tour])
-        format.html { redirect_to(@tour, :notice => 'Se actualizo el tour exitosamente.') }
+      if @tour.update(tour_params)
+        format.html { redirect_to tours_path, :notice => 'Se actualizo el tour exitosamente.' }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -119,12 +114,22 @@ class ToursController < ApplicationController
   # DELETE /tours/1
   # DELETE /tours/1.xml
   def destroy
-    @tour = Tour.find(params[:id])
+      
     @tour.destroy
-
     respond_to do |format|
       format.html { redirect_to(tours_url) }
       format.xml  { head :ok }
     end
+  end    
+  
+  private
+  
+  def set_tour
+      @tour = Tour.find(params[:id])
   end
+  
+    def tour_params
+      params.require(:tour).permit(:title, :subtitle, :short_description,:short_itinerary,:itinerary,:days,:nights,:price,:place,:interest_id)
+    end  
+  
 end

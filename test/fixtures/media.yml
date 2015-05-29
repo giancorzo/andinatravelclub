@@ -1,4 +1,18 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# == Schema Information
+#
+# Table name: media
+#
+#  id                   :integer          not null, primary key
+#  description          :string(255)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  content_file_name    :string(255)
+#  content_content_type :string(255)
+#  content_file_size    :integer
+#  content_updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   description: MyString

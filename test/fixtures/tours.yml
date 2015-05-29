@@ -1,15 +1,45 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# == Schema Information
+#
+# Table name: tours
+#
+#  id                :integer          not null, primary key
+#  title             :string(255)
+#  subtitle          :string(255)
+#  short_description :text(65535)
+#  short_itinerary   :text(65535)
+#  itinerary         :text(65535)
+#  days              :integer
+#  nights            :integer
+#  price             :integer
+#  place             :boolean          default(FALSE)
+#  slug              :string(255)
+#  interest_id       :integer
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   title: MyString
   subtitle: MyString
-  short_description: MyString
-  short_itinerary: MyString
-  itinerary: MyString
+  short_description: MyText
+  short_itinerary: MyText
+  itinerary: MyText
+  days: 1
+  nights: 1
+  price: 1
+  place: false
+  interest_id: 
 
 two:
   title: MyString
   subtitle: MyString
-  short_description: MyString
-  short_itinerary: MyString
-  itinerary: MyString
+  short_description: MyText
+  short_itinerary: MyText
+  itinerary: MyText
+  days: 1
+  nights: 1
+  price: 1
+  place: false
+  interest_id: 

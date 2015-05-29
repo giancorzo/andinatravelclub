@@ -1,42 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <%= yield :meta %>
-      <% if Rails.env.production? then %>
-        <%= stylesheet_link_tag "styles-bundle", :cache => true %>
-      <% else %>
-        <%= stylesheet_link_tag "0.bootstrap.min","2.slider","3.jquery.lightbox-0.5","4.style", :cache => false %>
-      <% end %>  
-      <script type="text/javascript">        
-        WebFontConfig = { google: {families: [ 'Open Sans' ]} };
-        (function() {
-          var wf = document.createElement('script');
-          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-          wf.type = 'text/javascript';
-          wf.async = 'true';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(wf, s);
-        })();
-      </script>  
-      <%= csrf_meta_tag %>  
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%= yield :meta %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script type="text/javascript">        
+    WebFontConfig = { google: {families: [ 'Open Sans' ]} };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
 
-      <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31507667-1']);
+    _gaq.push(['_trackPageview']);
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-31507667-1']);
-        _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-      </script>
-  </head>
-  <body>
+  </script>  
+</head>
+<body>
     <%= render "shared/header" %>
     <div class="container" style="position:relative">
       <div class="andina-bg-monkey"></div>
@@ -50,17 +45,13 @@
       <div class="container">
         <%= render "shared/footer" %>
       </div>
-    </div>
-    <% if Rails.env.production? then %>
-      <%= javascript_include_tag "bundle/application", :cache => true %>
-    <% else %>
-      <%= javascript_include_tag "jquery-1.7.1.min","mocha","jquery.lightbox-0.5.min","bootstrap-alerts", :cache => false %>
-    <% end %>
+    </div>  
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script>
       if ( /Safari/.test(navigator.userAgent) ) {
         $("body").addClass("safari");
       }
     </script>    
-    <%= yield :javascript %>
-  </body>
+    <%= yield :javascript %>    
+</body>
 </html>

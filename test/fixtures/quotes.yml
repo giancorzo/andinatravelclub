@@ -1,23 +1,33 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# == Schema Information
+#
+# Table name: quotes
+#
+#  id           :integer          not null, primary key
+#  travel_type  :string(255)
+#  days         :integer
+#  travel_time  :date
+#  name         :string(255)
+#  country      :string(255)
+#  city         :string(255)
+#  phone        :string(255)
+#  email        :string(255)
+#  payment_type :string(255)
+#  comments     :string(255)
+#  adults       :integer
+#  childs       :integer
+#  age          :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#
 
-one:
-  travel_type: MyString
-  days: 1
-  travel_time: 2012-02-17
-  name: MyString
-  country: MyString
-  city: MyString
-  email: MyString
-  payment_type: MyString
-  comments: MyString
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-two:
-  travel_type: MyString
-  days: 1
-  travel_time: 2012-02-17
-  name: MyString
-  country: MyString
-  city: MyString
-  email: MyString
-  payment_type: MyString
-  comments: MyString
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

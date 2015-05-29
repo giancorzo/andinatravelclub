@@ -1,21 +1,22 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
   
   before_filter :check_account, :except => [:login, :logout]
-  before_filter :last_post
-  before_filter :set_carmen_locale
-  
-  protected
 
+  protected
+  
   def current_account
     begin
       @current_account ||= Account.find session[:account_id]
     rescue ActiveRecord::RecordNotFound => e
+      logger.error e
       return nil
     end
     @current_account
   end
-
+  
   def check_account    
     unless current_account
       flash[:error] = "Debe loguearse primero"
@@ -24,17 +25,10 @@ class ApplicationController < ActionController::Base
       redirect_to login_url and return
     end
   end 
-
+  
   def permission_denied
     flash[:warn] = "No tiene permiso"
     redirect_to home_url
   end  
-  
-  def last_post
-    @last_post = Post.order("created_at desc").first
-  end
-  
-  def set_carmen_locale
-    Carmen.default_locale = :es
-  end
+
 end

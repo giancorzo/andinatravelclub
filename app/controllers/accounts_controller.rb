@@ -1,4 +1,6 @@
 class AccountsController < ApplicationController
+  before_action :set_account, only: [:show, :edit, :update, :destroy]
+  
   # GET /accounts
   # GET /accounts.xml
   def index
@@ -11,7 +13,6 @@ class AccountsController < ApplicationController
   # GET /accounts/1.xml
   def show
     @header_tab = "account"
-    @account = Account.find(params[:id])
     render :layout => "admin"
   end
 
@@ -26,18 +27,17 @@ class AccountsController < ApplicationController
   # GET /accounts/1/edit
   def edit
     @header_tab = "account"
-    @account = Account.find(params[:id])
     render :layout => "admin"
   end
 
   # POST /accounts
   # POST /accounts.xml
   def create
-    @account = Account.new(params[:account])
+    @account = Account.new(account_params)
 
     respond_to do |format|
       if @account.save
-        format.html { redirect_to(accounts_path, :notice => 'Account was successfully created.') }
+        format.html { redirect_to(accounts_path, :notice => 'Cuenta creada correctamente') }
         format.xml  { render :xml => @account, :status => :created, :location => @account }
       else
         format.html { render :action => "new" }
@@ -49,11 +49,9 @@ class AccountsController < ApplicationController
   # PUT /accounts/1
   # PUT /accounts/1.xml
   def update
-    @account = Account.find(params[:id])
-
     respond_to do |format|
-      if @account.update_attributes(params[:account])
-        format.html { redirect_to(accounts_path, :notice => 'Account was successfully updated.') }
+      if @account.update(account_params)
+        format.html { redirect_to(accounts_path, :notice => 'Cuenta actualizada correctamente') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -65,11 +63,10 @@ class AccountsController < ApplicationController
   # DELETE /accounts/1
   # DELETE /accounts/1.xml
   def destroy
-    @account = Account.find(params[:id])
     @account.destroy
 
     respond_to do |format|
-      format.html { redirect_to(accounts_url) }
+      format.html { redirect_to accounts_url, notice: 'Cuenta eliminada correctamente.' }
       format.xml  { head :ok }
     end
   end
@@ -108,5 +105,15 @@ class AccountsController < ApplicationController
     session[:account_id] = nil
     session[:return_to] = nil    
     redirect_to home_url
+  end  
+  
+  private
+  
+  def set_account
+    @account = Account.find(params[:id])
   end
+  
+    def account_params
+      params.require(:account).permit(:name, :email, :password)
+    end
 end
