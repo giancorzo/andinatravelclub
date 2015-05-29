@@ -16,6 +16,7 @@
 #  interest_id       :integer
 #  created_at        :datetime
 #  updated_at        :datetime
+#  popularity        :integer          default(0)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

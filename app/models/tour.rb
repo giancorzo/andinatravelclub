@@ -16,6 +16,7 @@
 #  interest_id       :integer
 #  created_at        :datetime
 #  updated_at        :datetime
+#  popularity        :integer          default(0)
 #
 
 class Tour < ActiveRecord::Base
