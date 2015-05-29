@@ -1,0 +1,643 @@
+ 
+.wf-loading p {
+    font-family: serif;
+}
+.wf-inactive p {
+    font-family: serif;
+}
+.wf-active p {
+    font-family: 'Open Sans', serif;
+}
+
+.wf-active .text-wf {
+    font-family: 'Open Sans', serif;
+}
+
+.wf-active {
+    font-family: 'Open Sans'
+}
+
+body {
+   background: transparent url('../images/bg.jpg') repeat-x; 
+   background-position: 0px 100px;
+   background-color: #e9e9e9;
+   overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5 {
+    color: #73af23;
+}
+
+.andina-bg-monkey {
+    background: transparent url('../images/linea-nazca-mono.gif') top left; 
+    width: 133px;
+    height: 255px;
+    position:absolute;    
+    left: -133px;
+    top: 88px;
+}
+
+.andina-bg-bird {
+    background: transparent url('../images/linea-nazca-colibri.gif') top left; 
+    width: 132px;
+    height: 255px;
+    position:absolute;
+    left: 1048px;
+    top: 93px;  
+}
+
+.nav { 
+    list-style: none; 
+    font-size: 13px;    
+}
+
+.andina-header .nav {
+    margin-top: 23px;
+}
+
+.nav li { 
+    display:block;
+    float:left;     
+}
+.andina-header .nav li { background: transparent url('../images/nav-bg.gif') top left repeat-x; }
+
+.nav li a{float:left;padding:10px 10px 11px;line-height:19px;font-weight: normal;}
+.andina-header .nav li a {padding:6px 10px}
+.nav li a:hover{background-color:transparent;text-decoration:none;}
+
+.andina-header .nav .nav-starter {
+    background: transparent url('../images/nav-left.gif') top left;
+    width: 10px;
+    height: 31px;
+}
+
+.andina-header .nav .nav-finisher {
+    background: transparent url('../images/nav-right.gif') top left;
+    width: 10px;
+    height: 31px;    
+}
+
+.andina-header .nav .nav-separator {
+    background: transparent url('../images/nav-separator.gif') top left;
+    width: 2px;
+    height: 31px;
+    float:left;
+}
+
+.experiencias { list-style: none; margin:0px;}
+.experiencias li { display: block; }
+.experiencias blockquote p {
+    font-size: 14px;
+}
+
+.container {width: 1048px;}
+
+.rounded {
+    background-color:#fff; 
+    border:1px solid #dbdbdb;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    -moz-box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    padding-bottom: 1em;
+    min-height: 800px;
+    margin-top: 10px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.andina-header {
+    background: transparent url('../images/header.jpg') top left repeat-x;    
+}
+
+@media (min-width: 768px) and (max-width: 980px) {    
+    .andina-header {
+        width:1048px;
+    }
+}
+
+.andina-header a {
+    color: white;
+}
+
+.andina-header-bottom {
+    background: transparent url('../images/header-bottom-bg.gif') top left repeat-x;
+    height: 19px;
+}
+
+.andina-header-bottom-curve {
+    background: transparent url('../images/header-bottom.gif') top left;
+    height: 19px;
+    width: 1310px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.andina-header-bottom-bg {
+    background: transparent url('../images/header-bottom-bg-fix.gif') top left repeat-x;
+    height: 12px;
+}
+
+.andina-header .logo {
+    background: transparent url('../images/logo.gif') top left;
+    display: block;
+    width: 388px;
+    height: 81px;     
+    text-indent: -10000px;      
+}
+
+.andina-header .logo:hover {
+    text-decoration: none;
+}
+
+.andina-header a:hover {
+    color:white;text-decoration:underline;
+}
+
+.andina-footer {
+    background-color: #dbdbdb;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {   
+    .andina-footer {
+        width:1048px;
+    }
+}
+
+.andina-footer a:hover {
+    color:#00438a;text-decoration:underline;
+}
+
+.dashed-right {
+    border-right: 1px dashed #049cdb;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: block;
+    float: left;
+    margin: 5px 0px;    
+}
+
+.footer-nav ul li {
+    display: block;
+    float: left;
+    padding-right: 10px;
+}
+
+.form-home {
+    
+    background-color:#ededed; 
+    border:1px solid #dbdbdb;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    -moz-box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05); 
+    box-shadow:0px 0px 10px 1px rgba(0,0,0,0.05);   
+}
+
+.thumbnail {
+     background: #F4F4F4;     
+     border-bottom: none;
+}
+
+.thumbnail img {
+    border-bottom: 6px solid #84b600;    
+}
+
+.thumbnail h5 {
+    margin-top: 8px;
+}
+
+.thumbnail h5 a {
+    color: #84b600 !important;
+    font-weight: bold !important;
+}
+
+.thumbnail .info-days {
+    background-color: #e6eed6;
+    height: 26px;
+    padding-left:5px;
+    line-height: 26px;    
+}
+
+.formulario-contacto {    
+    width: 265px;
+    height: 304px;
+    background: #fcfcfc !important;
+}
+
+.formulario-contacto h3 {
+    background: #F4F4F4;
+}
+
+.safari .formulario-contacto h3 {
+    background: #F4F4F4;    
+}
+
+.formulario-contacto .line {
+    height: 20px;    
+    padding-top: 10px;
+    line-height: 20px;
+    padding-left: 7px;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto .image {
+    margin-top:9px;    
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    float:left;    
+}
+
+.formulario-contacto h5 {
+    padding-left: 25px;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.form-destinos {
+    width: 700px;
+    min-height: 500px;
+    background: #fcfcfc !important;
+}
+
+.form-experiencias {
+    width: 265px;
+    min-height: 500px;    
+    background: #fcfcfc !important;
+}
+
+.form-experiencias blockquote {
+    border: none;    
+    margin-right: 5px;
+}
+
+.form-experiencias blockquote p {
+    font-size: 14px;
+}
+
+.form-facebook {
+    width: 265px;
+    text-align: center;
+    background: #fcfcfc !important;
+}
+
+.fan_box .profileimage {
+    display:none !important;
+}
+
+.tour-banner {
+    text-align: center;
+    overflow: hidden;    
+    position:relative;
+    margin-left: 0px;
+}
+
+.tour-banner a {
+    text-decoration:none;
+}
+
+.tour-banner .promotion {
+    margin-top: -71px;
+    margin-left: 15px;    
+    width: 996px;    
+    color: white;
+    padding: 5px 10px;
+    background-color: black;
+    text-align: left;        
+    opacity: 0.8;
+}
+
+.tour-banner .promotion h1 {
+    color: white;
+    font-style: italic;
+    font-size: 180%;
+    margin:0px;
+    padding:0px;
+}
+
+.tour-banner .promotion h2 {
+    color: white;
+    font-style: italic;
+    font-size: 130%;
+    margin:0px;
+    padding:0px;
+    line-height: 20px;
+}
+
+.form-paquetes {
+    margin: 0px auto;
+    width: 996px;
+    min-height: 500px;     
+}
+
+.form-paquetes li {
+    margin: 0 0 18px 32px;    
+}
+
+.thumbnail p {
+    margin: 0px;
+    height: 60px;
+}
+
+.interest-header-container {
+    min-height: 32px; 
+    height: 32px;
+    width: 1016px;
+    margin:10px auto 0px auto;    
+    text-align: center;
+}
+
+.interest-header-container h3 {
+    margin-left: 20px;
+}
+
+.interest-header {
+    margin-left: 20px;
+    margin-right: 30px;
+    float: left;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 45px;
+    padding-top: 4px;
+    font-size:90%;
+}
+
+.interest-1 {color: #ff6800;background: transparent url('../images/viajes-interes-aventura.gif') top left no-repeat; }
+.interest-2 {color: #58ae00;background: transparent url('../images/viajes-interes-ecologico.gif') top left no-repeat; }
+.interest-3 {color: #0098d1;background: transparent url('../images/viajes-interes-lujo.gif') top left no-repeat; }
+.interest-4 {color: #cc7a00;background: transparent url('../images/viajes-interes-gastronomico.gif') top left no-repeat; }
+.interest-5 {color: #0064d3;background: transparent url('../images/viajes-interes-mistico.gif') top left no-repeat; }
+.interest-6 {color: #754d29;background: transparent url('../images/viajes-interes-cultural.gif') top left no-repeat; }
+
+.interest-back-1 img {border-bottom: 6px solid #ff6800; }
+.interest-back-2 img {border-bottom: 6px solid #58ae00; }
+.interest-back-3 img {border-bottom: 6px solid #0098d1; }
+.interest-back-4 img {border-bottom: 6px solid #cc7a00; }
+.interest-back-5 img {border-bottom: 6px solid #0064d3; }
+.interest-back-6 img {border-bottom: 6px solid #754d29; }
+
+.tour-content {
+    padding: 10px 15px;
+    text-align: justify;
+}
+
+.tour-content p {
+    font-size: 15px;
+}
+
+.quote-content {
+    padding: 0px 15px;
+}
+
+.tour-gallery {
+    margin-left: 2px;
+}
+
+.tour-gallery ul {
+    list-style: none;
+    display: block;
+    margin: 5px 0px;
+}
+
+.tour-gallery ul li {
+    display: block;
+    float: left;
+    padding-right: 4px;
+}
+
+#quote_travel_time_3i { width: 55px; margin-left: 20px; }
+#quote_travel_time_2i { width: 100px; }
+#quote_travel_time_1i  { width: 70px; }
+
+.dsq-trackback-url input {
+    width: 360px;
+}
+
+.author {    
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #999;
+}
+
+.popular-articule {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.popular-articule li {
+    background: url('../images/bulletside.gif') left no-repeat;
+    background-position-x: 3px;
+    background-position-y: 0.43em;
+    padding-left: 18px;
+    margin-bottom: 10px;
+}
+
+.post-title a {
+    color: #73af23;
+}
+
+.phone-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+.skype-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+.mail-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+.msn-icon-big {
+    width: 70px;
+    height: 70px;
+    background:white;
+    position:absolute;
+    top:30px;
+    left:30px;
+}
+
+
+
+.phone-content {
+    margin:  120px 0px 0px 20px;
+    color: white;
+}
+
+.button {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    float: left;
+    margin-right: 10px;
+}
+
+#gallery {
+    border-bottom: 6px solid #84b600;
+}
+
+#thumbs {
+    border-bottom: 6px solid #84b600;  
+}
+
+.central .title {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    height: 50px;
+    line-height: 50px;
+    font-size: 160%;
+    background: #fcfcfc !important;
+}
+
+.central .content {
+    margin: 10px 0px 46px 2px;    
+}
+
+.central .central-bottom {
+    border-top: 1px solid #ccc;
+    padding-left: 14px;
+}
+
+.central .central-text {
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 88%;
+}
+
+.safari .central .central-text {
+    font-weight: normal;
+    padding-left: 10px;
+    font-size: 96%;
+}
+
+
+.phone-image {
+    background: url('../images/phone.gif') top left no-repeat;
+    width: 34px;
+    height: 22px;
+    float:left;
+}
+
+.skype-image {
+    background: url('../images/skype.gif') top left no-repeat;
+    width: 34px;
+    height: 33px;
+    float:left;
+}
+
+.email-image {
+    background: url('../images/email.gif') top left no-repeat;
+    width: 34px;
+    height: 33px;
+    float:left;
+}
+
+.connect-facebook {
+    background: url('../images/connect-facebook.gif') top left no-repeat;
+    width: 38px;
+    height: 38px;
+    float:left;
+    margin-top: 7px;
+    margin-left: 16px;
+}
+
+.connect-facebook:hover {
+    background: url('../images/connect-facebook-active.gif') top left no-repeat;
+}
+
+.connect-twitter {
+    background: url('../images/connect-twitter.gif') top left no-repeat;
+    width: 38px;
+    height: 38px;      
+    float:left;
+    margin-top: 7px;
+    margin-left: 16px;    
+}
+
+.connect-twitter:hover {
+    background: url('../images/connect-twitter-active.gif') top left no-repeat;
+}
+
+.connect-google-plus {
+    background: url('../images/connect-google-plus.gif') top left no-repeat;
+    width: 38px;
+    height: 38px;      
+    float:left;
+    margin-top: 7px;
+    margin-left: 16px;    
+}
+
+.connect-google-plus:hover {
+    background: url('../images/connect-google-plus-active.gif') top left no-repeat;
+}
+
+.connect-youtube {
+    background: url('../images/connect-youtube.gif') top left no-repeat;
+    width: 38px;
+    height: 38px;      
+    float:left;
+    margin-top: 7px;
+    margin-left: 16px;    
+}
+
+.connect-youtube:hover {
+    background: url('../images/connect-youtube-active.gif') top left no-repeat;
+}
+
+.connect-msn {
+    background: url('../images/connect-msn.gif') top left no-repeat;
+    width: 38px;
+    height: 38px;      
+    float:left;
+    margin-top: 7px;
+    margin-left: 16px;    
+}
+
+.connect-msn:hover {
+    background: url('../images/connect-msn-active.gif') top left no-repeat;
+}
+
+.nav-footer {
+    background: #84b700;
+}
+
+.nav-footer a {
+    color: white;
+    line-height: 11px !important;
+}
+
+.tour-day-title {
+    color: #f18a1a;
+}

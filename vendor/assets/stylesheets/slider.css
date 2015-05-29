@@ -1,0 +1,73 @@
+#gallery, #thumbs {
+    float: left;
+}
+
+#gallery {
+    width: 570px;
+    height: 300px;
+    overflow: hidden;    
+    position:relative;
+}
+
+#gallery img {
+    position: absolute;
+}
+
+#gallery .promotion {
+    position: absolute;
+    width: 546px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000;
+    color: white;
+    padding: 5px 10px;
+    background-color: black;
+    text-align: left;        
+    opacity: 0.8;
+}
+
+#gallery .promotion h1 {
+    color: white;
+    font-style: italic;
+    font-size: 180%;
+    margin:0px;
+    padding:0px;
+}
+
+#gallery a:hover {
+    text-decoration: none;
+}
+
+#gallery .promotion h2 {
+    color: white;
+    font-style: italic;
+    font-size: 130%;
+    margin:0px;
+    padding:0px;
+    line-height: 20px;
+}
+
+#thumbs {
+    width: 150px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#next {
+    display: block;
+    width: 47px;
+    height: 43px;
+    background: url(../images/arrow.png);
+    position: relative;
+    top: 257px;
+    left: 855px;
+}
+
+#next:hover {
+    background: url(../images/arrowmo.png);
+}
+
+.clear{
+    clear: both;
+}
