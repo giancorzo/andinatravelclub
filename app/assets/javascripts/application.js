@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require modernizr.custom
+//= require mocha
+//= require jquery.fancybox.pack
+//= require bootstrap-alerts
 //= require turbolinks
-//= require_tree .

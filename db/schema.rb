@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529070328) do
+ActiveRecord::Schema.define(version: 20150530223207) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "name",           limit: 255
@@ -109,7 +109,10 @@ ActiveRecord::Schema.define(version: 20150529070328) do
     t.integer  "age",          limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "tour_id",      limit: 4
   end
+
+  add_index "quotes", ["tour_id"], name: "index_quotes_on_tour_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.text     "description",         limit: 65535
@@ -128,20 +131,24 @@ ActiveRecord::Schema.define(version: 20150529070328) do
   add_index "reviews", ["tour_id"], name: "index_reviews_on_tour_id", using: :btree
 
   create_table "tours", force: :cascade do |t|
-    t.string   "title",             limit: 255
-    t.string   "subtitle",          limit: 255
-    t.text     "short_description", limit: 65535
-    t.text     "short_itinerary",   limit: 65535
-    t.text     "itinerary",         limit: 65535
-    t.integer  "days",              limit: 4
-    t.integer  "nights",            limit: 4
-    t.integer  "price",             limit: 4
-    t.boolean  "place",             limit: 1,     default: false
-    t.string   "slug",              limit: 255
-    t.integer  "interest_id",       limit: 4
+    t.string   "title",              limit: 255
+    t.string   "subtitle",           limit: 255
+    t.text     "short_description",  limit: 65535
+    t.text     "short_itinerary",    limit: 65535
+    t.text     "itinerary",          limit: 65535
+    t.integer  "days",               limit: 4
+    t.integer  "nights",             limit: 4
+    t.integer  "price",              limit: 4
+    t.boolean  "place",              limit: 1,     default: false
+    t.string   "slug",               limit: 255
+    t.integer  "interest_id",        limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "popularity",        limit: 4,     default: 0
+    t.integer  "popularity",         limit: 4,     default: 0
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
   end
 
   add_index "tours", ["interest_id"], name: "index_tours_on_interest_id", using: :btree
@@ -149,6 +156,7 @@ ActiveRecord::Schema.define(version: 20150529070328) do
   add_foreign_key "banners", "tours"
   add_foreign_key "images", "tours"
   add_foreign_key "posts", "accounts"
+  add_foreign_key "quotes", "tours"
   add_foreign_key "reviews", "tours"
   add_foreign_key "tours", "interests"
 end

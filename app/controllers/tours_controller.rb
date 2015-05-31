@@ -1,6 +1,7 @@
 class ToursController < ApplicationController
 
   skip_before_filter :check_account, :only => [:index, :index_by_location, :index_by_interest, :show]
+  
   before_action :set_tour, only: [:show, :edit, :update, :destroy]
   
   # GET /tours
@@ -125,7 +126,7 @@ class ToursController < ApplicationController
   private
   
   def set_tour
-      @tour = Tour.find(params[:id])
+      @tour = Tour.friendly.find(params[:id])
   end
   
     def tour_params
