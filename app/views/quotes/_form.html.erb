@@ -1,0 +1,102 @@
+<%= content_for :javascript do %>
+  <script type="text/javascript">
+
+      $("#quote_submit").click(function (e) {
+        days = $("#quote_days").val();
+        adults = $("#quote_adults").val();
+        childs = $("#quote_childs").val();
+        age = $("#quote_age").val();
+        name = $("#quote_name").val();
+        city = $("#quote_city").val();
+        phone = $("#quote_phone").val();
+        email = $("#quote_email").val();
+        
+        if (days == "" || adults == "" || name == "" || city == "" || phone == "" || email == "") {
+          alert("Necesita ingresar todos los campos");
+          e.preventDefault();
+        } else {
+          if (childs != "" && age == "") {
+            alert("Debe ingresar las edades de los niños");
+            e.preventDefault();
+          }
+        }
+      });
+
+  </script>
+<% end %>
+<%= form_for [@tour,@tour.quotes.build], :html => { :class => "form-horizontal",  :multipart => true } do |f| %>
+  <h3 style="margin-bottom: 10px;">¿Qué tipo de hotel le gustaria?</h3>
+    <div style="margin-left:10px;">
+      <% [ 'Lujo', 'Superior', 'Standard', 'Básico'].each do |travel_type| %>
+        <% if travel_type == "Muy bueno" %>
+          <%= f.radio_button :travel_type,travel_type, {:checked => true,:style => "margin:0px;margin-top:-3px;"} %>
+        <% else %>
+          <%= f.radio_button :travel_type,travel_type, :style => "margin:0px;margin-top:-3px;" %>
+        <% end %>
+        <span style="margin-right:5px;"><%= travel_type.humanize %></span>
+      <% end %>              
+    </div>
+  <h3 style="margin: 20px 0px 10px 0px;">¿Cuanto tiempo planea quedarse?</h3>
+  <%= f.text_field :days, :style => "margin-left:20px; margin-right:5px;width:70px;" %>días
+  <h3 style="margin: 20px 0px 10px 0px;">¿Más o menos cuando planea realizarlo?</h3>            
+  <%= f.date_select :travel_time, {:start_year => Time.now.year, :end_year => (Time.now.year+1), :order => [:day,:month,:year]} %>
+  <h3 style="margin: 20px 0px 10px 0px;">¿Cuantas personas son?</h3>
+  <table>
+    <tr>
+      <td><%= f.label :adults, "Adultos",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.text_field :adults, :style => "width:70px;" %></td>
+      <td colspan="2"></td>
+    </tr>
+    <tr>
+      <td><%= f.label :childs, "Niños",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.text_field :childs, :style => "width:70px;" %></td>
+      <td><%= f.label :age, "Edades", :style=> "margin-left:10px;" %></td>
+      <td><%= f.text_field :age, :style => "width:70px;" %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Ej. 5,3,2</td>
+    </tr>
+  </table>
+  <h3 style="margin: 20px 0px 10px 0px;">¿Nos otorga sus datos personales para poder contactarlo?</h3>
+  <table>
+    <tr>
+      <td><%= f.label :name, "Nombre",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :country, "País",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.country_select(:country, priority_countries: ["ES","MX","AR","BO","BR","CL","CO","CR","CU","DO","EC","SV","GT","HT","HN","NI","PA","PY","PE","PR","UY","VE"], locale: 'es') %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :city, "Ciudad",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.text_field :city %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :phone, "Teléfono",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.telephone_field :phone %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email, "Email",:style=>"display:inline;margin-right:5px;" %></td>
+      <td><%= f.email_field :email %></td>
+    </tr>
+  </table>
+  <h3 style="margin: 20px 0px 10px 0px;">¿Qué forma de pago le gustaría utilizar?</h3>
+    <div style="margin-left:20px;">
+      <% ['Trans. Bancaria','Tarjeta de crédito'].each do |forma| %>
+        <% if forma == "Trans. Bancaria" %>
+          <%= f.radio_button :payment_type, forma, {:checked => true, :style => "margin:0px;margin-top:-3px;"} %>
+        <% else %>
+          <%= f.radio_button :payment_type, forma,:style => "margin:0px;margin-top:-3px;" %>
+        <% end %>
+        <span style="margin-right:5px;"><%= forma.humanize %></span>
+      <% end %>                
+    </div>
+  <h3 style="margin: 20px 0px 10px 0px;">¿Algún comentario adicional?</h3>
+  <%= f.text_area :comments, :style => "margin-left: 20px;width:300px; height: 100px;"  %>
+  <div style="text-align:center;margin-top:20px;">
+    <%= f.submit "Enviar cotización", :class => "btn btn-primary"  %>
+  </div>
+<% end %>

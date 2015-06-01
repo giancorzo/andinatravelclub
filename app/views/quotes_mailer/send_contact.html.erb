@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style="background-color: #FFF;font-family: 'Lucida Grande', Verdana, Sans-serif;">
+      <div style="border-bottom: 1px solid #CCC;">Datos del solicitante:</div><br/>
+      Nombre del solicitante: <%= @contact[:name] %><br/>
+      Pais: <%= @contact[:country] %><br/>
+      Ciudad: <%= @contact[:city] %><br/>
+      Teléfono: <%= @contact[:phone] %><br/>
+      Correo: <%= @contact[:email] %><br/>
+      <br/>
+      <p>Mensaje: <%= @contact[:comments] %></p>        
+    </body>
+</html>

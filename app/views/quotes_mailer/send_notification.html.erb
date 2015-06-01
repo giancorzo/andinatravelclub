@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style="background-color: #FFF;font-family: 'Lucida Grande', Verdana, Sans-serif;">
+      <div style="border-bottom: 1px solid #CCC;">Datos del solicitante:</div><br/>
+      Nombre del solicitante: <%= @quote.name %><br/>
+      Pais: <%= @quote.country %><br/>
+      Ciudad: <%= @quote.city %><br/>
+      Teléfono: <%= @quote.phone %><br/>
+      Correo: <%= @quote.email %><br/>
+      <br/>
+      <div style="border-bottom: 1px solid #CCC;">Datos del tour seleccionado:</div><br/>
+      Tour seleccionado: <%= @quote.tour.title  %><br/>
+      Tipo de hotel: <%= @quote.travel_type %><br/>
+      Días que se queda: <%= @quote.days %><br/>
+      Fecha de llegada: <%= @quote.travel_time %><br/>
+      Fecha de Salida: <%= @quote.travel_time + @quote.days %><br/>
+      Cantidad de adultos: <%= @quote.adults %><br/>
+      Cantidad de Niños: <%= @quote.childs %><br/>
+      Edades de los niños: <%= @quote.age %><br/>
+      Forma de pago: <%= @quote.payment_type %><br/>
+      Comentarios: <%= @quote.comments %><br/>
+    </body>
+</html>

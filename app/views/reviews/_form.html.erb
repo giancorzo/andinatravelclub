@@ -1,0 +1,37 @@
+<%= form_for([@tour, @review] , :html => { :class => "form-horizontal", :multipart => true}) do |f| %>
+<div class="review-form">
+  <div class="control-group">
+    <%= f.label :name, "Nombre del cliente:" ,:class => "control-label" %>
+    <div class="controls">
+      <%= f.text_field :name, :class => "input-xlarge" %>
+    </div>      
+  </div>
+  <div class="control-group">
+    <%= f.label :avatar, "Avatar:" ,:class => "control-label" %>
+    <div class="controls">
+      <%= f.file_field :avatar ,:class => "input-xlarge input-file" %>
+    </div>
+  </div>  
+  <div class="control-group">
+    <%= f.label :short_description, "Reseña:",:class => "control-label" %>
+    <div class="controls">
+      <%= f.text_area :short_description, :rows => 3, :style => "width: 660px;" %>
+    </div>      
+  </div>  
+  <div class="control-group">
+    <%= f.label :description, "Reseña:",:class => "control-label" %>
+    <div class="controls">
+      <%= f.text_area :description, :rows => 8, :style => "width: 660px;" %>
+    </div>      
+  </div>
+  <div class="control-group">    
+    <div class="controls">      
+      <label class="add-on" style="width: 400px;">
+        <%= f.check_box(:home, {:class => 'left', :style => "margin-right:10px;"}, "yes", "no") %>
+        Check para que aparezca en la página inicial
+      </label>      
+    </div>      
+  </div>  
+  <%= f.submit :class => "btn btn-primary", :style => "margin-left: 160px;" %>
+</div>
+<% end %>

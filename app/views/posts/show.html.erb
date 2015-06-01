@@ -1,0 +1,64 @@
+<% if @current_account  %>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <b>Title:</b>
+    <%= @post.title %>
+  </p>
+
+  <p>
+    <b>Body:</b>
+    <%= @post.body %>
+  </p>
+
+  <p>
+    <b>Popular:</b>
+    <%= @post.popular %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
+<% else %>
+<% content_for :meta do %>
+    <meta name="description" content="<%= truncate(@post.preview.gsub(/<object.*object>/,""), :length => 648, :omission => "...") %>"/>    
+    <title>Andina Travel Club - <%= @post.title %></title>
+<% end %>  
+<div class="row">
+  <div class="span8" style="margin-left: 40px;">
+    <div class="rounded" style="padding: 20px;">      
+      <h1 style="font-size: 24px;line-height: 36px;"><%= @post.title %></h1>
+      <p class="author">by <%= @post.account.name  %></p>
+      <articule style="text-align: justify;">
+        <%= raw RedCloth.new(@post.body).to_html %>
+      </articule>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          
+          var disqus_shortname = 'andinatravelclub';
+          
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>  
+  </div>
+  <div class="span5" style="width: 372px;">
+    <div class="rounded" style="padding: 20px;">
+      <h3>Artículos populares</h3>
+      <ul class="popular-articule">
+        <% @popular.each do |popular| %>
+          <li>
+            <%= link_to popular.title, popular %>
+          </li>          
+        <% end %>        
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>  
+</div>
+<% end %>

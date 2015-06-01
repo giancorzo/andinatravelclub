@@ -1,0 +1,70 @@
+<%= form_for @post, :html => { :class => "form-horizontal",  :multipart => true } do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+  <div class="span8">
+    <div class="control-group">  
+      <%= f.label :title, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_field :title, :class => "input-xxlarge" %>
+      </div>      
+    </div>
+    <div class="control-group">
+      <%= f.label :preview, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_area :preview,:style=>"height:480px;", :class => "input-xxlarge", :rows => 5 %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :body, :class => "control-label" %>
+      <div class="controls">
+        <%= f.text_area :body,:style=>"height:480px;", :class => "input-xxlarge", :rows => 5 %>
+      </div>      
+    </div>
+    <div class="control-group">
+      <%= f.label :popular, :class => "control-label" %>
+      <div class="controls">
+        <%= f.check_box :popular %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :account_id, :class => "control-label" %>
+      <div class="controls">
+        <%= f.select :account_id, Account.all.map {|account| [account.name,account.id]} %>
+      </div>
+    </div>
+  </div>
+  <div class="span3">
+    <p>Para hacer formato con estilo se puede usar los siguientes comandos:</p>
+    <p>h1. Titulo</p>
+    <p>h2. Subtitulo</p>
+    <p>h3. Subtitulo Interno</p>
+    <p># Lista numerica</p>
+    <p>* Lista viñetas</p>
+    <p>_enfasis_</p>
+    <p>__italicas__</p>
+    <p>*fuerte*</p>
+    <p>**Negritas**</p>
+    <p>??cita??</p>
+    <p>-Texto negado-</p>
+    <p>+Insertar text+</p>
+    <p>^super indice^</p>
+    <p>~sub indice~</p>
+    <p>@codigo@</p>
+    <p>%(classname)span%</p>
+  </div>  
+</div>
+  <div class="actions" style="margin-left: 160px;">
+    <%= f.submit :class => "btn btn-primary" %>
+    <a href="/posts" class="btn">Cancelar</a>
+  </div>
+<% end %>

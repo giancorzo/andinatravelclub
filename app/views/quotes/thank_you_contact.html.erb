@@ -1,0 +1,34 @@
+<% content_for :meta do %>
+    <meta name="description" content="Gracias por el interés mostrado en nosotros"/>
+    <title>Andina Travel Club - Muchas gracias por enviarnos su mensaje</title>
+<% end %> 
+<div class="row" style="padding-left:20px;">
+  <div style="width:1016px;margin: 0 auto;">
+    <div class="rounded" style="padding:20px;min-height: 500px;text-align: justify;">
+      <h2>Gracias por el interés mostrado en nosotros</h2>
+      <p>El equipo de <b>Andina Travel Club</b> revisará la información enviada y se estará comunicando lo más pronto posible mediante
+        un correo electrónico a la dirección que proporcionó.</p>
+      <p>En caso no reciba un correo le rogamos revisar la sección de correos bloqueados.</p>
+      <h2 style="margin-bottom: 10px;">Tal vez le pueda interesar revisar la información de nuestro otros circuitos</h2>
+      <ul class="thumbnails">
+        <% @tours.each do |tour| %>
+          <li class="span3">
+            <div class="thumbnail" style="min-height: 240px;position: relative;">
+              <%= link_to tour do  %>
+                <%= image_tag tour.image.url(:thumb) %>
+              <% end %>
+              <h5><%= link_to tour.title, tour, :style => "color: #333;" %></h5>
+              <p><%= tour.subtitle %></p>
+              <div>
+                <div class="left">
+                  <%= tour.days %> días / <%= tour.nights %> noches
+                </div>
+                <div class="clear"></div>                
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>            
+    </div>    
+  </div>
+</div>

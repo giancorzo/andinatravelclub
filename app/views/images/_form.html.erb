@@ -1,0 +1,17 @@
+<%= form_for [@tour, @tour.images.build] , :html => { :class => "form-horizontal", :multipart => true } do |f| %>
+<div class="review-form">
+  <div class="control-group">
+    <%= f.label :image, "Image:",:class => "control-label" %>
+    <div class="controls">
+      <%= f.file_field :image ,:class => "input-xlarge input-file" %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, "Descripción:",:class => "control-label" %>
+    <div class="controls">
+      <%= f.text_area :description, :rows => 3, :style => "width: 360px;" %>
+    </div>      
+  </div>
+  <%= f.submit :class => "btn-primary", :style => "margin-left: 160px;"%>
+</div>
+<% end %>
