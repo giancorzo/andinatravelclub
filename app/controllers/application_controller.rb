@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   before_filter :check_account, :except => [:login, :logout]
+  before_filter :last_post
 
   protected
   
@@ -30,5 +31,9 @@ class ApplicationController < ActionController::Base
     flash[:warn] = "No tiene permiso"
     redirect_to home_url
   end  
+
+  def last_post
+    @last_post = Post.order("created_at desc").first
+  end
 
 end

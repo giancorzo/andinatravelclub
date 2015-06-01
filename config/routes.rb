@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
   
   get "/home" => "home#index", :as => :home
-  get "/contactenos" => "home#contact_us", :as => :contact_us
+  match "/contactenos" => "home#contact_us", :as => :contact_us, :via => [:get, :post]
   get "/nosotros" => "home#about_us", :as => :about_us
   get "/formas-de-pago" => "home#how_to_pay", :as => :how_to_pay
   get "/informacion-util" => "home#util_information", :as => :util_information

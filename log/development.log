@@ -12378,3 +12378,4724 @@ Started GET "/assets/skype.gif" for 190.234.105.249 at 2015-05-31 05:38:15 +0000
 
 
 Started GET "/assets/tarjetas.gif" for 190.234.105.249 at 2015-05-31 05:38:16 +0000
+
+
+Started GET "/tours/peru/maravilla-del-mundo" for 190.234.105.249 at 2015-05-31 05:39:55 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"maravilla-del-mundo"}
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'maravilla-del-mundo'  ORDER BY `tours`.`id` ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Image> at /home/ubuntu/workspace/app/models/image.rb:18)
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 1[0m
+  [1m[35mReview Load (0.5ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 1
+  Rendered quotes/_form.html.erb (54.3ms)
+  Rendered tours/show.html.erb within layouts/application (97.9ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 225ms (Views: 203.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:39:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:39:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:39:57 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:39:57 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:39:57 +0000
+
+
+Started GET "/assets/fancybox_sprite.png" for 190.234.105.249 at 2015-05-31 05:40:05 +0000
+
+
+Started GET "/assets/fancybox_loading.gif" for 190.234.105.249 at 2015-05-31 05:40:05 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.249 at 2015-05-31 05:40:15 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.249 at 2015-05-31 05:40:15 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.249 at 2015-05-31 05:40:15 +0000
+
+
+Started GET "/tours/peru" for 190.234.105.249 at 2015-05-31 05:40:43 +0000
+Processing by ToursController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mTour Load (46.5ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 1
+  [1m[36mTour Load (4.3ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity[0m
+  Rendered tours/index.html.erb within layouts/application (34.3ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 174ms (Views: 119.2ms | ActiveRecord: 51.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:44 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:44 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:44 +0000
+
+
+Started GET "/tours/peru/maravilla-del-mundo" for 190.234.105.249 at 2015-05-31 05:40:47 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"maravilla-del-mundo"}
+  [1m[35mTour Load (0.5ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'maravilla-del-mundo'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mImage Load (0.3ms)[0m  SELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 1
+  [1m[36mReview Load (1.8ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 1[0m
+  Rendered quotes/_form.html.erb (61.7ms)
+  Rendered tours/show.html.erb within layouts/application (82.0ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 185ms (Views: 177.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:48 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:48 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:48 +0000
+
+
+Started GET "/" for 190.234.105.249 at 2015-05-31 05:40:51 +0000
+Processing by HomeController#index as HTML
+  [1m[35mBanner Load (0.5ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.5ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1[0m
+  [1m[35mTour Load (1.0ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE (home = 1)[0m
+  Rendered home/index.html.erb within layouts/application (49.0ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 147ms (Views: 142.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:52 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:52 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:52 +0000
+
+
+Started GET "/tours/peru/maravilla-del-mundo" for 190.234.105.249 at 2015-05-31 05:40:53 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"maravilla-del-mundo"}
+  [1m[35mTour Load (0.5ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'maravilla-del-mundo'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mImage Load (0.3ms)[0m  SELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 1
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 1[0m
+  Rendered quotes/_form.html.erb (60.6ms)
+  Rendered tours/show.html.erb within layouts/application (76.8ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 179ms (Views: 174.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:54 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:54 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:54 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:40:54 +0000
+
+
+Started GET "/tours/peru/destino" for 190.234.105.249 at 2015-05-31 05:41:05 +0000
+Processing by ToursController#index_by_location as HTML
+  [1m[35mTour Load (0.5ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 31 LIMIT 1
+  [1m[36mTour Load (3.8ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 1)  ORDER BY popularity[0m
+  [1m[35mInterest Load (1.3ms)[0m  SELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 6 LIMIT 1
+  [1m[36mInterest Load (0.2ms)[0m  [1mSELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 1 LIMIT 1[0m
+  [1m[35mInterest Load (0.2ms)[0m  SELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 6 LIMIT 1[0m  [["id", 6]]
+  Rendered tours/index.html.erb within layouts/application (29.8ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 128ms (Views: 113.7ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:05 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:05 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:05 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:05 +0000
+
+
+Started GET "/tours/peru/destino" for 190.234.105.249 at 2015-05-31 05:41:16 +0000
+Processing by ToursController#index_by_location as HTML
+  [1m[35mTour Load (0.5ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 31 LIMIT 1
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 1)  ORDER BY popularity[0m
+  [1m[35mInterest Load (0.2ms)[0m  SELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 6 LIMIT 1
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 1 LIMIT 1[0m
+  [1m[35mInterest Load (0.2ms)[0m  SELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 6 LIMIT 1[0m  [["id", 6]]
+  Rendered tours/index.html.erb within layouts/application (15.2ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 116ms (Views: 111.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.249 at 2015-05-31 05:41:18 +0000
+
+
+Started GET "/tours/peru/arequipa-extendido" for 190.234.105.249 at 2015-05-31 05:41:21 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"arequipa-extendido"}
+  [1m[35mTour Load (0.5ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'arequipa-extendido'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mInterest Load (0.3ms)[0m  SELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 1 LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 14[0m
+  [1m[35mReview Load (5.4ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 14
+  Rendered quotes/_form.html.erb (47.9ms)
+  Rendered tours/show.html.erb within layouts/application (74.2ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 178ms (Views: 166.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:22 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:22 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:22 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:22 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:23 +0000
+
+
+Started GET "/tours/peru/arequipa-extendido" for 208.101.7.44 at 2015-05-31 05:41:23 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"arequipa-extendido"}
+  [1m[36mTour Load (0.5ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'arequipa-extendido'  ORDER BY `tours`.`id` ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT  `interests`.* FROM `interests` WHERE `interests`.`id` = 1 LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 14
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 14[0m
+  Rendered quotes/_form.html.erb (44.8ms)
+  Rendered tours/show.html.erb within layouts/application (61.1ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 158ms (Views: 152.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/fancybox_loading.gif" for 190.234.105.249 at 2015-05-31 05:41:27 +0000
+
+
+Started GET "/assets/fancybox_sprite.png" for 190.234.105.249 at 2015-05-31 05:41:27 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:32 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:32 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:32 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:32 +0000
+
+
+Started GET "/blog" for 190.234.105.249 at 2015-05-31 05:41:44 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (6.3ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (4.7ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (1.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.9ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (70.4ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 180ms (Views: 155.3ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.249 at 2015-05-31 05:41:45 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:59 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:59 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:59 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.249 at 2015-05-31 05:41:59 +0000
+
+
+Started GET "/blog" for 190.234.105.249 at 2015-05-31 05:46:51 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.6ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (23.6ms)
+  Rendered shared/_header.html.erb (0.4ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 129ms (Views: 124.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.249 at 2015-05-31 05:46:52 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.249 at 2015-05-31 05:46:52 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.249 at 2015-05-31 05:46:52 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.249 at 2015-05-31 05:46:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.249 at 2015-05-31 05:46:53 +0000
+
+
+Started GET "/" for 66.249.88.184 at 2015-05-31 23:42:59 +0000
+Processing by HomeController#index as HTML
+  [1m[35mBanner Load (148.5ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (29.1ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (1.2ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1
+  [1m[36mTour Load (1.2ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1[0m
+  [1m[35mTour Load (14.3ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity
+  [1m[36mReview Load (15.2ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE (home = 1)[0m
+  Rendered home/index.html.erb within layouts/application (1121.4ms)
+  Rendered shared/_header.html.erb (9.7ms)
+  Rendered shared/_footer_link.html.erb (10.4ms)
+  Rendered shared/_footer.html.erb (2.4ms)
+Completed 200 OK in 2195ms (Views: 1844.2ms | ActiveRecord: 209.6ms)
+
+
+Started GET "/" for 190.234.105.200 at 2015-06-01 00:10:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (11.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[35mBanner Load (0.4ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (0.4ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1
+  [1m[36mTour Load (1.6ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1[0m
+  [1m[35mTour Load (0.8ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE (home = 1)[0m
+  Rendered home/index.html.erb within layouts/application (116.8ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer_link.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 354ms (Views: 281.2ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:33 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:33 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:33 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+Processing by HomeController#index as HTML
+  [1m[35mBanner Load (0.4ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1[0m
+  [1m[35mTour Load (0.9ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity
+  [1m[36mReview Load (2.8ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE (home = 1)[0m
+  Rendered home/index.html.erb within layouts/application (43.7ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 177ms (Views: 170.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 00:10:34 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 00:10:36 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 00:10:37 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 00:10:38 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 00:10:38 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.200 at 2015-06-01 00:10:38 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.200 at 2015-06-01 00:10:39 +0000
+
+
+Started GET "/tours/peru/maravilla-del-mundo" for 190.234.105.200 at 2015-06-01 00:10:45 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"maravilla-del-mundo"}
+  [1m[35mTour Load (5.1ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'maravilla-del-mundo'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Image> at /home/ubuntu/workspace/app/models/image.rb:18)
+  [1m[35mImage Load (5.2ms)[0m  SELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 1
+  [1m[36mReview Load (2.7ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 1[0m
+  Rendered quotes/_form.html.erb (140.6ms)
+  Rendered tours/show.html.erb within layouts/application (212.8ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer_link.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 363ms (Views: 295.3ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 00:10:46 +0000
+
+
+Started GET "/assets/fancybox_sprite.png" for 190.234.105.200 at 2015-06-01 00:10:49 +0000
+
+
+Started GET "/assets/fancybox_loading.gif" for 190.234.105.200 at 2015-06-01 00:10:49 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:01 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:02 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:02 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:02 +0000
+
+
+Started GET "/tours/peru/maravilla-del-mundo" for 190.234.105.200 at 2015-06-01 00:11:17 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"maravilla-del-mundo"}
+  [1m[35mTour Load (0.6ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'maravilla-del-mundo'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mImage Load (0.4ms)[0m  SELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 1
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 1[0m
+  Rendered quotes/_form.html.erb (59.2ms)
+  Rendered tours/show.html.erb within layouts/application (79.6ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 201ms (Views: 195.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:18 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:18 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 00:11:19 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 00:11:20 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 00:11:20 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 00:11:20 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 00:11:20 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 00:11:20 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 00:11:20 +0000
+
+
+Started GET "/assets/fancybox_overlay.png" for 190.234.105.200 at 2015-06-01 00:11:21 +0000
+
+
+Started GET "/assets/fancybox_sprite.png" for 190.234.105.200 at 2015-06-01 00:11:21 +0000
+
+
+Started GET "/assets/fancybox_loading.gif" for 190.234.105.200 at 2015-06-01 00:11:21 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 00:26:04 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (47.8ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 162ms (Views: 147.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 00:26:05 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 00:26:12 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 00:26:12 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 00:26:12 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 00:26:12 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 00:26:12 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 01:06:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.1ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (74.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer_link.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 312ms (Views: 252.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:27 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:06:28 +0000
+
+
+Started GET "/contactenos" for 190.234.105.200 at 2015-06-01 01:06:35 +0000
+Processing by HomeController#contact_us as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+  [1m[36mTour Load (13.8ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6[0m
+  Rendered home/contact_us.html.erb within layouts/application (143.8ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 249ms (Views: 217.5ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:36 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:36 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:36 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:36 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:06:37 +0000
+
+
+Started POST "/contactenos" for 190.234.105.200 at 2015-06-01 01:06:46 +0000
+
+ActionController::RoutingError (No route matches [POST] "/contactenos"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.6ms)
+
+
+Started POST "/contactenos" for 190.234.105.200 at 2015-06-01 01:08:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#contact_us as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zuUqeCu09u5nlb2XFwZUwb0VBJu+n5ZZU5+GS0PUNd5fKjBpuLVpRWSSRt/olQm5+GZDzmxufGbh74JMCdwChA==", "contact"=>{"name"=>"Giancarlo Corzo", "country"=>"PE", "city"=>"Lima", "phone"=>"997528963", "email"=>"gian.corzo@gmail.com", "comments"=>"Datos de pruebas"}, "commit"=>"Enviar cotización"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from contact_us at /home/ubuntu/workspace/app/controllers/home_controller.rb:14)
+  Rendered quotes_mailer/send_contact.html.erb (3.0ms)
+  Rendered quotes_mailer/send_contact.text.erb (0.5ms)
+
+QuotesMailer#send_contact: processed outbound mail in 292.9ms
+
+Sent mail to  (22.3ms)
+Date: Mon, 01 Jun 2015 01:08:29 +0000
+From: upc.dew@gmail.com
+Message-ID: <556bb08da9d06_710638a15942477c@giancorzo-andinatravelclub-1549931.mail>
+Subject: Andina - Contactenos
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_556bb08da63a7_710638a1594246fe";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_556bb08da63a7_710638a1594246fe
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Nombre del solicitante: Giancarlo Corzo
+Pais: PE
+Ciudad: Lima
+Tel=C3=A9fono: 997528963
+Correo: gian.corzo@gmail.com
+
+Mensaje: Datos de pruebas=
+
+----==_mimepart_556bb08da63a7_710638a1594246fe
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style=3D"background-color: #FFF;font-family: 'Lucida Grande', V=
+erdana, Sans-serif;">
+      <div style=3D"border-bottom: 1px solid #CCC;">Datos del solicitante=
+:</div><br/>
+      Nombre del solicitante: Giancarlo Corzo<br/>
+      Pais: PE<br/>
+      Ciudad: Lima<br/>
+      Tel=C3=A9fono: 997528963<br/>
+      Correo: gian.corzo@gmail.com<br/>
+      <br/>
+      <p>Mensaje: Datos de pruebas</p>        =
+
+    </body>
+</html>
+
+----==_mimepart_556bb08da63a7_710638a1594246fe--
+
+Redirected to http://andinatravelclub-giancorzo-1.c9.io/thank-you-contact
+Completed 302 Found in 342ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/thank-you-contact" for 190.234.105.200 at 2015-06-01 01:08:30 +0000
+Processing by QuotesController#thank_you_contact as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+  [1m[35mTour Load (3.8ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY popularity LIMIT 4
+  Rendered quotes/thank_you_contact.html.erb within layouts/application (38.7ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer_link.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 237ms (Views: 201.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:08:32 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:08:33 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:08:33 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:08:33 +0000
+
+
+Started GET "/" for 190.234.105.200 at 2015-06-01 01:08:36 +0000
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[36mBanner Load (0.5ms)[0m  [1mSELECT `banners`.* FROM `banners`[0m
+  [1m[35mTour Load (0.5ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1
+  [1m[36mTour Load (8.4ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity[0m
+  [1m[35mReview Load (0.6ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE (home = 1)
+  Rendered home/index.html.erb within layouts/application (118.8ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer_link.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (2.1ms)
+Completed 200 OK in 256ms (Views: 225.6ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.200 at 2015-06-01 01:08:37 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.200 at 2015-06-01 01:08:38 +0000
+
+
+Started GET "/contactenos" for 190.234.105.200 at 2015-06-01 01:14:42 +0000
+Processing by HomeController#contact_us as HTML
+  [1m[36mTour Load (3.1ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6[0m
+  Rendered home/contact_us.html.erb within layouts/application (105.4ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 219ms (Views: 214.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:43 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:43 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:43 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:43 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:14:44 +0000
+
+
+Started POST "/contactenos" for 190.234.105.200 at 2015-06-01 01:14:59 +0000
+Processing by HomeController#contact_us as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3eOmcX4Y5OQdWL+58AiiUZpRhvUiW1AD87yUi2yPIZBMLLxg7Rl7Tx5fRPEPm/8p3yLBoPCqujxBzJCMJocWyg==", "contact"=>{"name"=>"Giancarlo Corzo", "country"=>"PE", "city"=>"Lima", "phone"=>"997528963", "email"=>"gian.corzo@gmail.com", "comments"=>"Otra prueba"}, "commit"=>"Enviar cotización"}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from contact_us at /home/ubuntu/workspace/app/controllers/home_controller.rb:14)
+  Rendered quotes_mailer/send_contact.html.erb (0.1ms)
+  Rendered quotes_mailer/send_contact.text.erb (0.1ms)
+
+QuotesMailer#send_contact: processed outbound mail in 17.7ms
+
+Sent mail to  (3.6ms)
+Date: Mon, 01 Jun 2015 01:14:59 +0000
+From: upc.dew@gmail.com
+Message-ID: <556bb2136143d_71062a63ec82493@giancorzo-andinatravelclub-1549931.mail>
+Subject: Andina - Contactenos
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_556bb213602ed_71062a63ec82483d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_556bb213602ed_71062a63ec82483d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Nombre del solicitante: Giancarlo Corzo
+Pais: PE
+Ciudad: Lima
+Tel=C3=A9fono: 997528963
+Correo: gian.corzo@gmail.com
+
+Mensaje: Otra prueba=
+
+----==_mimepart_556bb213602ed_71062a63ec82483d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style=3D"background-color: #FFF;font-family: 'Lucida Grande', V=
+erdana, Sans-serif;">
+      <div style=3D"border-bottom: 1px solid #CCC;">Datos del solicitante=
+:</div><br/>
+      Nombre del solicitante: Giancarlo Corzo<br/>
+      Pais: PE<br/>
+      Ciudad: Lima<br/>
+      Tel=C3=A9fono: 997528963<br/>
+      Correo: gian.corzo@gmail.com<br/>
+      <br/>
+      <p>Mensaje: Otra prueba</p>        =
+
+    </body>
+</html>
+
+----==_mimepart_556bb213602ed_71062a63ec82483d--
+
+Redirected to http://andinatravelclub-giancorzo-1.c9.io/thank-you-contact
+Completed 302 Found in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/thank-you-contact" for 190.234.105.200 at 2015-06-01 01:14:59 +0000
+Processing by QuotesController#thank_you_contact as HTML
+  [1m[35mTour Load (0.8ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY popularity LIMIT 4
+  Rendered quotes/thank_you_contact.html.erb within layouts/application (9.1ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 117.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:15:00 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:15:00 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:15:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:15:00 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:15:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:00 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:15:01 +0000
+
+
+Started GET "/tours/peru/maravilla-del-mundo" for 190.234.105.200 at 2015-06-01 01:19:13 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"maravilla-del-mundo"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'maravilla-del-mundo'  ORDER BY `tours`.`id` ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Image> at /home/ubuntu/workspace/app/models/image.rb:18)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 1[0m
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[35mReview Load (0.3ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 1
+  Rendered quotes/_form.html.erb (88.9ms)
+  Rendered tours/show.html.erb within layouts/application (144.8ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 292ms (Views: 231.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:14 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:14 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:14 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:14 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:14 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:14 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:14 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:19:15 +0000
+
+
+Started GET "/contactenos" for 190.234.105.200 at 2015-06-01 01:20:34 +0000
+Processing by HomeController#contact_us as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+  [1m[36mTour Load (2.4ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6[0m
+  Rendered home/contact_us.html.erb within layouts/application (77.3ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 179ms (Views: 164.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:36 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:36 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:36 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:36 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:37 +0000
+
+
+Started POST "/contactenos" for 190.234.105.200 at 2015-06-01 01:20:47 +0000
+Processing by HomeController#contact_us as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXWUutlFYWlbTHuMP+pAmttsg4MVZ3BrFqOVL/bKLiAAuo6rSkT+wlhLgMTAeR3inh/E1seWmlSk05EovMIZeg==", "contact"=>{"name"=>"Giancarlo Corzo", "country"=>"PE", "city"=>"Lima", "phone"=>"997528963", "email"=>"gian.corzo@gmail.com", "comments"=>"3 prueba"}, "commit"=>"Enviar cotización"}
+Sending to 
+  Rendered quotes_mailer/send_contact.html.erb (0.2ms)
+  Rendered quotes_mailer/send_contact.text.erb (0.1ms)
+
+QuotesMailer#send_contact: processed outbound mail in 15.8ms
+
+Sent mail to  (2.9ms)
+Date: Mon, 01 Jun 2015 01:20:47 +0000
+From: upc.dew@gmail.com
+Message-ID: <556bb36f26345_7106317d100251d4@giancorzo-andinatravelclub-1549931.mail>
+Subject: =?UTF-8?Q?Andina_-_Cont=C3=A1ctenos?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_556bb36f2572a_7106317d10025015";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_556bb36f2572a_7106317d10025015
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Nombre del solicitante: Giancarlo Corzo
+Pais: PE
+Ciudad: Lima
+Tel=C3=A9fono: 997528963
+Correo: gian.corzo@gmail.com
+
+Mensaje: 3 prueba=
+
+----==_mimepart_556bb36f2572a_7106317d10025015
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style=3D"background-color: #FFF;font-family: 'Lucida Grande', V=
+erdana, Sans-serif;">
+      <div style=3D"border-bottom: 1px solid #CCC;">Datos del solicitante=
+:</div><br/>
+      Nombre del solicitante: Giancarlo Corzo<br/>
+      Pais: PE<br/>
+      Ciudad: Lima<br/>
+      Tel=C3=A9fono: 997528963<br/>
+      Correo: gian.corzo@gmail.com<br/>
+      <br/>
+      <p>Mensaje: 3 prueba</p>        =
+
+    </body>
+</html>
+
+----==_mimepart_556bb36f2572a_7106317d10025015--
+
+Redirected to http://andinatravelclub-giancorzo-1.c9.io/thank-you-contact
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/thank-you-contact" for 190.234.105.200 at 2015-06-01 01:20:47 +0000
+Processing by QuotesController#thank_you_contact as HTML
+  [1m[35mTour Load (2.1ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY popularity LIMIT 4
+  Rendered quotes/thank_you_contact.html.erb within layouts/application (10.6ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 105ms (Views: 101.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:20:48 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:20:49 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:20:49 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:20:49 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:20:49 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:20:49 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:20:49 +0000
+
+
+Started GET "/contactenos" for 190.234.105.200 at 2015-06-01 01:23:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#contact_us as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+  [1m[35mTour Load (3.6ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6
+  Rendered home/contact_us.html.erb within layouts/application (133.3ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer_link.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 395ms (Views: 313.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:57 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:57 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:57 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:57 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:58 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:23:58 +0000
+
+
+Started POST "/contactenos" for 190.234.105.200 at 2015-06-01 01:24:09 +0000
+Processing by HomeController#contact_us as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6GzVfWPkGl2FadzQPz1BjpjO+mH31oS24XSGdgq/mDV5o89s8OWF9oZuJ5jArhz23b29NCUnbolTBIJxQLevbw==", "contact"=>{"name"=>"Giancarlo Corzo", "country"=>"PE", "city"=>"Lima", "phone"=>"997528963", "email"=>"gian.corzo@gmail.com", "comments"=>"Espero sea el ultimo test"}, "commit"=>"Enviar cotización"}
+Sending to gian.corzo@gmail.com
+  Rendered quotes_mailer/send_contact.html.erb (0.7ms)
+  Rendered quotes_mailer/send_contact.text.erb (0.5ms)
+
+QuotesMailer#send_contact: processed outbound mail in 211.0ms
+
+Sent mail to gian.corzo@gmail.com (23.9ms)
+Date: Mon, 01 Jun 2015 01:24:09 +0000
+From: upc.dew@gmail.com
+To: gian.corzo@gmail.com
+Message-ID: <556bb439e6d92_75283fe0fbc786f8@giancorzo-andinatravelclub-1549931.mail>
+Subject: =?UTF-8?Q?Andina_-_Cont=C3=A1ctenos?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_556bb439e3047_75283fe0fbc78511";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_556bb439e3047_75283fe0fbc78511
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Nombre del solicitante: Giancarlo Corzo
+Pais: PE
+Ciudad: Lima
+Tel=C3=A9fono: 997528963
+Correo: gian.corzo@gmail.com
+
+Mensaje: Espero sea el ultimo test=
+
+----==_mimepart_556bb439e3047_75283fe0fbc78511
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style=3D"background-color: #FFF;font-family: 'Lucida Grande', V=
+erdana, Sans-serif;">
+      <div style=3D"border-bottom: 1px solid #CCC;">Datos del solicitante=
+:</div><br/>
+      Nombre del solicitante: Giancarlo Corzo<br/>
+      Pais: PE<br/>
+      Ciudad: Lima<br/>
+      Tel=C3=A9fono: 997528963<br/>
+      Correo: gian.corzo@gmail.com<br/>
+      <br/>
+      <p>Mensaje: Espero sea el ultimo test</p>        =
+
+    </body>
+</html>
+
+----==_mimepart_556bb439e3047_75283fe0fbc78511--
+
+Redirected to http://andinatravelclub-giancorzo-1.c9.io/thank-you-contact
+Completed 302 Found in 250ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/thank-you-contact" for 190.234.105.200 at 2015-06-01 01:24:10 +0000
+Processing by QuotesController#thank_you_contact as HTML
+  [1m[36mTour Load (0.8ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY popularity LIMIT 4[0m
+  Rendered quotes/thank_you_contact.html.erb within layouts/application (11.0ms)
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_footer_link.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 154ms (Views: 151.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:24:11 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:24:12 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:24:12 +0000
+
+
+Started GET "/" for 190.234.105.200 at 2015-06-01 01:28:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[35mBanner Load (1.5ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (0.4ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1[0m
+  [1m[35mTour Load (0.9ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity
+  [1m[36mReview Load (0.7ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE (home = 1)[0m
+  Rendered home/index.html.erb within layouts/application (114.9ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer_link.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 335ms (Views: 265.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 190.234.105.200 at 2015-06-01 01:28:08 +0000
+Processing by HomeController#index as HTML
+  [1m[35mBanner Load (1.7ms)[0m  SELECT `banners`.* FROM `banners`
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1[0m
+  [1m[35mTour Load (0.9ms)[0m  SELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE (home = 1)[0m
+  Rendered home/index.html.erb within layouts/application (44.2ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer_link.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 141ms (Views: 135.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:09 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:09 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:09 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:28:10 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:28:11 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:28:11 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:28:11 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:28:11 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.200 at 2015-06-01 01:28:11 +0000
+
+
+Started GET "/contactenos" for 190.234.105.200 at 2015-06-01 01:28:17 +0000
+Processing by HomeController#contact_us as HTML
+  [1m[35mTour Load (3.1ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY RAND() LIMIT 6
+  Rendered home/contact_us.html.erb within layouts/application (77.1ms)
+  Rendered shared/_header.html.erb (0.4ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 165ms (Views: 161.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:28:18 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:28:19 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:28:19 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:28:19 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:28:19 +0000
+
+
+Started POST "/contactenos" for 190.234.105.200 at 2015-06-01 01:28:26 +0000
+Processing by HomeController#contact_us as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zcA0PGSfxSpIGmYh7e83YJB1wwU6KZGQbamKQucsofZcDy4t955agUsdnWkSfGoY1QaEUOjYe6/f2Y5FrSSWrA==", "contact"=>{"name"=>"Giancarlo Corzo", "country"=>"PE", "city"=>"Lima", "phone"=>"997528963", "email"=>"gian.corzo@gmail.com", "comments"=>"Test"}, "commit"=>"Enviar cotización"}
+Sending to gian.corzo@gmail.com
+  Rendered quotes_mailer/send_contact.html.erb (0.7ms)
+  Rendered quotes_mailer/send_contact.text.erb (0.5ms)
+
+QuotesMailer#send_contact: processed outbound mail in 180.0ms
+
+Sent mail to gian.corzo@gmail.com (16.1ms)
+Date: Mon, 01 Jun 2015 01:28:26 +0000
+From: upc.dew@gmail.com
+To: gian.corzo@gmail.com
+Message-ID: <556bb53a40bee_78953f913a0b3c5890096@giancorzo-andinatravelclub-1549931.mail>
+Subject: =?UTF-8?Q?Andina_-_Cont=C3=A1ctenos?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_556bb53a3e54f_78953f913a0b3c5889945";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_556bb53a3e54f_78953f913a0b3c5889945
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Nombre del solicitante: Giancarlo Corzo
+Pais: PE
+Ciudad: Lima
+Tel=C3=A9fono: 997528963
+Correo: gian.corzo@gmail.com
+
+Mensaje: Test=
+
+----==_mimepart_556bb53a3e54f_78953f913a0b3c5889945
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style=3D"background-color: #FFF;font-family: 'Lucida Grande', V=
+erdana, Sans-serif;">
+      <div style=3D"border-bottom: 1px solid #CCC;">Datos del solicitante=
+:</div><br/>
+      Nombre del solicitante: Giancarlo Corzo<br/>
+      Pais: PE<br/>
+      Ciudad: Lima<br/>
+      Tel=C3=A9fono: 997528963<br/>
+      Correo: gian.corzo@gmail.com<br/>
+      <br/>
+      <p>Mensaje: Test</p>        =
+
+    </body>
+</html>
+
+----==_mimepart_556bb53a3e54f_78953f913a0b3c5889945--
+
+Redirected to http://andinatravelclub-giancorzo-1.c9.io/thank-you-contact
+Completed 302 Found in 209ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/thank-you-contact" for 190.234.105.200 at 2015-06-01 01:28:26 +0000
+Processing by QuotesController#thank_you_contact as HTML
+  [1m[36mTour Load (0.4ms)[0m  [1mSELECT  `tours`.* FROM `tours`  ORDER BY popularity LIMIT 4[0m
+  Rendered quotes/thank_you_contact.html.erb within layouts/application (12.5ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 105ms (Views: 103.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:28:27 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:28:28 +0000
+
+
+Started GET "/tours/peru/enigmas-andinos" for 190.234.105.200 at 2015-06-01 01:33:21 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"enigmas-andinos"}
+  [1m[35mTour Load (2.0ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'enigmas-andinos'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Image> at /home/ubuntu/workspace/app/models/image.rb:18)
+  [1m[35mImage Load (0.4ms)[0m  SELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 2
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 2[0m
+  Rendered quotes/_form.html.erb (102.8ms)
+  Rendered tours/show.html.erb within layouts/application (192.6ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 342ms (Views: 288.9ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:22 +0000
+
+
+Started GET "/tours/peru/enigmas-andinos" for 75.126.28.194 at 2015-06-01 01:33:24 +0000
+Processing by ToursController#show as HTML
+  Parameters: {"id"=>"enigmas-andinos"}
+  [1m[35mTour Load (0.6ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'enigmas-andinos'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mImage Load (0.6ms)[0m  SELECT `images`.* FROM `images` WHERE `images`.`tour_id` = 2
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`tour_id` = 2[0m
+  Rendered quotes/_form.html.erb (53.1ms)
+  Rendered tours/show.html.erb within layouts/application (96.3ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 222ms (Views: 216.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/tours/peru/enigmas-andinos/quotes" for 190.234.105.200 at 2015-06-01 01:33:33 +0000
+Processing by QuotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a/zcfnWig0/vaWMOCUHnNoL4zRnjNtEm19PapdWLh8j6M8Zv5qMc5OxumEb20rpOx4uKTDHHOxllo96in4Owkg==", "quote"=>{"days"=>"3", "travel_time(3i)"=>"1", "travel_time(2i)"=>"6", "travel_time(1i)"=>"2015", "adults"=>"2", "childs"=>"", "age"=>"", "name"=>"Giancarlo Corzo", "country"=>"PE", "city"=>"Lima", "phone"=>"997528963", "email"=>"gian.corzo@gmail.com", "payment_type"=>"Trans. Bancaria", "comments"=>"d"}, "commit"=>"Enviar cotización", "tour_id"=>"enigmas-andinos"}
+  [1m[35mTour Load (0.6ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`slug` = 'enigmas-andinos'  ORDER BY `tours`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.8ms)[0m  INSERT INTO `quotes` (`days`, `adults`, `name`, `country`, `city`, `phone`, `email`, `payment_type`, `comments`, `travel_time`, `tour_id`, `created_at`, `updated_at`) VALUES (3, 2, 'Giancarlo Corzo', 'PE', 'Lima', '997528963', 'gian.corzo@gmail.com', 'Trans. Bancaria', 'd', '2015-06-01', 2, '2015-06-01 01:33:33', '2015-06-01 01:33:33')
+  [1m[36m (20.9ms)[0m  [1mCOMMIT[0m
+Sending to gian.corzo@gmail.com
+  Rendered quotes_mailer/send_notification.html.erb (1.0ms)
+  Rendered quotes_mailer/send_notification.text.erb (0.8ms)
+
+QuotesMailer#send_notification: processed outbound mail in 26.1ms
+
+Sent mail to gian.corzo@gmail.com (5.5ms)
+Date: Mon, 01 Jun 2015 01:33:33 +0000
+From: upc.dew@gmail.com
+To: gian.corzo@gmail.com
+Message-ID: <556bb66d441e9_7895309b408902c3@giancorzo-andinatravelclub-1549931.mail>
+Subject: =?UTF-8?Q?Cotizaci=C3=B3n_-_Giancarlo_Corzo?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_556bb66d4359e_7895309b408901d9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_556bb66d4359e_7895309b408901d9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Se solicit=C3=B3 la siguiente notificaci=C3=B3n:
+
+Notificaci=C3=B3n Nro. 2
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D
+
+Datos del solicitante
+---------------------
+
+Nombre del solicitante: Giancarlo Corzo
+Pais: PE
+Ciudad: Lima
+Tel=C3=A9fono: 997528963
+Correo: gian.corzo@gmail.com
+
+Datos del tour
+--------------
+
+Tour seleccionado: ENIGMAS ANDINOS
+Tipo de hotel: =
+
+D=C3=ADas que se queda: 3
+Fecha de llegada: 2015-06-01
+Fecha de Salida: 2015-06-04
+Cantidad de adultos: 2
+Cantidad de Ni=C3=B1os: =
+
+Edades de los ni=C3=B1os: =
+
+Forma de pago: Trans. Bancaria
+Comentarios: d
+
+----==_mimepart_556bb66d4359e_7895309b408901d9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body style=3D"background-color: #FFF;font-family: 'Lucida Grande', V=
+erdana, Sans-serif;">
+      <div style=3D"border-bottom: 1px solid #CCC;">Datos del solicitante=
+:</div><br/>
+      Nombre del solicitante: Giancarlo Corzo<br/>
+      Pais: PE<br/>
+      Ciudad: Lima<br/>
+      Tel=C3=A9fono: 997528963<br/>
+      Correo: gian.corzo@gmail.com<br/>
+      <br/>
+      <div style=3D"border-bottom: 1px solid #CCC;">Datos del tour selecc=
+ionado:</div><br/>
+      Tour seleccionado: ENIGMAS ANDINOS<br/>
+      Tipo de hotel: <br/>
+      D=C3=ADas que se queda: 3<br/>
+      Fecha de llegada: 2015-06-01<br/>
+      Fecha de Salida: 2015-06-04<br/>
+      Cantidad de adultos: 2<br/>
+      Cantidad de Ni=C3=B1os: <br/>
+      Edades de los ni=C3=B1os: <br/>
+      Forma de pago: Trans. Bancaria<br/>
+      Comentarios: d<br/>
+    </body>
+</html>
+
+----==_mimepart_556bb66d4359e_7895309b408901d9--
+
+Redirected to http://andinatravelclub-giancorzo-1.c9.io/thank-you
+Completed 302 Found in 79ms (ActiveRecord: 35.4ms)
+
+
+Started GET "/thank-you" for 190.234.105.200 at 2015-06-01 01:33:33 +0000
+Processing by QuotesController#thank_you as HTML
+  [1m[35mTour Load (0.6ms)[0m  SELECT  `tours`.* FROM `tours`  ORDER BY popularity LIMIT 4
+  Rendered quotes/thank_you.html.erb within layouts/application (12.3ms)
+  Rendered shared/_header.html.erb (0.4ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 118.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:33:35 +0000
+
+
+Started GET "/" for 190.234.105.200 at 2015-06-01 01:33:38 +0000
+Processing by HomeController#index as HTML
+  [1m[36mBanner Load (0.4ms)[0m  [1mSELECT `banners`.* FROM `banners`[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (0.3ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1[0m
+  [1m[35mTour Load (0.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1
+  [1m[36mTour Load (0.9ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity[0m
+  [1m[35mReview Load (0.5ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE (home = 1)
+  Rendered home/index.html.erb within layouts/application (38.3ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 129ms (Views: 125.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:38 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:38 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:38 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:38 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.200 at 2015-06-01 01:33:39 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 01:33:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.6ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (12.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (53.3ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 174ms (Views: 152.6ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 01:33:44 +0000
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:21 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:21 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:21 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:21 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:21 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 01:35:25 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (28.2ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 141ms (Views: 132.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:35:26 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 01:35:27 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 01:45:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (79.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer_link.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 291ms (Views: 232.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 01:45:05 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 01:45:06 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 01:45:07 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 01:45:07 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 01:45:07 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 01:45:07 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:10:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.9ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (73.0ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer_link.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 286ms (Views: 232.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:10:53 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:10:54 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:10:54 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:10:54 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:10:54 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:13:33 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.4ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (20.5ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 177ms (Views: 173.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:13:34 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:13:35 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:13:36 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:13:36 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:18:08 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.4ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (26.3ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 151ms (Views: 145.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:09 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:09 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:18:10 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:18:11 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:18:11 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:18:11 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:18:17 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.5ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (36.1ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 142.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:18:18 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:18:19 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:21:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (130.5ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_footer_link.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 606ms (Views: 470.3ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:13 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:13 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:13 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:13 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:21:14 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:21:37 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.8ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (32.1ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 173ms (Views: 164.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:21:38 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:39 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:21:39 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:21:39 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:21:39 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:21:39 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:21:46 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.9ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (38.2ms)
+  Rendered shared/_header.html.erb (0.9ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 175ms (Views: 167.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:47 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:21:48 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:21:55 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.6ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (29.7ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 166ms (Views: 160.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:56 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:56 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:56 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:21:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:21:57 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:23:58 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (26.9ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 162ms (Views: 156.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:23:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:24:00 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:24:01 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:24:01 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:24:01 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:24:01 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:24:01 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:24:01 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:24:01 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:27:15 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.4ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (46.1ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 195ms (Views: 189.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:27:17 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:27:18 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:29:44 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.6ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.7ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.3ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (40.2ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 287ms (Views: 279.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:29:46 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:29:47 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:30:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (13.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (29.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (159.3ms)
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_footer_link.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 639ms (Views: 393.1ms | ActiveRecord: 145.1ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:30:49 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:30:50 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:32:43 +0000
+Processing by PostsController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.6ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (25.4ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 225ms (Views: 216.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:32:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:32:44 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:32:44 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:32:44 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:32:44 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:32:45 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:32:46 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:32:46 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:32:46 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:32:46 +0000
+
+
+Started GET "/blog" for 190.234.105.200 at 2015-06-01 02:34:53 +0000
+Processing by PostsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (1.2ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (21.6ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 135.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:34:54 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:34:54 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:34:54 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:34:54 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:34:55 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:34:56 +0000
+
+
+Started GET "/blog?page=2" for 190.234.105.200 at 2015-06-01 02:35:03 +0000
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.6ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 5
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (22.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer_link.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 123ms (Views: 118.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:04 +0000
+
+
+Started GET "/blog?page=1" for 190.234.105.200 at 2015-06-01 02:35:08 +0000
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1
+Couldn't find Account with 'id'=
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `posts`
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc
+  Rendered posts/index.html.erb within layouts/application (27.4ms)
+  Rendered shared/_header.html.erb (0.5ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 138ms (Views: 133.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:35:09 +0000
+
+
+Started GET "/blog?page=1" for 190.234.105.200 at 2015-06-01 02:40:05 +0000
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.7ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (52.4ms)
+  Rendered shared/_header.html.erb (0.8ms)
+  Rendered shared/_footer_link.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 210ms (Views: 171.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:06 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:40:07 +0000
+
+
+Started GET "/blog?page=1" for 190.234.105.200 at 2015-06-01 02:40:35 +0000
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+Couldn't find Account with 'id'=
+  [1m[35mPost Load (0.5ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `posts`[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT `posts`.* FROM `posts` WHERE (popular = 1)  ORDER BY created_at desc[0m
+  Rendered posts/index.html.erb within layouts/application (40.7ms)
+  Rendered shared/_header.html.erb (0.6ms)
+  Rendered shared/_footer_link.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 158ms (Views: 128.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/boostrap.min.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:36 +0000
+
+
+Started GET "/assets/common.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:36 +0000
+
+
+Started GET "/assets/slider.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:36 +0000
+
+
+Started GET "/assets/jquery.fancybox.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 190.234.105.200 at 2015-06-01 02:40:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/bg.jpg" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/header.jpg" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/logo.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/nav-left.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/nav-bg.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/nav-separator.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/nav-right.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/header-bottom-bg.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/header-bottom.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/header-bottom-bg-fix.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/linea-nazca-mono.gif" for 190.234.105.200 at 2015-06-01 02:40:37 +0000
+
+
+Started GET "/assets/bulletside.gif" for 190.234.105.200 at 2015-06-01 02:40:38 +0000
+
+
+Started GET "/assets/linea-nazca-colibri.gif" for 190.234.105.200 at 2015-06-01 02:40:38 +0000
+
+
+Started GET "/" for 190.234.105.200 at 2015-06-01 02:40:43 +0000
+Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT  `posts`.* FROM `posts`  ORDER BY created_at desc LIMIT 1
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Tour> at /home/ubuntu/workspace/app/models/tour.rb:40)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Banner> at /home/ubuntu/workspace/app/models/banner.rb:19)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Review> at /home/ubuntu/workspace/app/models/review.rb:22)
+  [1m[36mBanner Load (18.7ms)[0m  [1mSELECT `banners`.* FROM `banners`[0m
+  [1m[35mTour Load (2.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 1 LIMIT 1
+  [1m[36mTour Load (3.8ms)[0m  [1mSELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 8 LIMIT 1[0m
+  [1m[35mTour Load (3.3ms)[0m  SELECT  `tours`.* FROM `tours` WHERE `tours`.`id` = 3 LIMIT 1
+  [1m[36mTour Load (34.9ms)[0m  [1mSELECT `tours`.* FROM `tours` WHERE (place = 0 and interest_id is null)  ORDER BY popularity[0m
+  [1m[35mReview Load (28.2ms)[0m  SELECT `reviews`.* FROM `reviews` WHERE (home = 1)
+  Rendered home/index.html.erb within layouts/application (207.8ms)
+  Rendered shared/_header.html.erb (0.7ms)
+  Rendered shared/_footer_link.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 329ms (Views: 190.6ms | ActiveRecord: 114.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/modernizr.custom.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/bootstrap-alerts.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/jquery.fancybox.pack.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/mocha.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/connect-google-plus.gif" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/connect-facebook.gif" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/email.gif" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/connect-twitter.gif" for 190.234.105.200 at 2015-06-01 02:40:44 +0000
+
+
+Started GET "/assets/skype.gif" for 190.234.105.200 at 2015-06-01 02:40:45 +0000
+
+
+Started GET "/assets/phone.gif" for 190.234.105.200 at 2015-06-01 02:40:45 +0000
+
+
+Started GET "/assets/tarjetas.gif" for 190.234.105.200 at 2015-06-01 02:40:45 +0000

@@ -14,6 +14,7 @@ gem 'paperclip'
 gem 'friendly_id'
 gem 'RedCloth'
 gem 'will_paginate'
+gem 'will_paginate-bootstrap', '0.2.5'
 gem 'country_select'
 
 group :development do
