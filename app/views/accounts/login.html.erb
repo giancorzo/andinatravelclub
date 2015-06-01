@@ -1,4 +1,16 @@
 <div class="row">
+  <% if flash[:notice] %>
+    <div class="span12 alert alert-success fade in" data-alert="alert" style="margin: 10px 48px;">
+      <a class="close" href="#" data-dismiss="alert">×</a>
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if flash[:error] %>
+    <div class="span12 alert alert-error fade in" data-alert="alert" style="margin: 10px 48px;">
+      <a class="close" href="#" data-dismiss="alert">×</a>
+      <%= flash[:error] %>
+    </div>
+  <% end %>   
   <%= form_tag nil,:class => "form-horizontal" do %>
     <div class="control-group">
       <%= label_tag :email %>
